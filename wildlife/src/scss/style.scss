@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+h1, h2, h4, h3 {
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+body,  html {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+
+}
+ul,li, a {
+    list-style-type: none;
+    text-decoration: none;
+    
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+@import 'base/variables';
+@import 'blocks/hero';
+@import 'blocks/main';
+@import 'blocks/footer';

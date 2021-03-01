@@ -1,0 +1,115 @@
+.hero {
+    background-image: url('../../src/assets/img/Hero.png');
+    background-color: #02160b;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 20px;
+    height: 779px;
+    width: 1440px;
+
+    &__title {
+        color: $orange-main;
+        font-size: 48px;
+        letter-spacing: 2px;
+        width: 100%
+    }
+    &__wrapper {
+        width: 100%;
+    
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        &-logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        &-title {
+            margin-left: 15px;
+            font-weight: 400;
+            font-size: 32px;
+            font-family: 'Roboto', sans-serif;
+            color: $font-lite;
+            text-transform: uppercase;
+        }
+        &-links {
+            font-size: 23px;
+            width: 480px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            a {
+                color:$font-lite;
+                line-height: 60px;
+                transition: all ease 0.5s;
+                &:hover {
+                    box-shadow: 0 2px 0px $orange-light;
+                }
+               
+            }
+        }
+        &-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #CD6326;
+            background-color: transparent;
+            border-radius: 5px;
+            font-size: 23px;
+            color:$font-lite;
+            width: 120px;
+            height: 50px;
+            transition: all ease 0.5s;
+
+            outline: none;
+            &:hover {
+                cursor: pointer;
+                background-color: $orange-main;
+            }
+            &:active {
+                background-color: $orange-dark;
+            }
+        }
+    }
+    
+    &__subtitle {
+        margin-top: 50px;
+        color: $font-lite;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 274px;
+        margin-top: 120px;
+
+    }
+    &__button button {
+        border: 0;
+        margin-top: 50px;
+        width: 160px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:$orange-main;
+        color: $font-lite;
+        border-radius: 5px;
+        font-size: 23px;
+        transition: all ease 0.4s;
+        outline: none;
+        &:hover {
+            background-color: $orange-light;
+            cursor: pointer;
+        }
+        &:active {
+            background-color: $orange-dark;
+        }
+    }
+}
+

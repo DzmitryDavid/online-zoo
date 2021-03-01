@@ -1,0 +1,58 @@
+.footer {
+    background-image: url('../../src/assets/img/footer.png');
+    background-size: cover;
+    height: 360px;
+    padding-top: 160px;
+    background-color: #181617;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        margin-left: 15px;
+        font-size: 32px;
+        color: $font-lite;
+        text-transform: uppercase;
+
+    }
+    &__nav {
+        display:flex;
+        justify-content: space-between;
+        width: 470px;
+        align-items: center;
+        &-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 240px;
+        }
+        &-item {
+            font-size: 23px;
+            color: $font-lite;
+            line-height: 60px;
+            transition: all ease 0.5s;
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 2px 0px $orange-light;
+                color: $orange-light;
+                
+            }
+    
+        }
+        &-icon {
+            transition: all ease 0.5s;
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
