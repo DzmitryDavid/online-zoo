@@ -21,6 +21,12 @@
     &__nav {
         display: flex;
         justify-content: space-between;
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
         &-logo {
             display: flex;
             justify-content: flex-start;
