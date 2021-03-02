@@ -1,0 +1,16 @@
+$orange-main: #CD6326;
+$orange-light: #E39128;
+$orange-dark: #8F5613;
+
+$font-lite: #F7F7F7;
+$font-grey: #666666;
+$font-dark: #333333;
+
+@mixin h1 {
+    font-family: Open Sans, sans-serif;
+    font-size: 48px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #02160b;
+    background-color: #181617;
+}
