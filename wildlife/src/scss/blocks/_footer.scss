@@ -1,5 +1,5 @@
 .footer {
-    background-image: url('../../src/assets/img/footer.png');
+    background-image: url("../../src/assets/img/footer.png");
     background-size: cover;
     height: 360px;
     padding-top: 160px;
@@ -15,15 +15,14 @@
         align-items: center;
     }
     &__title {
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         margin-left: 15px;
         font-size: 32px;
         color: $font-lite;
         text-transform: uppercase;
-
     }
     &__nav {
-        display:flex;
+        display: flex;
         justify-content: space-between;
         width: 470px;
         align-items: center;
@@ -42,17 +41,49 @@
                 cursor: pointer;
                 box-shadow: 0 2px 0px $orange-light;
                 color: $orange-light;
-                
             }
-    
         }
         &-icon {
-            transition: all ease 0.5s;
-            &:hover {
-                transform: scale(1.1);
-                cursor: pointer;
+            &-telegram {
+                width: 40px;
+                height: 40px;
+                transition: all ease 0.5s;
+                background: url("/src/assets/icons/telegramsvg.svg") center/cover no-repeat;
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+            }
+            &-pinterest {
+                width: 40px;
+                height: 40px;
+                background: url("/src/assets/icons/pinterest.svg") center/cover no-repeat;
+                transition: all ease 0.5s;
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+            }
+            &-instagram {
+                width: 40px;
+                height: 40px;
+                transition: all ease 0.5s;
+                background: url("/src/assets/icons/instagramm.svg") center/cover no-repeat;
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+            }
+            &-facebook {
+                width: 40px;
+                height: 40px;
+                background: url("/src/assets/icons/facebook.svg") center/cover no-repeat;
+                transition: all ease 0.5s;
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
             }
         }
     }
-    
 }
