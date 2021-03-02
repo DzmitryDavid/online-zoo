@@ -1,8 +1,12 @@
-.footer {
+.inner__wrapper-footer {
     background-image: url("../../src/assets/img/footer.png");
     background-size: cover;
     height: 360px;
     padding-top: 160px;
+
+}
+
+.footer {
     background-color: #181617;
     &__wrapper {
         display: flex;

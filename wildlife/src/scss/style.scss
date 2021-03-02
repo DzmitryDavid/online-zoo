@@ -10,7 +10,6 @@ h1, h2, h4, h3 {
 }
 
 body,  html {
-    width: 1440px;
     margin: 0 auto;
     padding: 0;
 
@@ -26,7 +25,11 @@ ul,li, a {
     width: 1200px;
     margin: 0 auto;
 }
+.inner__wrapper {
+    margin: 0 auto;
+    width: 1440px;
 
+}
 
 
 
