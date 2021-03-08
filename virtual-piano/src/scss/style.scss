@@ -1,0 +1,25 @@
+@import 'button';
+@import 'piano';
+@import 'header';
+@import 'footer';
+*,*::after, ::before {
+    box-sizing: border-box;
+
+}
+h1 {
+    margin: 0;
+}
+body {
+    font-family: 'Dancing Script', cursive;
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #434343 0%, black 100%);
+    margin: 0;
+    padding: 4px;
+    border: 2px solid #fff;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
