@@ -4,8 +4,6 @@ const startButton = document.querySelector('.start-btn');
 const inputNotes = document.querySelector('.input');
 console.log(inputNotes.checked);
 let isNote = true;
-
-
 startButton.addEventListener('click', init);
 fullscreenBtn.addEventListener('click', onFullScreen)
 
