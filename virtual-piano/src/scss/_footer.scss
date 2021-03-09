@@ -1,12 +1,13 @@
 .footer {
     display: flex;
-    width: 100%;
+    width: 1200px;
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translate(-50%);
     justify-content: space-around;
-    padding: 30px;
     align-items: center;
+    padding: 30px;
     &__description  {
         &-title {
             display: flex;
@@ -49,9 +50,4 @@
         }
     }
     
-}
-.block {
-    position: relative;
-    // display: flex;
-    // justify-content: space-around;
 }
