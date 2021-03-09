@@ -2,16 +2,26 @@
     
     &__key {
         border: 3.5px solid #333 ;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 30px;
+        text-transform: uppercase;
         &:hover {
             cursor: pointer;
+            background-color: rgba(255, 255, 255,  0.8);
         }
         &-white {
+            font-size: 30px;
             height: 400px;
             width: 100px;
             background-color: #fff;
             border-radius: 6px 6px  12px 12px;
         }    
         &-black {
+            font-size: 20px;
+            color: #fff;
             width: 60px;
             height: 250px;
             margin-left: -30px;
@@ -33,6 +43,7 @@
 }
 .active {
     transform: scale(0.98);
+    background-color: rgba(255, 255, 255,  0.8);
 }
 
 .hidden {

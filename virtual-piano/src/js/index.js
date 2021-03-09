@@ -1,40 +1,91 @@
+
+const fullscreenBtn = document.querySelector('.header__fullscreen');
 const startButton = document.querySelector('.start-btn');
+const inputNotes = document.querySelector('.input');
+console.log(inputNotes.checked);
+let isNote = true;
+
+
 startButton.addEventListener('click', init);
+fullscreenBtn.addEventListener('click', onFullScreen)
+
+function init() {
+    startButton.classList.add('hidden');
+    inputNotes.addEventListener('click', () => {
+        isNote = !isNote;
+        renderKeys()
+    })  
+renderKeys()
+}  
+
 
 function renderKeys() {
     const pianoContainer = document.createElement('div');
-    pianoContainer.innerHTML = `
-    <div class="piano__key piano__key-white" data="c"></div>
-    <div class="piano__key piano__key-black" data="c♯"></div>
-    <div class="piano__key piano__key-white" data="d"></div>
-    <div class="piano__key piano__key-black" data="d♯"></div>
-    <div class="piano__key piano__key-white" data="e"></div>
-    <div class="piano__key piano__key-white" data="f"></div>
-    <div class="piano__key piano__key-black" data="f♯"></div>
-    <div class="piano__key piano__key-white" data="g"></div>
-    <div class="piano__key piano__key-black" data="g♯"></div>
-    <div class="piano__key piano__key-white" data="a"></div>
-    <div class="piano__key piano__key-black" data="a♯"></div>
-    <div class="piano__key piano__key-white" data="b"></div>
+    document.querySelector('.container').innerHTML = '';
+
+    if (isNote) {
+        pianoContainer.innerHTML = `
+    <div class="piano__key piano__key-white" data="c">c</div>
+    <div class="piano__key piano__key-black" data="c♯">c♯</div>
+    <div class="piano__key piano__key-white" data="d">d</div>
+    <div class="piano__key piano__key-black" data="d♯">d♯</div>
+    <div class="piano__key piano__key-white" data="e">e</div>
+    <div class="piano__key piano__key-white" data="f">f</div>
+    <div class="piano__key piano__key-black" data="f♯">f♯</div>
+    <div class="piano__key piano__key-white" data="g">g</div>
+    <div class="piano__key piano__key-black" data="g♯">g♯</div>
+    <div class="piano__key piano__key-white" data="a">a</div>
+    <div class="piano__key piano__key-black" data="a♯">a♯</div>
+    <div class="piano__key piano__key-white" data="b">b</div>
     `;
+    } else {
+        pianoContainer.innerHTML = `
+    <div class="piano__key piano__key-white" data="c">Z</div>
+    <div class="piano__key piano__key-black" data="c♯">s</div>
+    <div class="piano__key piano__key-white" data="d">X</div>
+    <div class="piano__key piano__key-black" data="d♯">d</div>
+    <div class="piano__key piano__key-white" data="e">C</div>
+    <div class="piano__key piano__key-white" data="f">V</div>
+    <div class="piano__key piano__key-black" data="f♯">h</div>
+    <div class="piano__key piano__key-white" data="g">B</div>
+    <div class="piano__key piano__key-black" data="g♯">j</div>
+    <div class="piano__key piano__key-white" data="a">N</div>
+    <div class="piano__key piano__key-black" data="a♯">k</div>
+    <div class="piano__key piano__key-white" data="b">M</div>
+    `;
+    }
+    
     pianoContainer.classList.add('piano__container')
     document.querySelector('.container').append(pianoContainer);
-    addMouseListeners(pianoContainer);
+    addListeners(pianoContainer);
     setTimeout(() => {
         pianoContainer.classList.add('show')
     }, 100);
 }
 
-function addMouseListeners(pianoContainer) {
-    pianoContainer.addEventListener('mousedown', getMouseTarget);
-    pianoContainer.addEventListener('mousedown', addClass);
+function addListeners(pianoContainer) {
+    pianoContainer.addEventListener('mousedown', getNote);
     pianoContainer.addEventListener('mouseup', removeClass);
+    pianoContainer.addEventListener('mouseout', removeClass);
+    pianoContainer.addEventListener('mouseup' ,() => {
+        pianoContainer.removeEventListener('mouseover', mouseOver)
+    })
     window.addEventListener('keydown', getKey);
-    window.addEventListener('keyup', removeClass)
+    window.addEventListener('keyup', removeClass);
 }
 
+function mouseOver(e) {
+    let currentElem = null;
+    if (currentElem) return;
+    let target = e.target.closest('.piano__key');
+    if (!target) return
+    currentElem = target;
+    const note = currentElem.getAttribute('data');
+    addClass(e)
+    audioPlay(note);
+    
+}   
 function addClass(e) {
-    if (e.target === e.target.closest('.piano__container')) return
     e.target.classList.add('active');
 }
 
@@ -44,14 +95,14 @@ function removeClass(e) {
     e.target.classList.remove('active');
 }
 
-function getMouseTarget (e) {
+function getNote (e) {
     const event = e.target;
-    // console.log(event.closest('.piano__container'));
-    
     if (event === event.closest('.piano__container')) return
     const note = event.getAttribute('data');
+    const  container = document.querySelector('.piano__container');
+    container.addEventListener('mouseover', mouseOver)
+    addClass(e)
     audioPlay(note);
-    
 }
 
 function getKeyboardKey (key) {
@@ -64,24 +115,27 @@ function audioPlay(note) {
     const audio = new Audio(`/assets/audio/${note}.mp3`);
     audio.currentTime = 0;
     audio.play();
-    
 }
 
 function getKey(e) {
+    console.log(e.code);
+    if (e.repeat) return
     const allWhiteKeys = document.querySelectorAll('.piano__key-white');
     const allBlackKeys = document.querySelectorAll('.piano__key-black');
-    const whiteKeys = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
-    const blackKeys = ['s', 'd', 'h', 'j', 'k'];
-    const whiteKeysIndex = whiteKeys.indexOf(e.key)
-    const blackKeysIndex = blackKeys.indexOf(e.key)
+    const whiteKeys = ['KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM']
+    const blackKeys = ['KeyS', 'KeyD', 'KeyH', 'KeyJ', 'KeyK'];
+    const whiteKeysIndex = whiteKeys.indexOf(e.code)
+    const blackKeysIndex = blackKeys.indexOf(e.code)
 
     if(whiteKeysIndex > -1) getKeyboardKey(allWhiteKeys[whiteKeysIndex]);
     if(blackKeysIndex > -1) getKeyboardKey(allBlackKeys[blackKeysIndex]);
 }
 
+function onFullScreen() {
+    if (!document.fullscreenElement)  {
+        document.documentElement.requestFullscreen();
+    } else {
+        if (document.fullscreenEnabled) document.exitFullscreen();
+    }
+}
 
-function init() {
-    startButton.classList.add('hidden');
-    renderKeys();
-
-}  

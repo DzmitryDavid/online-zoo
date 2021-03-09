@@ -12,9 +12,27 @@
 <body>
     <header class="header">
         <h1 class="header__title">Virtual Piano</h1>
+        
+        <div class="header__toggle">
+        <label for="toggle">
+            <input type="checkbox" id="toggle" class="input">
+                <div class="toggle-wrapper">
+                    <span class="selector">
+                    </span>
+                    <div class="notification">
+                        <span class="selected">Notes</span>
+                        <span class="selected">Letters</span>
+                        
+                    </div> 
+                </div>
+            </label>
+        </div>
+        <div class="header__fullscreen">
+            fullscreen
+        </div>
     </header>
     <div class="container">
-        <a href="#" class="start-btn" data-back="lets play" data-front="have fun"></a>
+        <a href="#" class="start-btn" data-back="have fun" data-front="lets play"></a>
     </div>
     <footer class="footer">
         <div class="footer__description"></div>
