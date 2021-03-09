@@ -2,7 +2,9 @@
 const fullscreenBtn = document.querySelector('.header__fullscreen');
 const startButton = document.querySelector('.start-btn');
 const inputNotes = document.querySelector('.input');
-console.log(inputNotes.checked);
+const inputContainer = document.querySelector('.header__toggle');
+const footer = document.querySelector('.footer');
+
 let isNote = true;
 startButton.addEventListener('click', init);
 fullscreenBtn.addEventListener('click', onFullScreen)
@@ -18,9 +20,11 @@ renderKeys()
 
 
 function renderKeys() {
+    inputContainer.style.opacity = 1;
+    inputContainer.style.visibility = 'visible';
     const pianoContainer = document.createElement('div');
-    document.querySelector('.container').innerHTML = '';
 
+    document.querySelector('.container').innerHTML = '';
     if (isNote) {
         pianoContainer.innerHTML = `
     <div class="piano__key piano__key-white" data="c">c</div>

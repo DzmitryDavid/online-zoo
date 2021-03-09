@@ -1,6 +1,7 @@
 .header__toggle {
-    display: flex;
-    justify-content: space-around;
+    opacity: 0;
+    transition: all ease 1.5s;
+    visibility: hidden;
 }
 .selected {
     display: block;

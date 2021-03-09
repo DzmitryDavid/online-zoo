@@ -3,6 +3,7 @@
     justify-content: space-evenly;
     align-items: center;
     line-height: 120px;
+    
     &__title {
         text-align: center;
         display: inline-block;
@@ -24,6 +25,7 @@
         font-size: 24px;
         transition: all ease 0.4s;
         &:hover {
+            transform: scale(1.1);
             cursor: pointer;
             color: #fff;
         }
