@@ -1,5 +1,5 @@
-1. Task: https://rolling-scopes-school.github.io/stage0/#/stage1/tasks/photo-filter
-2. Deploy  https://rolling-scopes-school.github.io/dzmitrydavid-JSFE2021Q1/photo-filter
+1. Task: https://rolling-scopes-school.github.io/stage0/#/stage1/tasks/virtual-piano
+2. Deploy  https://rolling-scopes-school.github.io/dzmitrydavid-JSFE2021Q1/virtual-piano
 3. Done 
 4.  4. ![VirtualPiano](https://user-images.githubusercontent.com/61329467/110533811-6d2c5500-812f-11eb-97f4-d464873059f2.PNG)
 5. Total: 50/50
