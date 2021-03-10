@@ -1,1 +1,1 @@
-body{margin:0;padding:0;width:100%;height:100vh}
+body{box-sizing:border-box;margin:0;padding:0;width:100%;height:100vh}.container{display:flex}.wrapper{margin:0 auto;width:1440px}.header{display:flex;justify-content:space-around;align-items:center}.sidepanel{width:30%;display:flex;flex-direction:column;height:100vh;border:1px solid}.picture{border:1px solid;width:100%;display:grid;grid-template-rows:80% 20%}.picture__container{background-color:#ececec;margin:0 auto}.picture__upload{text-align:center}

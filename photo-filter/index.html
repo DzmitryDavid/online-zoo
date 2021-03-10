@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,97 @@
     <script defer src="src/js/index.js"></script>
     <title>Photo-filter</title>
 </head>
+
 <body>
-    
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="header__title">
+                Photo filter
+            </div>
+            <div class="header__buttons">
+                <button id="revert" class="header__buttons-reset">remove filters</button>
+                <button class="header__buttons-next">next picture</button>
+                <button class="header__buttons-save">save</button>
+            </div>
+        </header>
+        <div class="container">
+            <aside class="sidepanel">
+                <ul class="filters">
+                    <div class="filters__title">
+                        <h2>filters</h2>
+                    </div>
+                    <li class="filter">
+                        <label for="brightness">brightness</label>
+                        <input class="filter__input filter__input-brightness"  type="range">
+                    </li>
+                    <li class="filter">
+                        <label for="contrast">contrast</label>
+                        <input class="filter__input" id="contrast" type="range">
+                    </li>
+                    <li class="filter">
+                        <label for="vibrance">vibrance</label>
+                        <input class="filter__input" id="vibrance" type="range">
+                    </li>
+                    <li class="filter">
+                        <label for="saturation">saturation</label>
+                        <input class="filter__input" id="saturation" type="range">
+                    </li>
+                    <li class="filter">
+                        <label for=""></label>
+                        <input class="filter__input" id="" type="range">
+                    </li>
+                </ul>
+                <ul class="effects">
+                    <div class="effects__title">
+                        <h2>Effects</h2>
+                    </div>
+                    <li class="effect">
+                        <label for="vintage">vintage</label>
+                        <input id="vintage" type="range">
+                    </li>
+                    <li class="effect">
+                        <label for="lomo">lomo</label>
+                        <input id="lomo" type="range">
+                    </li>
+                    <li class="effect">
+                        <label for="sin-city">Sin City</label>
+                        <input id="sin-city" type="range">
+                    </li>
+                    <li class="effect">
+                        <label for="saturation">saturation</label>
+                        <input id="saturation" type="range">
+                    </li>
+                    <li class="effect">
+                        <label for=""></label>
+                        <input id="" type="range">
+                    </li>
+                </ul>
+                <input id="upload" type="file" ">
+                <button class="download__btn">download btn</button>
+            </aside>
+            <section class=" picture">
+                <div class="picture__container">
+                    <!-- <img src="" id="image__output" alt=""> -->
+                    <canvas id="canvas"></canvas>
+                </div>
+                <div class="picture__upload">
+                    <label for="upload"> Choose img
+                    </label>
+                </div>
+                </section>
+                <footer class="footer">
+                    <div class="footer__author"></div>
+                    <div class="footer__logo-git">
+                        <img src="" alt="">
+                    </div>
+                    <div class="footer__logo-rs">
+                        <img src="" alt="">
+                    </div>
+                </footer>
+        </div>
+    </div>
+
 </body>
+
 </html>
