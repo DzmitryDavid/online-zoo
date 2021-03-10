@@ -114,13 +114,12 @@ function getKeyboardKey (key) {
 }
 
 function audioPlay(note) {
-    const audio = new Audio(`/assets/audio/${note}.mp3`);
+    const audio = new Audio(`assets/audio/${note}.mp3`);
     audio.currentTime = 0;
     audio.play();
 }
 
 function getKey(e) {
-    console.log(e.code);
     if (e.repeat) return
     const allWhiteKeys = document.querySelectorAll('.piano__key-white');
     const allBlackKeys = document.querySelectorAll('.piano__key-black');
