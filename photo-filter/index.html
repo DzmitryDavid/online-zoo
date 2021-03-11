@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
     <script defer src="src/js/index.js"></script>
     <title>Photo-filter</title>
@@ -18,9 +20,8 @@
                 Photo filter
             </div>
             <div class="header__buttons">
-                <button id="revert" class="header__buttons-reset">remove filters</button>
+                
                 <button class="header__buttons-next">next picture</button>
-                <button class="header__buttons-save">save</button>
             </div>
         </header>
         <div class="container">
@@ -29,64 +30,101 @@
                     <div class="filters__title">
                         <h2>filters</h2>
                     </div>
-                    <li class="filter">
-                        <label for="blur">Blur</label>
 
-                        <input 
-                        class="filter__input" 
-                        id="blur"  
-                        min="0" 
-                        max="10" 
-                        value="0" 
-                        type="range">
+                    <li class="filter">
+                        <div class="filter__wrapper">
+
+                            <label
+                            class="filter__input-label" 
+                            for="blur">Blur</label>
+    
+                            <input 
+
+                            class="filter__input" 
+                            id="blur"  
+                            min="0" 
+                            max="10" 
+                            value="0" 
+                            type="range">
+                        </div>
+                        <div class="filter__output"></div>
+                    </li>
+
+                    <li class="filter">
+                        <div class="filter__wrapper">
+                            <label 
+                            class="filter__input-label" 
+                            for="hue-rotate">hue-rotate</label>
+
+                            <input 
+                            class="filter__input" 
+                            id="huerotate"  
+                            min="0" 
+                            max="360" 
+                            value="0"
+                            type="range">
+                        </div>
+                        <div class="filter__output"></div>
                     </li>
                     <li class="filter">
-                        <label for="hue-rotate">hue-rotate</label>
+                        <div class="filter__wrapper">
 
-                        <input 
-                        class="filter__input" 
-                        id="huerotate"  
-                        min="0" 
-                        max="360" 
-                        value="0"
-                        type="range">
+                            <label 
+                            class="filter__input-label" 
+                            for="saturate">saturate</label>
+                            <input 
+                            class="filter__input filter__input-saturate" 
+                            id="saturate" 
+                            min="0" 
+                            max="200"  
+                            value="100"
+                            type="range">
+                        </div>
+                        <div class="filter__output"></div>
                     </li>
                     <li class="filter">
-                        <label for="saturate">saturate</label>
-
-                        <input 
-                        class="filter__input filter__input-saturate" 
-                        id="saturate" 
-                        min="0" 
-                        max="200"  
-                        value="100"
-                        type="range">
+                        <div class="filter__wrapper">
+                            <label
+                            class="filter__input-label" 
+                            for="sepia">sepia</label>
+    
+                            <input 
+                            class="filter__input" 
+                            id="sepia" 
+                            min="0" 
+                            max="100" 
+                            value="0"
+                            type="range">
+                        </div>
+                        <div class="filter__output"></div>
                     </li>
                     <li class="filter">
-                        <label for="sepia">sepia</label>
+                        <div class="filter__wrapper">
 
-                        <input 
-                        class="filter__input" 
-                        id="sepia" 
-                        min="0" 
-                        max="100" 
-                        value="0"
-                        type="range">
-                    </li>
-                    <li class="filter">
-                        <label for="invert">invert</label>
-
-                        <input 
-                        class="filter__input" 
-                        min="0" 
-                        max="100" 
-                        id="invert" 
-                        value="0"
-                        type="range">
+                            <label 
+                            class="filter__input-label" 
+                            for="invert">invert</label>
+                            
+                            <input 
+                            class="filter__input" 
+                            min="0" 
+                            max="100" 
+                            id="invert" 
+                            value="0"
+                            type="range">
+                        </div>
+                        <div class="filter__output"></div>
                     </li>
                 </ul>
-                <input id="upload" type="file" ">
-                <button class="download__btn">download btn</button>
+                <div class="upload">
+                    <label class="upload" for="upload">Choose Image</label>
+                    <input id="upload" type="file" accept="image jpg/png">
+                </div>
+
+                <div class="buttons">
+                    <button class="download__btn">Save image</button>
+                    <button id="revert" class="revert__btn">remove filters</button>
+                </div>
             </aside>
             <section class=" picture">
                 <div class="picture__container">

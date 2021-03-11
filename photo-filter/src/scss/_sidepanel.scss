@@ -1,7 +1,69 @@
 .sidepanel {
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    // justify-content: space-between;
+    height: 95vh;
     border: 1px solid;
+}
+.filters {
+
+    &__title {
+        text-align: center;
+    }
+    display: flex;
+    flex-direction: column;
+  
+}
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__input {
+        background: transparent; 
+        border-color: transparent;
+        color: transparent;
+        transition: all ease 0.4s;
+        
+       
+        &-label {
+
+            text-align: center;
+        }
+
+        
+    }
+    &__output {
+        width: 40px;
+        height: 20px;
+        border: 2px solid #eceff1;
+        box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+    }
+}
+
+.result {
+
+}
+
+
+
+.upload {
+    margin-top: 30px;
+}
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.revert__btn {
+    
+}
+.download__btn {
+
 }
