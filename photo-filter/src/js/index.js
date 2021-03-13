@@ -3,6 +3,12 @@ const brightness = document.querySelector('#brightness');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
+let sepiaInput = document.querySelector('#sepia');
+let hueRotateInput = document.querySelector('#huerotate');
+let saturateInput = document.querySelector('#saturate');
+let blurInput = document.querySelector('#blur');
+let invertInput = document.querySelector('#invert');
+
 const revertBtn = document.querySelector('#revert');
 const output = document.querySelectorAll('.filter__output')
 const filterInputs = document.querySelectorAll('.filter__input');
@@ -13,14 +19,7 @@ const prevImgBtn = document.querySelector('.header__buttons-prev');
 
 let currentImage = 0;
 
-
-
-
-const images = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
-// const dayImages = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
-// const eveningImages = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
-// const nightImages = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
-
+const images = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'];
 
 let image = new Image();
 const reader = new FileReader();
@@ -32,35 +31,29 @@ function onFullScreen() {
     } else {
         if (document.fullscreenEnabled) document.exitFullscreen();
     }
-}
-
+};
 
 function getImage(arrImages, time) {
     let imgNum = arrImages[currentImage]
-    
     image.src = `assets/img/${time}/${imgNum}.jpg`
-    image.onload = renderImage
-    fileName = image.src.toString().slice(-14)
-    
-}
-
+    image.onload = renderImage;
+    fileName = image.src.toString().slice(-14);
+};
 
 function renderImage() {
-
     canvas.height = image.height;
     canvas.width = image.width;
     ctx.drawImage(image, 0, 0, image.width, image.height)
-}
-
-
+};
 
 function appFilter() {
-    let sepia = document.querySelector('#sepia').value;
-    let hueRotate = document.querySelector('#huerotate').value;
-    let saturate = document.querySelector('#saturate').value;
-    let blur = document.querySelector('#blur').value;
-    let invert = document.querySelector('#invert').value;
-    
+    let saturate = saturateInput.value;
+    let blur = blurInput.value;
+    let invert = invertInput.value;
+    let sepia = sepiaInput.value;
+    let hueRotate = hueRotateInput.value;
+
+
     canvas.height = image.height;
     canvas.width = image.width;
     ctx.filter = `sepia(${sepia}%) 
@@ -81,8 +74,7 @@ function removeFilters() {
     });
     ctx.filter = 'none';
     getValues()
-        ctx.drawImage(image, 0, 0, image.width, image.height);
-
+    ctx.drawImage(image, 0, 0, image.width, image.height);
 }
 
 function getValues() {
@@ -99,12 +91,11 @@ getValues()
 
 document.addEventListener('mousedown', (e) => {
     if (e.target.classList.contains('filter__input')) {
-        e.target.addEventListener('mousemove', (e) => {
+        e.target.addEventListener('mousemove', () => {
+           
             getValues();
-            appFilter()
-            
+            appFilter();
         })
-        
     }
 });
 
@@ -113,34 +104,27 @@ function download(canvas, fileName) {
     const link = document.createElement('a');
     link.download = fileName
     link.href = canvas.toDataURL('image/jpg', 1);
-    console.log(link.download);
     
     e = new MouseEvent('click');
     link.dispatchEvent(e)
 }
 
 downloadBtn.addEventListener('click', (e) => {
-    console.log(e);
-    
     let newFileName;
     if (!fileName) return;
     const fileExtension = fileName.toLowerCase().slice(-4);
     
     if (fileExtension === '.jpg' || fileExtension === '.png') {
         newFileName = fileName.substring(0, fileName.length - 4) + '-edited.jpg';
-        console.log(newFileName);
     }
     download(canvas, newFileName)
 });
 
 uploadFile.addEventListener('change', () => {
     const file = uploadFile.files[0]
-    console.log(file);
     
     if (file) {
         fileName = file.name;
-        console.log(fileName);
-        
     }
     reader.readAsDataURL(file);
     reader.addEventListener('load', () => {
@@ -152,27 +136,22 @@ uploadFile.addEventListener('change', () => {
         }
     })
 });
-
-    
-    
     
 const setImageTime = () => {
     let today = new Date();
     let hour = today.getHours();
+    console.log(hour);
     
-    if (hour > 6 && hour < 12) {
+    if (hour >= 6 && hour < 12) {
         getImage(images, 'morning');
     } else if (hour >= 12 && hour < 18) {
         getImage(images, 'day');
-        
-    } else if (hour >= 18 && hour < 24) {
+    } else if (hour >= 18 && hour < 0) {
         getImage(images, 'evening');
-        // renderImage(eveningImages)
     } else {
         getImage(images, 'night');
         
     }
-    
 }
 setImageTime()
 
@@ -182,14 +161,14 @@ nextImgBtn.addEventListener('click', () => {
         currentImage = 0;
     }
     setImageTime()
-})
+});
 prevImgBtn.addEventListener('click', () => {
     currentImage--;
     if (currentImage < 0) {
         currentImage = images.length - 1;
     }
     setImageTime()
-})
+});
 
 revertBtn.addEventListener('click', removeFilters)
 fullScreenBtn.addEventListener('click', onFullScreen);

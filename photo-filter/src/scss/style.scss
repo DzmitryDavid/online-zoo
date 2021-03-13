@@ -5,7 +5,8 @@
 
 @import 'base';
 body {
-    
+    margin: 0;
+    padding: 0;
     font-family: 'Potta One', cursive;
     font-weight: 400;
     line-height: 1.6;
@@ -36,3 +37,4 @@ ul, li, h1, h2 {
 @import 'header';
 @import 'picture';
 @import 'inputs';
+@import 'footer';
