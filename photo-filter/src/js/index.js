@@ -53,7 +53,6 @@ function appFilter() {
     let sepia = sepiaInput.value;
     let hueRotate = hueRotateInput.value;
 
-
     canvas.height = image.height;
     canvas.width = image.width;
     ctx.filter = `sepia(${sepia}%) 
@@ -140,7 +139,6 @@ uploadFile.addEventListener('change', () => {
 const setImageTime = () => {
     let today = new Date();
     let hour = today.getHours();
-    console.log(hour);
     
     if (hour >= 6 && hour < 12) {
         getImage(images, 'morning');
