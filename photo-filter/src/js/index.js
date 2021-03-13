@@ -1,101 +1,195 @@
-const uploadFile = document.querySelector('#upload')
+const uploadFile = document.querySelector('#upload');
 const brightness = document.querySelector('#brightness');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const revert = document.querySelector('#revert')
 
-
+const revertBtn = document.querySelector('#revert');
+const output = document.querySelectorAll('.filter__output')
+const filterInputs = document.querySelectorAll('.filter__input');
 const downloadBtn = document.querySelector('.download__btn');
+const fullScreenBtn = document.querySelector('.header__fullscreen');
+const nextImgBtn = document.querySelector('.header__buttons-next');
+const prevImgBtn = document.querySelector('.header__buttons-prev');
+
+let currentImage = 0;
+
+
+
+
+const images = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
+// const dayImages = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
+// const eveningImages = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
+// const nightImages = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
+
+
+let image = new Image();
 const reader = new FileReader();
 let fileName;
 
-let img = new Image();
-console.log();
-
-
-function renderImage(e) {
-    canvas.height =  img.height;
-    canvas.width = img.width;
-    // let w = canvas.width;
-    // let nw = img.naturalWidth;
-    // let nh = img.naturalHeight;
-    // let aspect = nw / nh;
-    // let h = w / aspect;
-    // canvas.height = h;
-    
-    // let val = e.target.value
-    if (e.target.classList.contains('filter__input')) {
-        let sepia = document.querySelector('#sepia').value;
-        let hueRotate = document.querySelector('#huerotate').value;
-        let saturate = document.querySelector('#saturate').value;
-        let blur = document.querySelector('#blur').value;
-        let invert = document.querySelector('#invert').value;
-
-        ctx.filter = `sepia(${sepia}%) 
-        hue-rotate(${hueRotate}deg) 
-        blur(${blur}px) 
-        saturate(${saturate}%)
-        invert(${invert}%)`;
+function onFullScreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        if (document.fullscreenEnabled) document.exitFullscreen();
     }
-    revert.addEventListener('click', () => {
-        const filters = document.querySelectorAll('.filter__input');
-        
-        filters.forEach(filter => {
-            filter.value = '0';
-            if (filter.classList.contains('filter__input-saturate')) {
-                filter.value = '100';
-            }
-        });
-
-        ctx.filter = 'none';
-        ctx.drawImage(img, 0, 0, img.width, img.height)
-    })
-    ctx.drawImage(img, 0, 0, img.width, img.height)
 }
 
-uploadFile.addEventListener('change', () => {
-    const file = uploadFile.files[0]
-    if (file) {
-        fileName = file.name;
-    }
 
-    reader.readAsDataURL(file);
+function getImage(arrImages, time) {
+    let imgNum = arrImages[currentImage]
     
-    reader.addEventListener('load', () => {
-        img = new Image();
-        img.src = reader.result;
-        
-        img.onload = function (e) {
-            renderImage(e);
-            
+    image.src = `assets/img/${time}/${imgNum}.jpg`
+    image.onload = renderImage
+    fileName = image.src.toString().slice(-14)
+    
+}
+
+
+function renderImage() {
+
+    canvas.height = image.height;
+    canvas.width = image.width;
+    ctx.drawImage(image, 0, 0, image.width, image.height)
+}
+
+
+
+function appFilter() {
+    let sepia = document.querySelector('#sepia').value;
+    let hueRotate = document.querySelector('#huerotate').value;
+    let saturate = document.querySelector('#saturate').value;
+    let blur = document.querySelector('#blur').value;
+    let invert = document.querySelector('#invert').value;
+    
+    canvas.height = image.height;
+    canvas.width = image.width;
+    ctx.filter = `sepia(${sepia}%) 
+    hue-rotate(${hueRotate}deg) 
+    blur(${blur}px) 
+    saturate(${saturate}%)
+    invert(${invert}%)`;
+
+    ctx.drawImage(image, 0, 0, image.width, image.height)
+}
+
+function removeFilters() {
+    filterInputs.forEach(filter => {
+        filter.value = '0';
+        if (filter.classList.contains('filter__input-saturate')) {
+            filter.value = '100';
         }
+    });
+    ctx.filter = 'none';
+    getValues()
+        ctx.drawImage(image, 0, 0, image.width, image.height);
+
+}
+
+function getValues() {
+    let arr = []
+    let valuesArr = Array.from(filterInputs)
+    valuesArr.map(item => {
+        arr.push(item.value)
     })
-});
+    output.forEach((item, i) => {
+        item.textContent = arr[i]
+    })
+}
+getValues()
 
-
-document.addEventListener('change', (e) => {
+document.addEventListener('mousedown', (e) => {
     if (e.target.classList.contains('filter__input')) {
-        renderImage(e)        
+        e.target.addEventListener('mousemove', (e) => {
+            getValues();
+            appFilter()
+            
+        })
+        
     }
 });
 
-// save | download
-downloadBtn.addEventListener('click', (e) => {
-    let newFileName;
-    if (!fileName) return;
-    const fileExtension = fileName.toLowerCase().slice(-4);
-
-    if (fileExtension === '.jpg' || fileExtension === '.png') {
-        newFileName = fileName.substring(0, fileName.length - 4) +'-edited.jpg';
-        console.log(newFileName);
-    }
-    download(canvas, newFileName) 
-})
 function download(canvas, fileName) {
     let e;
     const link = document.createElement('a');
     link.download = fileName
     link.href = canvas.toDataURL('image/jpg', 1);
+    console.log(link.download);
+    
     e = new MouseEvent('click');
     link.dispatchEvent(e)
 }
+
+downloadBtn.addEventListener('click', (e) => {
+    console.log(e);
+    
+    let newFileName;
+    if (!fileName) return;
+    const fileExtension = fileName.toLowerCase().slice(-4);
+    
+    if (fileExtension === '.jpg' || fileExtension === '.png') {
+        newFileName = fileName.substring(0, fileName.length - 4) + '-edited.jpg';
+        console.log(newFileName);
+    }
+    download(canvas, newFileName)
+});
+
+uploadFile.addEventListener('change', () => {
+    const file = uploadFile.files[0]
+    console.log(file);
+    
+    if (file) {
+        fileName = file.name;
+        console.log(fileName);
+        
+    }
+    reader.readAsDataURL(file);
+    reader.addEventListener('load', () => {
+        image = new Image();
+        image.src = reader.result;
+
+        image.onload = function (e) {
+            appFilter(e)
+        }
+    })
+});
+
+    
+    
+    
+const setImageTime = () => {
+    let today = new Date();
+    let hour = today.getHours();
+    
+    if (hour > 6 && hour < 12) {
+        getImage(images, 'morning');
+    } else if (hour >= 12 && hour < 18) {
+        getImage(images, 'day');
+        
+    } else if (hour >= 18 && hour < 24) {
+        getImage(images, 'evening');
+        // renderImage(eveningImages)
+    } else {
+        getImage(images, 'night');
+        
+    }
+    
+}
+setImageTime()
+
+nextImgBtn.addEventListener('click', () => {
+    currentImage++
+    if (currentImage === images.length) {
+        currentImage = 0;
+    }
+    setImageTime()
+})
+prevImgBtn.addEventListener('click', () => {
+    currentImage--;
+    if (currentImage < 0) {
+        currentImage = images.length - 1;
+    }
+    setImageTime()
+})
+
+revertBtn.addEventListener('click', removeFilters)
+fullScreenBtn.addEventListener('click', onFullScreen);

@@ -16,13 +16,22 @@
     <div class="wrapper">
 
         <header class="header">
-            <div class="header__title">
+            <h1 class="header__title">
+                <img src="assets/icons/Image.png" alt="">
                 Photo filter
-            </div>
+            </h1>
             <div class="header__buttons">
-                
-                <button class="header__buttons-next">next picture</button>
-            </div>
+                <button class="header__buttons-prev">
+                    <img src="assets/icons/Rewind.png" alt="">
+                    prev picture</button>
+                <button class="header__buttons-next">
+                    next picture
+                    <img src="assets/icons/Forward.png" alt="next image button">
+                    </button>
+                </div>
+                <div class="header__fullscreen">
+                    fullscreen
+                </div>
         </header>
         <div class="container">
             <aside class="sidepanel">
@@ -33,7 +42,6 @@
 
                     <li class="filter">
                         <div class="filter__wrapper">
-
                             <label
                             class="filter__input-label" 
                             for="blur">Blur</label>
@@ -47,7 +55,7 @@
                             value="0" 
                             type="range">
                         </div>
-                        <div class="filter__output"></div>
+                        <div class="filter__output">1000</div>
                     </li>
 
                     <li class="filter">
@@ -117,13 +125,20 @@
                     </li>
                 </ul>
                 <div class="upload">
-                    <label class="upload" for="upload">Choose Image</label>
+                    <label class="upload" for="upload">
+                        <img src="assets/icons/choose.png" alt="">
+                        Load picture</label>
                     <input id="upload" type="file" accept="image jpg/png">
                 </div>
 
                 <div class="buttons">
-                    <button class="download__btn">Save image</button>
-                    <button id="revert" class="revert__btn">remove filters</button>
+                    <button class="download__btn">
+                        <img src="assets/icons/save.png" alt="save picture icon">
+                        Save picture
+                    </button>
+                    <button id="revert" class="revert__btn">
+                        <img src="assets/icons/remove.png" alt="remove button">
+                        reset filters</button>
                 </div>
             </aside>
             <section class=" picture">
