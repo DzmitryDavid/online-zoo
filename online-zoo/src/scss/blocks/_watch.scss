@@ -1,0 +1,38 @@
+.watch {
+   
+    background-image: url('/assets/img/Background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 79rem;
+    &__title {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 129px;
+        width: 890px;
+        @include h1;
+    }
+    &__description {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-top: 3rem;
+        width: 43rem;
+        line-height: 2.7rem;
+
+    }
+    &__button {
+        margin-top: 4.6rem;
+        &-btn {
+            @include btn;
+            &-arrow {
+                margin-left: 1rem;
+            }
+        }
+
+    }
+}
+.sections__wrapper {
+    
+}

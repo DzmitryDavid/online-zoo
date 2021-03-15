@@ -1,0 +1,46 @@
+.welcome {
+    &__wrapper {
+        display: flex;
+        column-gap: 7.7rem;
+        &-eagles {
+            margin-top: 14.8rem;
+            display: flex;
+            column-gap: 4rem;
+        }
+    }
+    padding-top: 15rem;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 52.3rem;
+
+    }
+    &__title {
+        margin-top: 6.8rem;
+        @include h2;
+        &-eagles {
+            margin-top: 11.2rem;
+            @include h2;
+
+        }
+    }
+    &__description {
+        width: 56rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5.3rem;
+        line-height: 2.7rem;
+        font-size: 1.8rem;
+        font-weight: 400;
+        &-eagles {
+            width: 56rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5.3rem;
+        line-height: 2.7rem;
+        font-size: 1.8rem;
+        font-weight: 400;
+        }   
+    }
+}
