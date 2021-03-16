@@ -25,14 +25,21 @@
     &__button {
         margin-top: 4.6rem;
         &-btn {
+            transition: all ease 0.5s; 
             @include btn;
+            cursor: pointer;
             &-arrow {
                 margin-left: 1rem;
+            }
+            &:hover {
+                @include btn-hovered;
+
+            }
+            &:active {
+                @include btn-hovered;
+                transform: scale(0.97);
             }
         }
 
     }
-}
-.sections__wrapper {
-    
 }

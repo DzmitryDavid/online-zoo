@@ -20,6 +20,8 @@
     font-size: 42px;
     line-height: 51px;
     text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.01rem;
 }
 
 @mixin subheader {
@@ -41,6 +43,10 @@
     text-transform: uppercase;
     color: #fff;
     border-radius: 5px;
+    border:none;
+}
+@mixin btn-hovered {
+    background-color: #D26004;
 }
 
 $primary-color : #F58021;

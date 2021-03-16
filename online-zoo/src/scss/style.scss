@@ -16,6 +16,11 @@ ul, li , a {
     text-decoration: none;
 
 }
+button {
+    &:focus {
+        outline: 0;
+    }
+}
 body, html {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -36,3 +41,4 @@ body, html {
 @import 'blocks/header';
 @import 'blocks/watch';
 @import 'blocks/welcome';
+@import 'blocks/donation';
