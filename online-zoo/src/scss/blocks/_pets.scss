@@ -1,0 +1,151 @@
+
+.pets {
+    padding-top: 13.4rem;
+    &__title {
+        text-align: center;
+        @include h2;
+        margin-left: 20px;
+    }
+    &__subtitle {
+        margin: 0 auto;
+        margin-top: 5rem;
+        width: 92rem;
+        text-align: center;
+        @include subtitle;
+    }
+    &__btn {
+        margin: 0 auto;
+        width: 17.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10.2rem;
+        text-align: center;
+
+        &-prev {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 5px;
+            border: 1px solid $secondary-color;
+        }
+        &-next {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 6rem;
+            height: 6rem;
+            border: 1px solid $secondary-color;
+            border-radius: 5px;
+
+            img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 44rem);
+        grid-template-rows: repeat(2, 749px);
+        margin-top: 5rem;
+        gap: 4rem;
+    }
+
+    &__card {
+        position: relative;
+        background-color: $secondary-color;
+        border-radius: 5px;
+        &-text {
+            padding:  0 10px;
+        }
+        &-name {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 13px 20px;
+            border-radius: 5px 0px;
+            @include subtitle;
+            background-color: $secondary-color;
+            color: #fff;
+        }
+        &-image {
+        }
+        &-title {
+            margin-top: 2.8rem;
+            @include subtitle;
+            text-align: center;
+            color: #fff;
+        }
+        &-subtitle {
+            margin-top: 1.5rem;
+            padding: 0 4.5rem 0 4.5rem;
+            
+            text-align: center;
+            color: #fff;
+            @include descr;
+            &-eagle {
+                margin-top: 1.5rem;
+                text-align: center;
+                color: #fff;
+                @include descr;
+            }
+            &-lion {
+                margin-top: 1.5rem;
+                padding:0 3rem 0 3rem;
+                text-align: center;
+                color: #fff;
+                @include descr;
+            }
+            &-alligator {
+                margin-top: 1.5rem;
+                padding: 0 6.5rem 0 6.5rem;
+                text-align: center;
+                color: #fff;
+                @include descr;
+            }
+        }
+        &-link {
+            position: absolute;
+            bottom: 5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            @include no-bordered-btn;
+            transition: all ease 0.5s;
+            svg {
+                path {
+                    transition: all ease 0.5s;
+                }
+                margin-left: 1.1rem;
+            }
+            &:hover {
+                transition: all ease 0.5s;
+                background-color: #d26004;
+                color: #fff;
+                svg path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    &__button {
+        margin-top: 9.5rem;
+        &-main {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include empty-btn-large;
+
+            border: 1px solid $secondary-color;
+            svg {
+                margin-left: 10px;
+            }
+        }
+    }
+}

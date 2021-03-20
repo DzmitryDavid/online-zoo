@@ -1,10 +1,10 @@
 .welcome {
-    padding-bottom: 15rem;
+    padding-bottom: 14.7rem;
     &__wrapper {
         display: flex;
         column-gap: 7.7rem;
         &-eagles {
-            margin-top: 14.8rem;
+            margin-top: 14.7rem;
             display: flex;
             column-gap: 4rem;
         }
@@ -36,12 +36,12 @@
         font-weight: 400;
         &-eagles {
             width: 56rem;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 5.3rem;
-        line-height: 2.7rem;
-        font-size: 1.8rem;
-        font-weight: 400;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 5.3rem;
+            line-height: 2.7rem;
+            font-size: 1.8rem;
+            font-weight: 400;
         }   
     }
 }
