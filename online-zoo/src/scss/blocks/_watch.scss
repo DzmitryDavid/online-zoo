@@ -1,6 +1,5 @@
 .watch {
-   
-    background-image: url('/assets/img/Background.png');
+    background-image: url("/assets/img/Background.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -20,26 +19,17 @@
         margin-top: 3rem;
         width: 43rem;
         line-height: 2.7rem;
-
     }
     &__button {
         margin-top: 4.6rem;
         &-btn {
-            transition: all ease 0.5s; 
+            transition: all ease 0.5s;
             cursor: pointer;
             @include btn;
-            &-arrow {
-                margin-left: 1rem;
-            }
+
             &:hover {
                 @include btn-hovered;
-
-            }
-            &:active {
-                @include btn-hovered;
-                transform: scale(0.97);
             }
         }
-
     }
 }

@@ -12,8 +12,6 @@
     font-size: 54px;
     line-height: 65.83px;
     text-transform: uppercase;
-    color: $title-color;
-    // letter-spacing: 0.2px;
     line-height: 65.83px;
 
 }
@@ -40,6 +38,7 @@
     font-size: 1.8rem;
     font-weight: 400;
 }
+
 
 @mixin no-bordered-btn {
     display: flex;
@@ -94,6 +93,11 @@
 
 @mixin btn-hovered {
     background-color: #d26004;
+    transition: all ease 0.5s;
+    &:active {
+        transform: scale(0.96);        
+
+    }
     
 }
 

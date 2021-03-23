@@ -1,0 +1,78 @@
+.feed {
+    padding-top: 9rem;
+    background-color: $secondary-color;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        @include h2;
+        color: #fff;
+        margin-bottom: 10rem;
+
+    }
+    &__card {
+
+        padding-top: 8.5rem;
+        padding-bottom: 11rem;
+        display: flex;
+        gap: 16rem;
+
+        &-title {
+            width: 50rem;
+            @include subtitle;
+            color: #fff;
+            margin-top: 3rem;
+
+        }
+        &-content {
+            margin-top: 1.7rem;
+        }
+
+        &-description {
+            width: 56rem;
+            @include descr;
+            color: #fff;
+            margin-top: 5rem;
+            span {
+                display: inline-block;
+            }
+            &-third {
+                margin-top: 5.4rem;
+                width: 54.9rem;
+            }
+        }
+        &-two {
+            padding-bottom: 8.2rem;
+            padding-top: 8.8rem;
+        }
+    }
+    &__button {
+        margin-top: 5.3rem;
+        &-donate {
+            @include btn;
+            cursor: pointer;
+            transition: all ease 0.4s;
+            &:hover {
+                @include btn-hovered;
+            }
+        }
+
+    }
+}
+.divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__text {
+        font-weight: 500;
+        font-size: 26px;
+        letter-spacing: 0.02rem;
+        color: #fff;
+    }
+    &__line {
+        width: 1280px;
+        height: 1px;
+        background-color: #fff;
+    }
+}

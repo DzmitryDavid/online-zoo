@@ -38,8 +38,8 @@ body, html {
     width: 1920px;
 }
 .container {
-    width: 1400px;
     margin: 0 auto;
+    width: 1400px;
 
 }
 
@@ -50,3 +50,5 @@ body, html {
 @import 'blocks/welcome';
 @import 'blocks/donation';
 @import 'blocks/pets';
+@import 'blocks/feed';
+@import 'blocks/think';

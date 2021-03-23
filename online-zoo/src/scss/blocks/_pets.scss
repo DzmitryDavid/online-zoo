@@ -1,9 +1,11 @@
 
 .pets {
     padding-top: 13.4rem;
+    padding-bottom: 15rem;
     &__title {
         text-align: center;
         @include h2;
+        color: $title-color;
         margin-left: 20px;
     }
     &__subtitle {

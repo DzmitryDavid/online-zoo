@@ -20,9 +20,11 @@
     &__title {
         margin-top: 6.8rem;
         @include h2;
+        color: $title-color;
         &-eagles {
             margin-top: 11.2rem;
             @include h2;
+            color: $title-color;
 
         }
     }
