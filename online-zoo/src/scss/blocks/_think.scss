@@ -1,0 +1,92 @@
+.think {
+    position: relative;
+    padding-top: 9rem;
+    background-image: url('/assets/img/think/think-panda.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1677px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content {
+        margin-right: 4rem;
+        &-title {
+            width: 44rem;
+            color: #fff;
+            @include h2;
+        }
+        &-subtitle {
+            margin-top: 4rem;
+            width: 56rem;
+            color: #fff;
+            @include subtitle; 
+        }
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 51.5rem);
+        grid-template-rows: repeat(2, 46.3rem);
+        gap: 3rem;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        padding: 0 5rem;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        &-icon {
+            margin-top: 5rem;
+        }
+        &-title {
+            margin-top: 4rem;
+            @include subtitle;
+            color: #000;
+            
+        }
+        &-description {
+            margin-top: 2rem;
+            @include descr;
+            color: #000;
+            span {
+                display: inline-block;
+            }
+        }
+        &-subtitle {
+            text-transform: uppercase;
+            margin-top: 4.6rem;
+            color: #000;
+            font-size: 1.8rem;
+            font-weight: 600;
+            &-four {
+                margin-top: 1.9rem;
+            }
+        }
+
+    }
+    &__btn {
+        margin-top: 3rem;
+        width: 18rem;
+        @include square-btns;
+
+    }
+    &__general {
+        &-button {
+            position: absolute;
+            bottom: 15rem;
+        }
+        &-btn {
+          
+            @include empty-btn-large;
+            border: 1px solid #fff;
+            color: #fff;
+            width: 35.9rem;
+            svg {
+                transform: rotate(180deg);
+                margin-left: 10px;
+            }
+        }
+       
+    }
+}
