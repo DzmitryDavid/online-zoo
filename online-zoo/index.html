@@ -5,56 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="pages/main/css/style.css">
     <title>Online-Zoo</title>
 </head>
 <body>
-    <div class="content__wrapper">
-        <header class="header">
-            <div class="container">
-                <div class="header__wrapper">
-                    <div class="header__logo"></div>
-                    <div class="header__navigation-wrapper">
-                        <nav class="header__navigation">
-                            <ul class="header__navigation-list">
-                                <li class="header__navigation-list-link">
-                                    <a href="">About</a>
-                                </li>
-                                <li class="header__navigation-list-link">
-                                    <a href="">map</a>
-                                </li>
-                                <li class="header__navigation-list-link">
-                                    <a href="">Zoos</a>
-                                </li>
-                                <li class="header__navigation-list-link">
-                                    <a href="">Contact us</a>
-                                </li>
-                                <li class="header__navigation-list-link">
-                                    <a href="">Design</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <nav class="header__social">
-                            <ul class="header__social-icons">
-                                <a href="">
-                                        <li class="header__social-icon header__social-icon-youtube">
-                                    </a>
-                                </li>
-                                <a href="">
-                                        <li class="header__social-icon header__social-icon-instagram">
-                                    </a>
-                                </li>
-                                <a href="">
-                                        <li class="header__social-icon header__social-icon-facebook">
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo"></div>
+                <div class="header__navigation-wrapper">
+                    <nav class="header__navigation">
+                        <ul class="header__navigation-list">
+                            <li class="header__navigation-list-link">
+                                <a href="">About</a>
+                            </li>
+                            <li class="header__navigation-list-link">
+                                <a href="">map</a>
+                            </li>
+                            <li class="header__navigation-list-link">
+                                <a href="zoos/panda.html">Zoos</a>
+                            </li>
+                            <li class="header__navigation-list-link">
+                                <a href="">Contact us</a>
+                            </li>
+                            <li class="header__navigation-list-link">
+                                <a href="">Design</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="header__social">
+                        <ul class="header__social-icons">
+                            <a href="">
+                                    <li class="header__social-icon header__social-icon-youtube">
+                                </a>
+                            </li>
+                            <a href="">
+                                    <li class="header__social-icon header__social-icon-instagram">
+                                </a>
+                            </li>
+                            <a href="">
+                                    <li class="header__social-icon header__social-icon-facebook">
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            
-        </header>
+        </div>
+        
+    </header>
+
+    <div class="content__wrapper">
+        
         <section class="watch">
             <div class="container">
                 <div class="watch__content">
@@ -87,12 +90,12 @@
                         </p>
                     </div>
                     <div class="welcome__image">
-                        <img src="assets/img/welcome.png" alt="">
+                        <img src="assets/img/main/welcome/welcome.png" alt="">
                     </div>
                 </div>
                 <div class="welcome__wrapper-eagles">
                     <div class="welcome__image">
-                        <img src="assets/img/eagles.png" alt="">
+                        <img src="assets/img/main/welcome/eagles.png" alt="">
                     </div>
                     <div class="welcome__content">
                         <h2 class="welcome__title-eagles">
@@ -118,7 +121,7 @@
                     <div class="donation__action-btn">
                             <span>$ Donation Amount</span>
                         <button class="donation__btn">
-                            <img class="donation__img" src="assets/icons/Union.svg" alt="">
+                            <img class="donation__img" src="assets/icons/union.svg" alt="">
                         </button>
                     </div>
                 </div>
@@ -131,10 +134,14 @@
             <div class="pets__subtitle">Do you have a special place in your heart for animals? Who are your favorites? Perhaps you'd like to donate to special ones or all our pets? We think it's important for you to choose how your donation is used. </div>
             <div class="pets__btn">
                 <button class="pets__btn-prev">
-                    <img src="assets/icons/pets-arrow.svg" alt="animal image">
+                    <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9318 0.119971C12.1139 0.199174 12.2794 0.315255 12.4187 0.461565C12.5583 0.607505 12.6691 0.780876 12.7446 0.971748C12.8202 1.16262 12.8591 1.36724 12.8591 1.57389C12.8591 1.78055 12.8202 1.98517 12.7446 2.17604C12.6691 2.36691 12.5583 2.54028 12.4187 2.68622L6.39097 9H23.5416C23.9659 9 24.3729 9.21071 24.673 9.58579C24.973 9.96086 25.1416 10.4696 25.1416 11C25.1416 11.5304 24.973 12.0391 24.673 12.4142C24.3729 12.7893 23.9659 13 23.5416 13H6.39018L12.4187 19.3146C12.7002 19.6096 12.8584 20.0097 12.8584 20.4269C12.8584 20.8441 12.7002 21.2443 12.4187 21.5393C12.1371 21.8343 11.7553 22 11.3571 22C10.959 22 10.5771 21.8343 10.2956 21.5393L1.29962 12.1127C1.15999 11.9668 1.04921 11.7934 0.973627 11.6026C0.898043 11.4117 0.859135 11.2071 0.859135 11.0004C0.859135 10.7938 0.898043 10.5891 0.973627 10.3983C1.04921 10.2074 1.15999 10.034 1.29962 9.88808L10.2956 0.461565C10.4349 0.315255 10.6003 0.199174 10.7825 0.119971C10.9646 0.0407677 11.1599 0 11.3571 0C11.5543 0 11.7496 0.0407677 11.9318 0.119971Z" fill="#20113D"/>
+                        </svg>
                 </button>
                 <button class="pets__btn-next">
-                    <img src="assets/icons/pets-arrow.svg" alt="animal image">
+                    <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9318 0.119971C12.1139 0.199174 12.2794 0.315255 12.4187 0.461565C12.5583 0.607505 12.6691 0.780876 12.7446 0.971748C12.8202 1.16262 12.8591 1.36724 12.8591 1.57389C12.8591 1.78055 12.8202 1.98517 12.7446 2.17604C12.6691 2.36691 12.5583 2.54028 12.4187 2.68622L6.39097 9H23.5416C23.9659 9 24.3729 9.21071 24.673 9.58579C24.973 9.96086 25.1416 10.4696 25.1416 11C25.1416 11.5304 24.973 12.0391 24.673 12.4142C24.3729 12.7893 23.9659 13 23.5416 13H6.39018L12.4187 19.3146C12.7002 19.6096 12.8584 20.0097 12.8584 20.4269C12.8584 20.8441 12.7002 21.2443 12.4187 21.5393C12.1371 21.8343 11.7553 22 11.3571 22C10.959 22 10.5771 21.8343 10.2956 21.5393L1.29962 12.1127C1.15999 11.9668 1.04921 11.7934 0.973627 11.6026C0.898043 11.4117 0.859135 11.2071 0.859135 11.0004C0.859135 10.7938 0.898043 10.5891 0.973627 10.3983C1.04921 10.2074 1.15999 10.034 1.29962 9.88808L10.2956 0.461565C10.4349 0.315255 10.6003 0.199174 10.7825 0.119971C10.9646 0.0407677 11.1599 0 11.3571 0C11.5543 0 11.7496 0.0407677 11.9318 0.119971Z" fill="#20113D"/>
+                        </svg>
                 </button>
             </div>
             <div class="pets__cards">
@@ -145,7 +152,7 @@
                         </div>
                     </div>
                     <div class="pets__card-image">
-                        <img src="assets/img/cards/lucas.png" alt="animal image">
+                        <img src="assets/img/main/cards/lucas.png" alt="animal image">
                     </div>
                     
                         <div class="pets__card-title">Giant Panda</div>
@@ -159,7 +166,7 @@
                 <div class="pets__card">
                     <div class="pets__card-name">Andy</div>
                     <div class="pets__card-image">
-                        <img src="assets/img/cards/andy.png" alt="animal image">
+                        <img src="assets/img/main/cards/andy.png" alt="animal image">
                     </div>
                     <div class="pets__card-title">Madagascarian Lemur </div>
                     <div class="pets__card-subtitle">Lemurs are considered the world’s most endangered group of mammals.</div>
@@ -172,7 +179,7 @@
                 <div class="pets__card">
                     <div class="pets__card-name">Glen</div>
                     <div class="pets__card-image">
-                        <img src="assets/img/cards/glen.png" alt="animal image">
+                        <img src="assets/img/main/cards/glen.png" alt="animal image">
                     </div>
                     <div class="pets__card-title">Gorilla in Congo </div>
                     <div class="pets__card-subtitle">Variety of snacks very important for the healthy life of gorillas and his plenty of babies.</div>
@@ -189,7 +196,7 @@
                         </div>
                     </div>
                     <div class="pets__card-image">
-                        <img src="assets/img/cards/mike.png" alt="animal image">
+                        <img src="assets/img/main/cards/mike.png" alt="animal image">
                     </div>
                         <div class="pets__card-title">Chinese Alligator</div>
                         <div class="pets__card-subtitle-alligator">From nose to tail, belly to back, hard scales protect this petite alligator. </div>
@@ -207,7 +214,7 @@
                         </div>
                     </div>
                     <div class="pets__card-image">
-                        <img src="assets/img/cards/sam-lora.png" alt="animal image">
+                        <img src="assets/img/main/cards/sam-lora.png" alt="animal image">
                     </div>
                     <div class="pets__card-title">West End Bald Eagles</div>
                     <div class="pets__card-subtitle-eagle">
@@ -228,7 +235,7 @@
                         </div>
                     </div>
                     <div class="pets__card-image">
-                        <img src="assets/img/cards/liz.png" alt="animal image">
+                        <img src="assets/img/main/cards/liz.png" alt="animal image">
                     </div>
                     <div class="pets__card-title">Australian Koala</div>
                     <div class="pets__card-subtitle">The elevated walkways bring you to eye level with the koalas as they perch in their forest. </div>
@@ -245,7 +252,7 @@
                         </div>
                     </div>
                     <div class="pets__card-image">
-                        <img src="assets/img/cards/shake.png" alt="animal image">
+                        <img src="assets/img/main/cards/shake.png" alt="animal image">
                     </div>
                     <div class="pets__card-title">African Lion</div>
                     <div class="pets__card-subtitle-lion">Lions roam the savannas and grasslands of Africa, hunting and raising cubs in the pride.</div>
@@ -262,7 +269,7 @@
                         </div>
                     </div>
                     <div class="pets__card-image">
-                        <img src="assets/img/cards/senja.png" alt="animal image">
+                        <img src="assets/img/main/cards/senja.png" alt="animal image">
                     </div>
                     <div class="pets__card-title">Sumatran Tiger</div>
                     <div class="pets__card-subtitle">Sumatran Tigers are the smallest of the five sub-species, and are found in Indonesia.</div>
@@ -294,11 +301,11 @@
             <div class="feed__wrapper">
                 <div class="feed__card">
                     <div class="feed__card-image">
-                        <img src="assets/img/feed/monkey.png" alt="">
+                        <img src="assets/img/main/feed/monkey.png" alt="">
                     </div>
                     <div class="feed__card-content">
                         <div class="feed__card-icon">
-                            <img src="assets/icons/feed/heart.svg" alt="">
+                            <img src="assets/icons/main/feed/heart.svg" alt="">
                         </div>
                         <div class="feed__card-title">Your donation has an impact</div>
                         <div class="feed__card-description">Providing our animals with high-quality nutritious diets is just one element of animal care at our Zoo. We do all the best so that our animals can eat food similar to what they might find in their natural habitats while making sure they get the right mix of nutrients, proteins, and vitamins to be happy and healthy. Please help us provide nutritious food for our animals by donating. The generosity of people like you can help us make sure that our animals enjoy good food that keeps them in great condition.</div>
@@ -310,11 +317,11 @@
                 </div>
                 <div class="feed__card feed__card-two">
                     <div class="feed__card-image">
-                        <img src="assets/img/feed/banana.png" alt="">
+                        <img src="assets/img/main/feed/banana.png" alt="">
                     </div>
                     <div class="feed__card-content">
                         <div class="feed__card-icon">
-                            <img src="assets/icons/feed/donate.svg" alt="image monkey">
+                            <img src="assets/icons/main/feed/donate.svg" alt="image monkey">
                         </div>
                         <div class="feed__card-title">Make a donation</div>
                         <div class="feed__card-description">You can donate through your credit card without any fees. It is easy and safe. We do not keep donors' personal information <span>
@@ -332,11 +339,11 @@
                 </div>
                 <div class="feed__card">
                     <div class="feed__card-image">
-                        <img src="assets/img/feed/monkey-banana.png" alt="">
+                        <img src="assets/img/main/feed/monkey-banana.png" alt="">
                     </div>
                     <div class="feed__card-content">
                         <div class="feed__card-icon">
-                            <img src="assets/icons/feed/food.svg" alt="image monkey">
+                            <img src="assets/icons/main/feed/food.svg" alt="image monkey">
                         </div>
                         <div class="feed__card-title">Bring your food charity — straight to your favorites pets.</div>
                         <div class="feed__card-description feed__card-description-third">After your donation, the animal receives its favorite foods. You can support your favorite animals or any animal you care about and make a real personal impact. Never doubt that your donation can make a difference even if it is small. </div>
@@ -359,7 +366,7 @@
                 <div class="think__cards">
                     <div class="think__card">
                         <div class="think__card-icon">
-                            <img src="assets/icons/think/quotes.svg" alt="quotes image">
+                            <img src="assets/icons/main/think/quotes.svg" alt="quotes image">
                         </div>
                         <div class="think__card-title">New Jersey, June 2020</div>
                         <div class="think__card-description">I am writing to thank you for your mission is to bring people closer to nature! Like myself, children were very impressed by the opportunity to explore the life of incredible animals in real-time. </div>
@@ -367,7 +374,7 @@
                     </div>
                     <div class="think__card">
                         <div class="think__card-icon">
-                            <img src="assets/icons/think/quotes.svg" alt="quotes image">
+                            <img src="assets/icons/main/think/quotes.svg" alt="quotes image">
                         </div>
                         <div class="think__card-title">Toronto, November 2020</div>
                         <div class="think__card-description">We so enjoy the ever-evolving selection of animals from around the globe. THANK YOU for sharing these fascinating animal friends with us so that we may learn and increase our understanding of the animal kingdom.</div>
@@ -375,7 +382,7 @@
                     </div>
                     <div class="think__card">
                         <div class="think__card-icon">
-                            <img src="assets/icons/think/quotes.svg" alt="quotes image">
+                            <img src="assets/icons/main/think/quotes.svg" alt="quotes image">
                         </div>
                         <div class="think__card-title">London, February 2020</div>
                         <div class="think__card-description">A fantastic experience for kids and adults alike! If anyone is looking for an attraction that educates people on wild animals – <span>
@@ -385,7 +392,7 @@
                     </div>
                     <div class="think__card">
                         <div class="think__card-icon">
-                            <img src="assets/icons/think/quotes.svg" alt="quotes image">
+                            <img src="assets/icons/main/think/quotes.svg" alt="quotes image">
                         </div>
                         <div class="think__card-title">Amsterdam, June 2020</div>
                         <div class="think__card-description">I want to thank you for the amazing sites you find to put your cameras to let each of us see things that we would probably never see on our own. There are so many positives on Zoo Online and I'm grateful for it. Thank you so much!</div>
@@ -393,10 +400,15 @@
                     </div>
                     <div class="think__btn">
                         <button class="think__btn-prev">
-                            <img src="assets/icons/think/arrow-white.svg" alt="">
+                            <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9318 0.119971C12.1139 0.199174 12.2794 0.315255 12.4187 0.461565C12.5583 0.607505 12.6691 0.780876 12.7446 0.971748C12.8202 1.16262 12.8591 1.36724 12.8591 1.57389C12.8591 1.78055 12.8202 1.98517 12.7446 2.17604C12.6691 2.36691 12.5583 2.54028 12.4187 2.68622L6.39097 9H23.5416C23.9659 9 24.3729 9.21071 24.673 9.58579C24.973 9.96086 25.1416 10.4696 25.1416 11C25.1416 11.5304 24.973 12.0391 24.673 12.4142C24.3729 12.7893 23.9659 13 23.5416 13H6.39018L12.4187 19.3146C12.7002 19.6096 12.8584 20.0097 12.8584 20.4269C12.8584 20.8441 12.7002 21.2443 12.4187 21.5393C12.1371 21.8343 11.7553 22 11.3571 22C10.959 22 10.5771 21.8343 10.2956 21.5393L1.29962 12.1127C1.15999 11.9668 1.04921 11.7934 0.973627 11.6026C0.898043 11.4117 0.859135 11.2071 0.859135 11.0004C0.859135 10.7938 0.898043 10.5891 0.973627 10.3983C1.04921 10.2074 1.15999 10.034 1.29962 9.88808L10.2956 0.461565C10.4349 0.315255 10.6003 0.199174 10.7825 0.119971C10.9646 0.0407677 11.1599 0 11.3571 0C11.5543 0 11.7496 0.0407677 11.9318 0.119971Z" fill="white"/>
+                                </svg>
+                                
                         </button>
                         <button class="think__btn-next">
-                            <img src="assets/icons/think/arrow-white.svg" alt="">
+                            <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9318 0.119971C12.1139 0.199174 12.2794 0.315255 12.4187 0.461565C12.5583 0.607505 12.6691 0.780876 12.7446 0.971748C12.8202 1.16262 12.8591 1.36724 12.8591 1.57389C12.8591 1.78055 12.8202 1.98517 12.7446 2.17604C12.6691 2.36691 12.5583 2.54028 12.4187 2.68622L6.39097 9H23.5416C23.9659 9 24.3729 9.21071 24.673 9.58579C24.973 9.96086 25.1416 10.4696 25.1416 11C25.1416 11.5304 24.973 12.0391 24.673 12.4142C24.3729 12.7893 23.9659 13 23.5416 13H6.39018L12.4187 19.3146C12.7002 19.6096 12.8584 20.0097 12.8584 20.4269C12.8584 20.8441 12.7002 21.2443 12.4187 21.5393C12.1371 21.8343 11.7553 22 11.3571 22C10.959 22 10.5771 21.8343 10.2956 21.5393L1.29962 12.1127C1.15999 11.9668 1.04921 11.7934 0.973627 11.6026C0.898043 11.4117 0.859135 11.2071 0.859135 11.0004C0.859135 10.7938 0.898043 10.5891 0.973627 10.3983C1.04921 10.2074 1.15999 10.034 1.29962 9.88808L10.2956 0.461565C10.4349 0.315255 10.6003 0.199174 10.7825 0.119971C10.9646 0.0407677 11.1599 0 11.3571 0C11.5543 0 11.7496 0.0407677 11.9318 0.119971Z" fill="white"/>
+                                </svg>
                         </button>
                     </div>
                 </div>
@@ -411,6 +423,131 @@
             </div>
         </div>
     </section>
-    </div>
-</body>
+    <section class="care">
+        <div class="container">
+            <div class="care__title">care for the animals you love </div>
+            <div class="care__subtitle">You can help to look after the animals you love with your gift today
+            </div>
+            <div class="care__cards">
+                <div class="care__card care__card-first">
+                    <div class="care__card-image">
+                        <img src="assets/img/main/care/koala.png" alt="">
+                    </div>
+                    </div>
+                <div class="care__card">
+                    <div class="care__card-image">
+                        <img src="assets/img/main/care/care-panda.png" alt="">
+                    </div>
+                    <div class="care__card-description">
+                        <span>
+                            Your $30 could give Lucas
+                        </span> 
+                        a slice of panda cake, made with our secret recipe.</div>
+                    <div class="care__card-button">
+                        <button 
+                        class="care__card-button-feed">
+                        feed
+                        <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0682 0.119971C13.8861 0.199174 13.7206 0.315255 13.5813 0.461565C13.4417 0.607505 13.3309 0.780876 13.2554 0.971748C13.1798 1.16262 13.1409 1.36724 13.1409 1.57389C13.1409 1.78055 13.1798 1.98517 13.2554 2.17604C13.3309 2.36691 13.4417 2.54028 13.5813 2.68622L19.609 9H2.4584C2.03405 9 1.62709 9.21071 1.32703 9.58579C1.02697 9.96086 0.858398 10.4696 0.858398 11C0.858398 11.5304 1.02697 12.0391 1.32703 12.4142C1.62709 12.7893 2.03405 13 2.4584 13H19.6098L13.5813 19.3146C13.2998 19.6096 13.1416 20.0097 13.1416 20.4269C13.1416 20.8441 13.2998 21.2443 13.5813 21.5393C13.8629 21.8343 14.2447 22 14.6429 22C15.041 22 15.4229 21.8343 15.7044 21.5393L24.7004 12.1127C24.84 11.9668 24.9508 11.7934 25.0264 11.6026C25.102 11.4117 25.1409 11.2071 25.1409 11.0004C25.1409 10.7938 25.102 10.5891 25.0264 10.3983C24.9508 10.2074 24.84 10.034 24.7004 9.88808L15.7044 0.461565C15.5651 0.315255 15.3997 0.199174 15.2175 0.119971C15.0354 0.0407677 14.8401 0 14.6429 0C14.4457 0 14.2504 0.0407677 14.0682 0.119971Z" fill="#f58021"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="care__card">
+                    <div class="care__card-image">
+                        <img src="assets/img/main/care/care-tiger.png" alt="">
+                    </div>
+                    <div class="care__card-description"> Your $150 will help to care for Senja,
+                        <span>
+                            a Sumatran tiger, for three weeks.
+                        </span> 
+                    </div>
+                    <div class="care__card-button">
+                        <button 
+                        class="care__card-button-feed">
+                        feed
+                        <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0682 0.119971C13.8861 0.199174 13.7206 0.315255 13.5813 0.461565C13.4417 0.607505 13.3309 0.780876 13.2554 0.971748C13.1798 1.16262 13.1409 1.36724 13.1409 1.57389C13.1409 1.78055 13.1798 1.98517 13.2554 2.17604C13.3309 2.36691 13.4417 2.54028 13.5813 2.68622L19.609 9H2.4584C2.03405 9 1.62709 9.21071 1.32703 9.58579C1.02697 9.96086 0.858398 10.4696 0.858398 11C0.858398 11.5304 1.02697 12.0391 1.32703 12.4142C1.62709 12.7893 2.03405 13 2.4584 13H19.6098L13.5813 19.3146C13.2998 19.6096 13.1416 20.0097 13.1416 20.4269C13.1416 20.8441 13.2998 21.2443 13.5813 21.5393C13.8629 21.8343 14.2447 22 14.6429 22C15.041 22 15.4229 21.8343 15.7044 21.5393L24.7004 12.1127C24.84 11.9668 24.9508 11.7934 25.0264 11.6026C25.102 11.4117 25.1409 11.2071 25.1409 11.0004C25.1409 10.7938 25.102 10.5891 25.0264 10.3983C24.9508 10.2074 24.84 10.034 24.7004 9.88808L15.7044 0.461565C15.5651 0.315255 15.3997 0.199174 15.2175 0.119971C15.0354 0.0407677 14.8401 0 14.6429 0C14.4457 0 14.2504 0.0407677 14.0682 0.119971Z" fill="#f58021"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="care__card">
+                    <div class="care__card-image">
+                        <img src="assets/img/main/care/care-lemur.png" alt="">
+                    </div>
+                    <div class="care__card-description">With your support, we can give Andy his favorite fruits. Especially when it's not fruit season in its natural habitat.</div>
+                    <div class="care__card-button">
+                        <button 
+                        class="care__card-button-feed">
+                        feed
+                        <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0682 0.119971C13.8861 0.199174 13.7206 0.315255 13.5813 0.461565C13.4417 0.607505 13.3309 0.780876 13.2554 0.971748C13.1798 1.16262 13.1409 1.36724 13.1409 1.57389C13.1409 1.78055 13.1798 1.98517 13.2554 2.17604C13.3309 2.36691 13.4417 2.54028 13.5813 2.68622L19.609 9H2.4584C2.03405 9 1.62709 9.21071 1.32703 9.58579C1.02697 9.96086 0.858398 10.4696 0.858398 11C0.858398 11.5304 1.02697 12.0391 1.32703 12.4142C1.62709 12.7893 2.03405 13 2.4584 13H19.6098L13.5813 19.3146C13.2998 19.6096 13.1416 20.0097 13.1416 20.4269C13.1416 20.8441 13.2998 21.2443 13.5813 21.5393C13.8629 21.8343 14.2447 22 14.6429 22C15.041 22 15.4229 21.8343 15.7044 21.5393L24.7004 12.1127C24.84 11.9668 24.9508 11.7934 25.0264 11.6026C25.102 11.4117 25.1409 11.2071 25.1409 11.0004C25.1409 10.7938 25.102 10.5891 25.0264 10.3983C24.9508 10.2074 24.84 10.034 24.7004 9.88808L15.7044 0.461565C15.5651 0.315255 15.3997 0.199174 15.2175 0.119971C15.0354 0.0407677 14.8401 0 14.6429 0C14.4457 0 14.2504 0.0407677 14.0682 0.119971Z" fill="#f58021"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="care__card">
+                    <div class="care__card-image">
+                        <img src="assets/img/main/care/care-eagles.png" alt="">
+                    </div>
+                    <div class="care__card-description">Sam & Lora have hatched and raised numerous young and will be happy with your help. </div>
+                    <div class="care__card-button">
+                        <button 
+                        class="care__card-button-feed">
+                        feed
+                        <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0682 0.119971C13.8861 0.199174 13.7206 0.315255 13.5813 0.461565C13.4417 0.607505 13.3309 0.780876 13.2554 0.971748C13.1798 1.16262 13.1409 1.36724 13.1409 1.57389C13.1409 1.78055 13.1798 1.98517 13.2554 2.17604C13.3309 2.36691 13.4417 2.54028 13.5813 2.68622L19.609 9H2.4584C2.03405 9 1.62709 9.21071 1.32703 9.58579C1.02697 9.96086 0.858398 10.4696 0.858398 11C0.858398 11.5304 1.02697 12.0391 1.32703 12.4142C1.62709 12.7893 2.03405 13 2.4584 13H19.6098L13.5813 19.3146C13.2998 19.6096 13.1416 20.0097 13.1416 20.4269C13.1416 20.8441 13.2998 21.2443 13.5813 21.5393C13.8629 21.8343 14.2447 22 14.6429 22C15.041 22 15.4229 21.8343 15.7044 21.5393L24.7004 12.1127C24.84 11.9668 24.9508 11.7934 25.0264 11.6026C25.102 11.4117 25.1409 11.2071 25.1409 11.0004C25.1409 10.7938 25.102 10.5891 25.0264 10.3983C24.9508 10.2074 24.84 10.034 24.7004 9.88808L15.7044 0.461565C15.5651 0.315255 15.3997 0.199174 15.2175 0.119971C15.0354 0.0407677 14.8401 0 14.6429 0C14.4457 0 14.2504 0.0407677 14.0682 0.119971Z" fill="#f58021"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="care__button">
+                <button class="care__button-main">choose your favourite
+                    <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0682 0.119971C13.8861 0.199174 13.7206 0.315255 13.5813 0.461565C13.4417 0.607505 13.3309 0.780876 13.2554 0.971748C13.1798 1.16262 13.1409 1.36724 13.1409 1.57389C13.1409 1.78055 13.1798 1.98517 13.2554 2.17604C13.3309 2.36691 13.4417 2.54028 13.5813 2.68622L19.609 9H2.4584C2.03405 9 1.62709 9.21071 1.32703 9.58579C1.02697 9.96086 0.858398 10.4696 0.858398 11C0.858398 11.5304 1.02697 12.0391 1.32703 12.4142C1.62709 12.7893 2.03405 13 2.4584 13H19.6098L13.5813 19.3146C13.2998 19.6096 13.1416 20.0097 13.1416 20.4269C13.1416 20.8441 13.2998 21.2443 13.5813 21.5393C13.8629 21.8343 14.2447 22 14.6429 22C15.041 22 15.4229 21.8343 15.7044 21.5393L24.7004 12.1127C24.84 11.9668 24.9508 11.7934 25.0264 11.6026C25.102 11.4117 25.1409 11.2071 25.1409 11.0004C25.1409 10.7938 25.102 10.5891 25.0264 10.3983C24.9508 10.2074 24.84 10.034 24.7004 9.88808L15.7044 0.461565C15.5651 0.315255 15.3997 0.199174 15.2175 0.119971C15.0354 0.0407677 14.8401 0 14.6429 0C14.4457 0 14.2504 0.0407677 14.0682 0.119971Z" fill="#20113d"/>
+                    </svg>    
+                    </button>
+                </div>
+                <div class="care__image">
+                    <img src="assets/img/main/care/touch.png" alt="image touch">
+                </div>
+            </div>
+        </section>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <nav class="footer__logos">
+                        <a href="">
+                            <img src="assets/icons/main/footer/logo.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="" alt="">
+                        </a>
+                        <a href="">
+                            <img src="" alt="">
+                        </a>
+                    </nav>
+                    <nav class="footer__links-nav">
+                        <ul class="footer__links">
+                            <li class="footer__link">
+                                <a href="">About</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="">map</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="">Zoos</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="">Contact us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>

@@ -10,14 +10,13 @@
         justify-content: space-between;
     }
     &__logo {
-        background-image: url('/assets/icons/Logo.svg');
+        background-image: url("../../../../assets/icons/Logo.svg");
         background-size: cover;
         width: 96px;
         height: 50px;
     }
 
     &__navigation {
-        
         width: 556px;
         &-wrapper {
             display: flex;
@@ -36,7 +35,7 @@
                     color: #000;
                 }
                 &:first-child a {
-                    color: #00A092;
+                    color: #00a092;
                 }
             }
         }
@@ -46,32 +45,30 @@
         &-icons {
             display: flex;
             justify-content: space-between;
-            
         }
         &-icon {
             display: flex;
             justify-content: space-between;
-            cursor:pointer;
+            cursor: pointer;
             transition: all ease 0.5s;
             &:hover {
                 transform: scale(1.1);
             }
-            &-youtube  {
-                background-image: url('/assets/icons/YouTube.svg');
+            &-youtube {
+                background-image: url("../../../../../assets/icons/YouTube.svg");
                 width: 40px;
                 height: 40px;
             }
-            &-instagram  {
-                background-image: url('/assets/icons/Instagram.svg');
+            &-instagram {
+                background-image: url("../../../../../assets/icons/Instagram.svg");
                 width: 40px;
                 height: 40px;
             }
-            &-facebook  {
-                background-image: url('/assets/icons/Facebook.svg');
+            &-facebook {
+                background-image: url("../../../../../assets/icons/Facebook.svg");
                 width: 40px;
                 height: 40px;
             }
-            
         }
     }
 }
