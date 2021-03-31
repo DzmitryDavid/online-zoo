@@ -37,7 +37,12 @@
             color: #fff;
             text-transform: uppercase;
             @include descr;
-
+            cursor: pointer;
+            transition: all ease 0.5s;
+            &:hover {
+                transition: all ease 0.5s;
+                box-shadow: 0 7px 7px -6px #fff;
+            }
         }
         display: flex;
         justify-content: space-between;
@@ -53,6 +58,12 @@
         &-link {
             @include descr;
             color: #fff;
+            cursor: pointer;
+            transition: all ease 0.5s;
+            &:hover {
+                transition: all ease 0.5s;
+                box-shadow: 0 7px 7px -7px #fff;
+            }
         }
     }
 
@@ -86,5 +97,12 @@
         display: flex;
         width: 20rem;
         justify-content: space-between;
+        &-icon {
+            cursor: pointer;
+            transition: all ease 0.5s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
     }
 }
