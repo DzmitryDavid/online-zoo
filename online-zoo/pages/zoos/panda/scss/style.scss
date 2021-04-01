@@ -1,11 +1,14 @@
-@import 'base';
-
-* {
-    margin:0;
+@import "base";
+*,
+*::after,
+::before {
+    margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
-ul, li , a {
+ul,
+li,
+a {
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -19,9 +22,9 @@ button {
         outline: 0;
     }
 }
-body, html {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+body,
+html {
+    font-family: "Montserrat", sans-serif;
     width: 100%;
     font-weight: 600;
     padding: 0;
@@ -32,11 +35,11 @@ body, html {
 .container {
     margin: 0 auto;
     width: 140rem;
-
 }
 
-
-
-@import 'header';
-@import 'live';
-@import 'sidepanel';
+@import "header";
+@import "live";
+@import "sidepanel";
+@import 'donation';
+@import 'know';
+@import 'footer';
