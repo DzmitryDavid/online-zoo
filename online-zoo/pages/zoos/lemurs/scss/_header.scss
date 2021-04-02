@@ -6,6 +6,7 @@
     opacity: 0;
 }
 .header {
+    // position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,8 +48,6 @@
                     }
                 }
                 &:nth-child(3) a {
-                    border-bottom: 2px solid;
-                    margin-bottom: 2rem;
                     cursor: default;
                     color: #00a092;
                 }

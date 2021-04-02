@@ -1,14 +1,14 @@
-
-
 .sidepanel {
+    position: sticky;
     &__wrapper {
         position: absolute;
         left: 0;
+        
     }
     &__nav {
         width: 100%;
     }
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +47,7 @@
                 transition: transform ease 0.5s;
                 transform: scale(1.15);
             }
-        }    
+        }
         &-down {
             display: flex;
             align-items: center;
@@ -55,7 +55,6 @@
             width: 100%;
             height: 8rem;
             img {
-
                 cursor: pointer;
                 transition: transform ease 0.5s;
                 &:hover {
@@ -98,7 +97,7 @@
         height: 17rem;
         width: 100%;
         border-bottom: 1px solid #fff;
-        
+
         &-logo {
             position: relative;
             display: flex;
@@ -115,7 +114,6 @@
             &:hover .sidepanel__tooltip-text {
                 visibility: visible;
                 transition: all ease 0.5s;
-                
             }
         }
     }
@@ -126,7 +124,7 @@
         height: 17rem;
         width: 100%;
         border-bottom: 1px solid #fff;
-        
+
         &-logo {
             position: relative;
             display: flex;
@@ -139,7 +137,6 @@
             transition: all ease 0.5s;
             &:hover {
                 background-color: #fff;
-
             }
             &:hover .sidepanel__tooltip-text {
                 visibility: visible;
@@ -154,7 +151,7 @@
         height: 17rem;
         width: 100%;
         border-bottom: 1px solid #fff;
-        
+
         &-logo {
             position: relative;
             display: flex;
@@ -165,20 +162,18 @@
             width: 12rem;
             height: 12rem;
             transition: all ease 0.5s;
-            
+
             &:hover {
                 background-color: #fff;
-
             }
             &:hover .sidepanel__tooltip-text {
                 visibility: visible;
                 transition: all ease 0.5s;
-
             }
         }
     }
-    
-    &__tooltip { 
+
+    &__tooltip {
         visibility: hidden;
         min-width: 10rem;
         height: 3rem;
@@ -195,7 +190,5 @@
             @include descr;
             line-height: 2.5rem;
         }
-        
-        
     }
 }

@@ -1,21 +1,25 @@
 .sidepanel {
+    position: sticky;
+    // left: 0;
+    // height: 82.5rem;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    top: 0;
+    width: 22rem;
+    background-color: $secondary-color;
     &__wrapper {
         position: absolute;
-        display: flex;
-        height: 84.6rem;
-        flex-direction: column;
-        align-items: center;
-        top: 11rem;
-        width: 22rem;
-        background-color: $secondary-color;
+        top: 0;
+        height: 3259px;
     }
     &__nav {
         width: 100%;
+        position: sticky !important;
     }
 
-
     &__live {
-        position: absolute;
+        // position: relative;
         display: flex;
         left: 0;
         padding: 8px 25px;

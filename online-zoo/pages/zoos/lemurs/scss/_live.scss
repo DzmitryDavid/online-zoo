@@ -1,17 +1,15 @@
 .live {
     // padding-left: 26rem;
+    // position: relative;
     display: flex;
     &__video {
-
         position: relative;
     }
-    height: 1497px;
     &__description {
         position: relative;
         display: flex;
         justify-content: center;
         padding-top: 5.4rem;
-        
     }
     &__title {
         @include h2;
@@ -22,7 +20,7 @@
         position: absolute;
         right: -9px;
         top: 5rem;
-        
+
         button {
             @include btn;
             &:hover {
@@ -56,8 +54,7 @@
         }
 
         &-frame {
-            
-            max-width: 32rem ;
+            max-width: 32rem;
             height: 209px;
         }
         &-title {
@@ -66,9 +63,8 @@
             text-align: center;
             @include h3;
             color: #000;
-            
         }
-       
+
         &-wrapper {
             margin-top: 3rem;
             padding-left: 13rem;
@@ -79,7 +75,6 @@
                 grid-template-columns: repeat(3, 32rem);
                 grid-template-rows: 20.9rem;
                 column-gap: 4rem;
-    
             }
         }
         &-arrow {
@@ -104,9 +99,7 @@
                     cursor: pointer;
                     transform: scale(1.15);
                 }
-
             }
         }
     }
-
 }

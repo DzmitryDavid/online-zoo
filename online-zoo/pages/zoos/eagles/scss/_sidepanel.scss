@@ -1,6 +1,6 @@
 .sidepanel {
+    position: sticky;
     &__wrapper {
-        position: sticky;
         display: flex;
         height: 84.6rem;
         flex-direction: column;
