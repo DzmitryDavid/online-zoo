@@ -19,22 +19,26 @@
         }
         &-subtitle {
             span {
+                display: block;
                 filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25%));
                 @include subtitle;
+                p {
+                   margin: 0 auto;
+                    width: 85%;
+                }
 
             }
             text-align: center;
             width: 91.9rem;
             margin: 0 auto;
             margin-top: 3rem;
-            
 
         }
     }
     &__info {
-        margin-top: 14.7rem;
+        margin-top: 14rem;
         display: flex;
-        gap: 12rem;
+        gap: 22rem;
         flex-wrap: wrap;
         &-content {
            
@@ -43,7 +47,7 @@
                 @include subtitle;
                 display: flex;
                 justify-self: center;
-                align-items:baseline;
+                align-items: baseline;
             }
             &-descr {
                 margin-left: 1rem;
@@ -74,7 +78,7 @@
                 display: block;
             }
             margin-top: 5rem;
-            width: 116rem;
+            width: 115rem;
             @include descr;
         }
     }

@@ -29,6 +29,10 @@
         display: flex;
         justify-content: space-between;
         width: 41.4rem;
+        a {
+            cursor: default;
+
+        }
     }
 
     &__links {
@@ -37,7 +41,6 @@
             color: #fff;
             text-transform: uppercase;
             @include descr;
-            cursor: pointer;
             transition: all ease 0.5s;
             &:hover {
                 transition: all ease 0.5s;

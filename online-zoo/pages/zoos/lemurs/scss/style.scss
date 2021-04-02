@@ -1,0 +1,53 @@
+@import "base";
+*,
+*::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    &:active {
+        outline: 0;
+    }
+}
+body,
+html {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    font-weight: 600;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 62.5%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 140rem;
+}
+.overlay {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+@import "header";
+@import "live";
+@import "sidepanel";
+@import "donation";
+@import "know";
+@import "footer";
