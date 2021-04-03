@@ -8,13 +8,13 @@
 	<link rel="shortcut icon" href="../../../assets/icons/favicon.svg" type="image/x-icon" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Zoos Eagles</title>
 </head>
 
 <body>
 
-	<h1 class="hidden">online zoo</h1>
+	<h1 class="visually-hidden">online zoo</h1>
 	<header class="header">
 		<div class="container">
 			<div class="header__wrapper">
@@ -32,7 +32,7 @@
 								<a href="">map</a>
 							</li>
 							<li class="header__navigation-list-link">
-								<a href="#">Zoos</a>
+								<a class="link-active" href="#">Zoos</a>
 							</li>
 							<li class="header__navigation-list-link">
 								<a href="">Contact us</a>
@@ -63,45 +63,44 @@
 		</div>
 	</header>
 
-
-	<main>
+	<main class="main">
 
 		<div class="sidepanel__wrapper">
 			<aside class="sidepanel">
 				<div class="sidepanel__live">
 					live
-					<img src="../../../assets/icons/zoos/panda/live-icon.svg" alt="live image">
+					<img src="../../../assets/icons/zoos/live-icon.svg" alt="live camera image">
 				</div>
 				<div class="sidepanel__arrow">
-					<img src="../../../assets/icons/zoos/panda/arrows.svg" alt="">
+					<img src="../../../assets/icons/zoos/arrows.svg" alt="arrows-right image">
 				</div>
 				<ul class="sidepanel__nav">
 					<li class="sidepanel__active">
 						<a class="sidepanel__active-logo">
-							<img src="../../../assets/icons/zoos/panda/lemur-logo.svg" alt="">
+							<img src="../../../assets/icons/zoos/lemur-logo.svg" alt="lemur icon">
 						</a>
 					</li>
-					<li class="sidepanel__eagle">
-						<a class="sidepanel__eagle-logo" href="../../../pages/zoos/panda/panda.html">
-							<img src="../../../assets/icons/zoos/panda/panda-logo.svg" alt="">
+					<li class="sidepanel__second">
+						<a class="sidepanel__second-logo" href="../../../pages/zoos/panda/panda.html">
+							<img src="../../../assets/icons/zoos/panda-logo.svg" alt="panda icon">
 							<div class="sidepanel__tooltip">
 								<span class="sidepanel__tooltip-text">Panda, Eastern Asia
 								</span>
 							</div>
 						</a>
 					</li>
-					<li class="sidepanel__gorilla">
-						<a class="sidepanel__gorilla-logo" href="../../zoos/eagles/eagles.html">
-							<img src="../../../assets/icons/zoos/panda/eagle-logo.svg" alt="">
+					<li class="sidepanel__third">
+						<a class="sidepanel__third-logo" href="../../zoos/eagles/eagles.html">
+							<img src="../../../assets/icons/zoos/eagle-logo.svg" alt="eagle icon">
 							<div class="sidepanel__tooltip">
 								<span class="sidepanel__tooltip-text">Eagles, Continental United States
 								</span>
 							</div>
 						</a>
 					</li>
-					<li class="sidepanel__lemur">
-						<a class="sidepanel__lemur-logo" href="../../zoos/gorrilas/gorrilas.html">
-							<img src="../../../assets/icons/zoos/panda/gorilla-logo.svg" alt="">
+					<li class="sidepanel__fourth">
+						<a class="sidepanel__fourth-logo" href="../../zoos/gorrilas/gorrilas.html">
+							<img src="../../../assets/icons/zoos/gorilla-logo.svg" alt="gorrilas icon">
 							<div class="sidepanel__tooltip">
 								<span class="sidepanel__tooltip-text">Gorilla, Western Africa
 								</span>
@@ -111,15 +110,13 @@
 				</ul>
 
 				<div class="sidepanel__arrow-down">
-					<img src="../../../assets/icons/zoos/panda/arrow-down.svg" alt="">
+					<img src="../../../assets/icons/zoos/arrow-down.svg" alt="arrow down icon">
 				</div>
 			</aside>
 
 		</div>
 
 		<section class="live">
-
-
 			<div class="container">
 
 				<div class="live__description">
@@ -144,17 +141,18 @@
 					</div>
 					<div class="live__slider-wrapper">
 						<div class="live__slider-arrow-left">
-							<img src="../../../assets/icons/pets-arrow.svg" alt="">
+							<img src="../../../assets/icons/pets-arrow.svg" alt="arrow-left icon">
 						</div>
 						<div class="live__slider-wrapper-inner">
 							<div class="live__slider-camera">
 								<div class="overlay"></div>
 								<div class="live__slider-camera-description">
 									<span>CAM 1</span>
-									<img src="../../../assets/icons/zoos/panda/live-icon.svg" alt="">
+									<img src="../../../assets/icons/zoos/live-icon.svg" alt="live camera icon">
 								</div>
 								<iframe class="live__slider-frame" width="560" height="315"
-									src="https://www.youtube.com/embed/uypihSxskk8" title="YouTube video player" frameborder="0"
+									src="https://www.youtube.com/embed/uypihSxskk8" title="YouTube video player"
+									frameborder="0"
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 									allowfullscreen></iframe>
 							</div>
@@ -162,10 +160,11 @@
 								<div class="overlay"></div>
 								<div class="live__slider-camera-description">
 									<span>CAM 2</span>
-									<img src="../../../assets/icons/zoos/panda/live-icon.svg" alt="">
+									<img src="../../../assets/icons/zoos/live-icon.svg" alt="live camera icon">
 								</div>
 								<iframe class="live__slider-frame" width="560" height="315"
-									src="https://www.youtube.com/embed/uypihSxskk8" title="YouTube video player" frameborder="0"
+									src="https://www.youtube.com/embed/uypihSxskk8" title="YouTube video player"
+									frameborder="0"
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 									allowfullscreen></iframe>
 							</div>
@@ -173,16 +172,17 @@
 								<div class="overlay"></div>
 								<div class="live__slider-camera-description">
 									<span>CAM 3</span>
-									<img src="../../../assets/icons/zoos/panda/live-icon.svg" alt="">
+									<img src="../../../assets/icons/zoos/live-icon.svg" alt="live camera icon">
 								</div>
 								<iframe class="live__slider-frame" width="560" height="315"
-									src="https://www.youtube.com/embed/uypihSxskk8" title="YouTube video player" frameborder="0"
+									src="https://www.youtube.com/embed/uypihSxskk8" title="YouTube video player"
+									frameborder="0"
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 									allowfullscreen></iframe>
 							</div>
 						</div>
 						<div class="live__slider-arrow-right">
-							<img src="../../../assets/icons/arrow-slider-right.svg" alt="">
+							<img src="../../../assets/icons/arrow-slider-right.svg" alt="arrow-right icon">
 						</div>
 					</div>
 				</div>
@@ -193,11 +193,12 @@
 		<section class="donation">
 			<div class="container">
 				<div class="donation__content-wrapper">
-
 					<div class="donation__content">
 						<h3 class="donation__content-title">Provide Andy the lemur with fruits!</h3>
-						<p class="donation__content-subtitle">More than 90% of lemur species are endangered and might face
-							extinction in the nearest future. Watch the ring-tailed lemurs play and climb in this soothing setting and
+						<p class="donation__content-subtitle">More than 90% of lemur species are endangered and might
+							face
+							extinction in the nearest future. Watch the ring-tailed lemurs play and climb in this
+							soothing setting and
 							support them by donating <span> for the fruits they adore.</span>
 						</p>
 					</div>
@@ -206,7 +207,7 @@
 						<div class="donation__action-btn">
 							<span>$ Donation Amount</span>
 							<button class="donation__btn">
-								<img class="donation__img" src="../../../assets/icons/union.svg" alt="">
+								<img class="donation__img" src="../../../assets/icons/union.svg" alt="arrow-right icon">
 							</button>
 						</div>
 					</div>
@@ -219,7 +220,8 @@
 				<div class="know__card-title">did you know?</div>
 				<div class="know__card-subtitle">
 					<span>
-						A ring-tailed lemur mob will gather in open areas of the forest to sunbathe. They sit in what some call a
+						A ring-tailed lemur mob will gather in open areas of the forest to sunbathe. They sit in what
+						some call a
 						"yoga position" with their <p>
 							bellies toward the sun and their arms and legs stretched out to the sides.
 						</p>
@@ -230,17 +232,11 @@
 				<ul class="know__info-content">
 					<li class="know__info-content-heading">
 						Common name:
-						<span class="know__info-content-descr">Ring-Tailed Lemur
-
-
-						</span>
+						<span class="know__info-content-descr">Ring-Tailed Lemur</span>
 					</li>
 					<li class="know__info-content-heading">
 						Scientific name:
 						<span class="know__info-content-descr">Lemur catta
-
-
-
 						</span>
 					</li>
 					<li class="know__info-content-heading">Type:
@@ -269,7 +265,8 @@
 						Range:
 						<span class="know__info-content-descr">Southeast Asia</span>
 						<button class="know__info-content-btn">VIEW map
-							<svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg width="26" height="22" viewBox="0 0 26 22" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
 									d="M14.0682 0.119971C13.8861 0.199174 13.7206 0.315255 13.5813 0.461565C13.4417 0.607505 13.3309 0.780876 13.2554 0.971748C13.1798 1.16262 13.1409 1.36724 13.1409 1.57389C13.1409 1.78055 13.1798 1.98517 13.2554 2.17604C13.3309 2.36691 13.4417 2.54028 13.5813 2.68622L19.609 9H2.4584C2.03405 9 1.62709 9.21071 1.32703 9.58579C1.02697 9.96086 0.858398 10.4696 0.858398 11C0.858398 11.5304 1.02697 12.0391 1.32703 12.4142C1.62709 12.7893 2.03405 13 2.4584 13H19.6098L13.5813 19.3146C13.2998 19.6096 13.1416 20.0097 13.1416 20.4269C13.1416 20.8441 13.2998 21.2443 13.5813 21.5393C13.8629 21.8343 14.2447 22 14.6429 22C15.041 22 15.4229 21.8343 15.7044 21.5393L24.7004 12.1127C24.84 11.9668 24.9508 11.7934 25.0264 11.6026C25.102 11.4117 25.1409 11.2071 25.1409 11.0004C25.1409 10.7938 25.102 10.5891 25.0264 10.3983C24.9508 10.2074 24.84 10.034 24.7004 9.88808L15.7044 0.461565C15.5651 0.315255 15.3997 0.199174 15.2175 0.119971C15.0354 0.0407677 14.8401 0 14.6429 0C14.4457 0 14.2504 0.0407677 14.0682 0.119971Z"
 									fill="#f58021" />
@@ -283,15 +280,23 @@
 			</div>
 			<div class="know__info-description">
 				<span>
-					Ring-tailed lemurs are named for the 13 alternating black and white bands that adorn their tails. Unlike most
-					other lemurs, ringtails spend 40 percent of their time on the ground, moving quadrupedally along the forest
-					floor. Ring-tailed lemurs live in southwestern Madagascar, in arid, open areas and forests in territories that
-					range from 15 to 57 acres (0.06 to 0.2 square kilometers) in size. As with all lemurs, olfactory communication
-					is important for ringtails. Ring-tailed lemurs have scent glands on their wrists and chests that they use to
-					mark their foraging routes. Ringtails eat leaves, flowers and insects. They can also eat fruit, herbs and
+					Ring-tailed lemurs are named for the 13 alternating black and white bands that adorn their tails.
+					Unlike most
+					other lemurs, ringtails spend 40 percent of their time on the ground, moving quadrupedally along the
+					forest
+					floor. Ring-tailed lemurs live in southwestern Madagascar, in arid, open areas and forests in
+					territories that
+					range from 15 to 57 acres (0.06 to 0.2 square kilometers) in size. As with all lemurs, olfactory
+					communication
+					is important for ringtails. Ring-tailed lemurs have scent glands on their wrists and chests that
+					they use to
+					mark their foraging routes. Ringtails eat leaves, flowers and insects. They can also eat fruit,
+					herbs and
 					small vertebrates.
-					Females usually give birth to their first baby when they are three years old, and usually once a year every
-					year after that. All adult females participate in raising the offspring of the group. The median life
+					Females usually give birth to their first baby when they are three years old, and usually once a
+					year every
+					year after that. All adult females participate in raising the offspring of the group. The median
+					life
 					expectancy for a ring-tailed lemur <span> is about 16 years.</span>
 				</span>
 			</div>

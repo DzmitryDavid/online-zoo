@@ -3,6 +3,13 @@ $primary-color: #f58021;
 $secondary-color: #20113d;
 $title-color: #00a092;
 
+.visually-hidden {
+    position: absolute;
+    top:0;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
 
 @mixin h1 {
     font-weight: 800;
@@ -229,11 +236,14 @@ $title-color: #00a092;
         transform: scale(0.96);        
     }
 }
-
+.link-active {
+    color: $title-color;
+}
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+}
+.line-divider {
+    display: block;
 }

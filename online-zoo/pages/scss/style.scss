@@ -1,18 +1,28 @@
-@import 'base/base';
+@import 'base';
 
 
-* {
+*,
+*::after,
+*::before {
     margin:0;
     padding: 0;
+    box-sizing: border-box;
     
 }
-ul, li , a {
+ul, li{
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
     
-
+    
+}
+a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #000;
+    transition: all ease 0.5s;
 }
 button {
     background-color: transparent;
@@ -29,7 +39,6 @@ body, html {
     font-weight: 600;
     font-size: 62.5%;
     padding: 0;
-    overflow-x: hidden;
 }
 
 
@@ -38,8 +47,6 @@ body, html {
     width: 1400px;
 
 }
-
-
 
 @import 'header';
 @import 'watch';
@@ -50,3 +57,6 @@ body, html {
 @import 'think';
 @import 'care';
 @import 'footer';
+@import 'live';
+@import 'sidepanel';
+@import 'know';

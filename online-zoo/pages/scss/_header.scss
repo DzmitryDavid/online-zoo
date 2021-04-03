@@ -1,12 +1,4 @@
-.hidden {
-    position: absolute;
-    top: 0;
-    overflow: hidden;
-    display: none;
-    opacity: 0;
-}
 .header {
-    // position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,35 +22,25 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 794px;
+            width: 800px;
         }
         &-list {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            &-link {
-                a {
+            &-link a {
+                &:hover {
                     transition: all ease 0.5s;
-                    font-size: 1.8rem;
-                    text-transform: uppercase;
-                    color: #000;
-                    &:hover {
-                        transition: all ease 0.5s;
-                        color: $title-color;
-                    }
-                }
-                &:nth-child(3) a {
-                    cursor: default;
-                    color: #00a092;
+                    color: $title-color;
                 }
             }
         }
     }
     &__social {
-        width: 180px;
+        width: 195px;
         &-icons {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
         }
         &-icon {
             display: flex;
@@ -68,18 +50,18 @@
             &:hover {
                 transform: scale(1.1);
             }
-            &-youtube a {
-                background-image: url("../../../../assets/icons/YouTube.svg");
+            &-youtube {
+                background-image: url("../../../../../assets/icons/YouTube.svg");
                 width: 40px;
                 height: 40px;
             }
-            &-instagram a {
-                background-image: url("../../../../assets/icons/Instagram.svg");
+            &-instagram {
+                background-image: url("../../../../../assets/icons/Instagram.svg");
                 width: 40px;
                 height: 40px;
             }
-            &-facebook a {
-                background-image: url("../../../../assets/icons/Facebook.svg");
+            &-facebook {
+                background-image: url("../../../../../assets/icons/Facebook.svg");
                 width: 40px;
                 height: 40px;
             }

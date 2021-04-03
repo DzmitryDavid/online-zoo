@@ -1,12 +1,12 @@
 .know {
-    padding-left: 26rem;
     padding-top: 15rem;
     padding-bottom: 15rem;
 
     &__card {
-        margin-left: 23.7rem;
+        margin-left: 24.7rem;
         width: 1040px;
-        height: 26.9rem;
+        height: fit-content;
+        padding-bottom: 5rem;
         box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
         border-radius: 5px;
         &-title {
@@ -18,30 +18,44 @@
         }
         &-subtitle {
             span {
+                display: block;
                 filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25%));
                 @include subtitle;
+                p {
+                   margin: 0 auto;
+                    width: 85%;
+                }
 
             }
             text-align: center;
             width: 91.9rem;
             margin: 0 auto;
-            margin-top: 2rem;
+            margin-top: 3rem;
 
         }
     }
     &__info {
-        margin-top: 14.7rem;
+        margin-top: 14rem;
         display: flex;
-        gap: 24rem;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 116rem;
         &-content {
-           
+            
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            // 
             &-heading {
-                padding-bottom: 2.1rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                line-height: 0px;
+                padding-bottom: 2rem;
                 @include subtitle;
                 display: flex;
-                justify-self: center;
-                align-items:baseline;
+                
+                
             }
             &-descr {
                 margin-left: 1rem;
@@ -68,8 +82,11 @@
             }
         }
         &-description {
+            span {
+                display: block;
+            }
             margin-top: 5rem;
-            width: 116rem;
+            width: 115rem;
             @include descr;
         }
     }

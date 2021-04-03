@@ -1,18 +1,27 @@
+.main {
+    position: relative;
+}
+
 .sidepanel {
-    position: sticky;
+    position:sticky;
+    top: 0;
+    height: 82.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22rem;
+    background-color: $secondary-color;
+
     &__wrapper {
-        display: flex;
-        height: 84.6rem;
-        flex-direction: column;
-        align-items: center;
-        top: 11rem;
-        width: 22rem;
-        background-color: $secondary-color;
+        position: absolute;
+        top: 0rem;
+        left: 0;
+        height: 100%;
     }
+
     &__nav {
         width: 100%;
     }
-
 
     &__live {
         position: absolute;
@@ -32,7 +41,7 @@
     }
     &__arrow {
         width: 100%;
-        height: 8rem;
+        height: 10rem;
         img {
             position: absolute;
             right: 3rem;
@@ -71,7 +80,7 @@
         height: 17rem;
         &-logo {
             position: relative;
-            background-image: url("../../../../assets/icons/zoos/panda/panda.svg");
+            background-image: url("../../../../assets/icons/zoos/border.svg");
             background-size: contain;
             background-position: center;
             display: flex;
@@ -86,7 +95,7 @@
             }
         }
     }
-    &__eagle {
+    &__second {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -113,7 +122,7 @@
             }
         }
     }
-    &__gorilla {
+    &__third {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -140,7 +149,7 @@
             }
         }
     }
-    &__lemur {
+    &__fourth {
         display: flex;
         justify-content: center;
         align-items: center;
