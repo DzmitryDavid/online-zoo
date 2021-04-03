@@ -45,23 +45,24 @@
             display: flex;
             align-items: flex-start;
             flex-direction: column;
-            // 
+            
             &-heading {
                 display: flex;
                 justify-content: space-around;
-                align-items: center;
+                align-items: flex-end;
                 line-height: 0px;
-                padding-bottom: 2rem;
+                padding-bottom: 5%;
                 @include subtitle;
-                display: flex;
-                
-                
+                position: relative;
             }
             &-descr {
-                margin-left: 1rem;
+                margin-left: 2rem;
                 @include descr;
             }
             &-btn {
+                position: absolute;
+                left: 100%;
+                top: -40%;
                 @include no-bordered-btn;
                 transition: all ease 0.6s;
                 margin-left: 20px;

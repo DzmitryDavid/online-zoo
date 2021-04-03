@@ -1410,13 +1410,6 @@ body, html {
   transition: all ease 0.5s;
 }
 
-.footer__links li a:hover {
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  -webkit-box-shadow: 0 7px 7px -6px #fff;
-          box-shadow: 0 7px 7px -6px #fff;
-}
-
 .footer__divider span {
   margin-top: 6.8rem;
   width: 100%;
@@ -1430,13 +1423,6 @@ body, html {
   cursor: pointer;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-}
-
-.footer__author-link:hover {
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  -webkit-box-shadow: 0 7px 7px -7px #fff;
-          box-shadow: 0 7px 7px -7px #fff;
 }
 
 .footer__button {
@@ -2099,26 +2085,29 @@ body, html {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   line-height: 0px;
-  padding-bottom: 2rem;
+  padding-bottom: 5%;
   font-weight: 500;
   font-size: 26px;
   line-height: 130%;
   letter-spacing: 0.02rem;
-  display: flex;
+  position: relative;
 }
 
 .know__info-content-descr {
-  margin-left: 1rem;
+  margin-left: 2rem;
   line-height: 2.7rem;
   font-size: 1.8rem;
   font-weight: 400;
 }
 
 .know__info-content-btn {
+  position: absolute;
+  left: 100%;
+  top: -40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2172,4 +2161,26 @@ body, html {
 
 .know__info-description span {
   display: block;
+}
+
+.map {
+  margin-bottom: 15rem;
+}
+
+.map__title {
+  margin: 0 auto;
+  max-width: 60rem;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.map__title-heading {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65.83px;
+  text-transform: uppercase;
+}
+
+.map__wrapper {
+  margin-top: 7rem;
 }

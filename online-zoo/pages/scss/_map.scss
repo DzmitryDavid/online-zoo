@@ -1,0 +1,15 @@
+.map {
+    margin-bottom: 15rem;
+    &__title {
+        margin: 0 auto;
+        max-width: 60rem;
+        margin-top: 5rem;
+        text-align: center;
+        &-heading {
+            @include h2;
+        }
+    }
+    &__wrapper {
+        margin-top: 7rem;
+    }
+}

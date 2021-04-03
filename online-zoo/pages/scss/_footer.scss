@@ -39,10 +39,7 @@
             @include descr;
             cursor: pointer;
             transition: all ease 0.5s;
-            &:hover {
-                transition: all ease 0.5s;
-                box-shadow: 0 7px 7px -6px #fff;
-            }
+           
         }
         display: flex;
         justify-content: space-between;
@@ -60,10 +57,7 @@
             color: #fff;
             cursor: pointer;
             transition: all ease 0.5s;
-            &:hover {
-                transition: all ease 0.5s;
-                box-shadow: 0 7px 7px -7px #fff;
-            }
+            
         }
     }
 
