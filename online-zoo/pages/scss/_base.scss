@@ -189,6 +189,7 @@ $title-color: #00a092;
     color: $primary-color;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 @mixin empty-btn-large {
@@ -203,6 +204,16 @@ $title-color: #00a092;
     border-radius: 5px;
     text-transform: uppercase;
     cursor: pointer;
+    &:hover {
+        transition: all ease 0.5s;
+        background-color: #05786E;
+    }
+    &:focus,
+    &:active {
+        transition: all ease 0.5s;
+        background-color: #05786E;
+        transform: scale(0.96);
+    }
 }
 
 @mixin btn {
@@ -220,7 +231,7 @@ $title-color: #00a092;
     border-radius: 5px;
     border: none;
     &::after {
-        content: url('../../../../assets/icons/union.svg');
+        content: url('../../assets/icons/union.svg');
         color: $primary-color;
         display: flex;
         justify-content: center;
@@ -238,6 +249,7 @@ $title-color: #00a092;
 }
 .link-active {
     color: $title-color;
+    cursor: default;
 }
 .overlay {
     position: absolute;

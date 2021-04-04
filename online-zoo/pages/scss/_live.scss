@@ -53,8 +53,13 @@
         }
 
         &-frame {
-            max-width: 32rem;
-            height: 209px;
+            width: 100%;
+            height: 100%;
+            &-wrapper {
+                max-width: 32rem;
+                height: 209px ;
+            }
+
         }
         &-title {
             margin-top: 9.5rem;

@@ -3,7 +3,7 @@
 }
 
 .sidepanel {
-    position:sticky;
+    position: sticky;
     top: 0;
     height: 82.5rem;
     display: flex;
@@ -80,7 +80,7 @@
         height: 17rem;
         &-logo {
             position: relative;
-            background-image: url("../../../../assets/icons/zoos/border.svg");
+            background-image: url("../../assets/icons/zoos/border.svg");
             background-size: contain;
             background-position: center;
             display: flex;

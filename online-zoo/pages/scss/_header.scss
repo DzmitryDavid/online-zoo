@@ -10,7 +10,7 @@
         justify-content: space-between;
     }
     &__logo {
-        background-image: url("../../../../assets/icons/Logo.svg");
+        background-image: url("../../assets/icons/Logo.svg");
         background-size: cover;
         width: 96px;
         height: 50px;
@@ -29,6 +29,7 @@
             justify-content: space-between;
             align-items: center;
             &-link a {
+                text-transform: uppercase;
                 &:hover {
                     transition: all ease 0.5s;
                     color: $title-color;
@@ -51,17 +52,17 @@
                 transform: scale(1.1);
             }
             &-youtube {
-                background-image: url("../../../../../assets/icons/YouTube.svg");
+                // background-image: url("../../assets/icons/YouTube.svg");
                 width: 40px;
                 height: 40px;
             }
             &-instagram {
-                background-image: url("../../../../../assets/icons/Instagram.svg");
+                // background-image: url("../../assets/icons/Instagram.svg");
                 width: 40px;
                 height: 40px;
             }
             &-facebook {
-                background-image: url("../../../../../assets/icons/Facebook.svg");
+                // background-image: url("../../assets/icons/Facebook.svg");
                 width: 40px;
                 height: 40px;
             }

@@ -9,6 +9,9 @@
         color: $title-color;
     }
     &__subtitle {
+        span {
+            filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25%));
+        }
         margin: 0 auto;
         margin-top: 5rem;
         text-align: center;
@@ -30,6 +33,12 @@
         align-items: center;
         background-color: $secondary-color;
         border-radius: 5px;
+        transition: all ease 0.5s;
+        &:hover {
+            cursor: pointer;
+            transition: all ease 0.5s;
+            transform: scale(1.02);
+        }
         span {
             display: block;
         }
@@ -47,10 +56,13 @@
         }
         &-button {
             position: absolute;
+            left: 50%;
+            transform: translate(-50%);
             bottom: 5rem;
             &-feed {
                 transition: all ease 0.5s;
                 text-align: center;
+                margin: 0 auto;
                 
                 @include no-bordered-btn;
                 svg {

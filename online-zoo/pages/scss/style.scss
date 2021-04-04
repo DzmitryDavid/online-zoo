@@ -6,7 +6,7 @@
 *::before {
     margin:0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
     
 }
 ul, li{
@@ -20,7 +20,6 @@ ul, li{
 a {
     text-decoration: none;
     font-size: 1.8rem;
-    text-transform: uppercase;
     color: #000;
     transition: all ease 0.5s;
 }
@@ -39,6 +38,7 @@ body, html {
     font-weight: 600;
     font-size: 62.5%;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -61,3 +61,4 @@ body, html {
 @import 'sidepanel';
 @import 'know';
 @import 'map';
+@import 'contact';
