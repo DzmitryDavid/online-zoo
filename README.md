@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 1. Task: https://rolling-scopes-school.github.io/stage0/#/stage1/tasks/online-zoo/variant-2
 2. Deploy: 
 3. Done 04.04.2021/ Deadline 05.04.2021
