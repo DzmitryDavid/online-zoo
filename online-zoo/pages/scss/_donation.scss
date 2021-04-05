@@ -17,18 +17,42 @@
         }
         &-wrapper {
             display: flex;
-            column-gap: 171px;
+            justify-content: space-between;
+            // column-gap: 171px;
         }
+    }
+    &__input {
+        
+        padding: 0 2.1rem;
+        width: 100%;
+        height: 100%;
+        background-color: $secondary-color;
+        border: none;
+        color: #fff;
+        font-family: inherit;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 18px;
+        &::placeholder {
+            color: #fff;
+            @include descr;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: inherit;
+            
+        }
+        
     }
     &__action {
         display: flex;
         flex-direction: column;
         &-btn {
+            position: relative;
             display: flex;
             margin-top: 1.2rem;
             font-weight: 600;
             border: 1px solid #fff;
-            width: 30.2rem;
+            width: 32rem;
             border-radius: 5px;
             height: 7.4rem;
             font-size: 1.8rem;
@@ -36,9 +60,9 @@
             align-items: center;
             justify-content: space-between;
             background-color: transparent;
-            padding-left: 14px;
-            span {
-                text-transform: uppercase;
+            label {
+                position: absolute;
+                left: 2rem;
             }
         }
         &-title {
@@ -53,13 +77,21 @@
     &__btn  {
         text-transform: uppercase;
         display: block;
-        width: 79px;
+        width: 80px;
+        height: 74px;
         justify-content: center;
         align-items: center;
         height: 100%;
-        background-color: orange;
+        background-color: $primary-color;
         border-radius: 5px;
         border: none;
-        
+        &:hover {
+            @include btn-hovered;
+        }
     }
+}
+.donation__input::-webkit-inner-spin-button, 
+::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
 }

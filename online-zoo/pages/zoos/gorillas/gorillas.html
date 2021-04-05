@@ -103,7 +103,7 @@
 				</ul>
 
 				<div class="sidepanel__arrow-down">
-					<img src="../../../assets/icons/zoos/arrow-down.svg" alt="rrow-down icon">
+					<img src="../../../assets/icons/zoos/arrow-down.svg" alt="arrow-down icon">
 				</div>
 			</aside>
 		</div>
@@ -176,13 +176,14 @@
 
 				<div class="donation__content">
 					<h3 class="donation__content-title">make a difference for the gorillas!</h3>
-					<p class="donation__content-subtitle"> It is our goal to ensure the conservation and restoration of the gorilla population and their habitat in Central Africa. To do this, we need your help! Bring your food charity straight to Glen and his family.
+					<p class="donation__content-subtitle"> It is our goal to ensure the conservation and restoration of the gorilla population and their habitat in <span class="line-divider"></span> Central Africa. To do this, we need your help! Bring your food charity straight to Glen and his family.
 					</p>
 				</div>
 				<div class="donation__action">
 					<div class="donation__action-title">Quick Donate</div>
 					<div class="donation__action-btn">
-						<span>$ Donation Amount</span>
+						<label for="donate">$</label>
+                            <input id="donate-gorillas" class="donation__input" type="number" placeholder="Donation Amount">
 						<button class="donation__btn">
 							<img class="donation__img" src="../../../assets/icons/union.svg" alt="arrow-right icon">
 						</button>
@@ -338,6 +339,7 @@
 			</div>
 		</div>
 	</footer>
+	<script src="gorillas.js"></script>
 </body>
 
 </html>

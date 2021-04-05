@@ -202,9 +202,10 @@
 					<div class="donation__content">
 						<h3 class="donation__content-title">make the Bamboo Donation!</h3>
 						<p class="donation__content-subtitle">Our process for bamboo donations first starts with a site
-							evaluation. It is important that our team sees where the bamboo is growing, then determining
-							if
-							the bamboo is a species that our
+							evaluation. It is important that our team
+							<span class="line-divider">sees where the bamboo is growing, then determining
+								if
+								the bamboo is a species that our</span> 
 							<span class="line-divider"> animals are currently eating. Thank you for your interest
 								in donating bamboo for our pandas.</span>
 						</p>
@@ -212,7 +213,8 @@
 					<div class="donation__action">
 						<div class="donation__action-title">Quick Donate</div>
 						<div class="donation__action-btn">
-							<span>$ Donation Amount</span>
+							<label for="donate">$</label>
+                            <input id="donate-panda" class="donation__input" type="number" placeholder="Donation Amount">
 							<button class="donation__btn">
 								<img class="donation__img" src="../../../assets/icons/union.svg" alt="arrow-right icon">
 							</button>
@@ -380,5 +382,5 @@
 		</div>
 	</footer>
 </body>
-
+<script src="panda.js"></script>
 </html>

@@ -11,15 +11,15 @@
         "sourceType": "module"
     },
     "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "single"],
-        "no-unused-vars": "warn",
-        "no-console": "off",
-        "func-names": "off",
-        "no-plusplus":"off" ,
-        "indent": [2, "tab"],
-		"no-tabs":"off",
-		"no-param-reassign": "off"
+			"semi": ["error", "always"],
+			"quotes": ["error", "single"],
+			"no-unused-vars": "warn",
+			"no-console": "off",
+			"func-names": "off",
+			"no-plusplus":"off" ,
+			"indent": [2, "tab"],
+			"no-tabs":"off",
+			"no-param-reassign": "off"
         
     }
 }

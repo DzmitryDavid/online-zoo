@@ -100,10 +100,6 @@ body, html {
   height: 50px;
 }
 
-.header__navigation {
-  width: 556px;
-}
-
 .header__navigation-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,12 +117,10 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.header__navigation-list-link {
+  margin-left: 5.1rem;
 }
 
 .header__navigation-list-link a {
@@ -139,8 +133,12 @@ body, html {
   color: #00a092;
 }
 
+.header__navigation-list-link:first-child {
+  margin: 0;
+}
+
 .header__social {
-  width: 195px;
+  width: 17rem;
 }
 
 .header__social-icons {
@@ -156,9 +154,8 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -167,21 +164,6 @@ body, html {
 .header__social-icon:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-.header__social-icon-youtube {
-  width: 40px;
-  height: 40px;
-}
-
-.header__social-icon-instagram {
-  width: 40px;
-  height: 40px;
-}
-
-.header__social-icon-facebook {
-  width: 40px;
-  height: 40px;
 }
 
 .watch {
@@ -382,8 +364,62 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 171px;
-          column-gap: 171px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.donation__input {
+  padding: 0 2.1rem;
+  width: 100%;
+  height: 100%;
+  background-color: #20113d;
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+}
+
+.donation__input::-webkit-input-placeholder {
+  color: #fff;
+  line-height: 2.7rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: inherit;
+}
+
+.donation__input:-ms-input-placeholder {
+  color: #fff;
+  line-height: 2.7rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: inherit;
+}
+
+.donation__input::-ms-input-placeholder {
+  color: #fff;
+  line-height: 2.7rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: inherit;
+}
+
+.donation__input::placeholder {
+  color: #fff;
+  line-height: 2.7rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: inherit;
 }
 
 .donation__action {
@@ -397,13 +433,14 @@ body, html {
 }
 
 .donation__action-btn {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 1.2rem;
   font-weight: 600;
   border: 1px solid #fff;
-  width: 30.2rem;
+  width: 32rem;
   border-radius: 5px;
   height: 7.4rem;
   font-size: 1.8rem;
@@ -415,11 +452,11 @@ body, html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: transparent;
-  padding-left: 14px;
 }
 
-.donation__action-btn span {
-  text-transform: uppercase;
+.donation__action-btn label {
+  position: absolute;
+  left: 2rem;
 }
 
 .donation__action-title {
@@ -433,7 +470,8 @@ body, html {
 .donation__btn {
   text-transform: uppercase;
   display: block;
-  width: 79px;
+  width: 80px;
+  height: 74px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -441,9 +479,26 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  background-color: orange;
+  background-color: #f58021;
   border-radius: 5px;
   border: none;
+}
+
+.donation__btn:hover {
+  background-color: #d26004;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.donation__btn:hover:active {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+.donation__input::-webkit-inner-spin-button,
+::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
 }
 
 .pets {
@@ -1579,7 +1634,7 @@ body, html {
 }
 
 .live {
-  padding-bottom: 15rem;
+  padding-bottom: 15.4rem;
 }
 
 .live__video {
@@ -2158,7 +2213,7 @@ body, html {
   text-align: center;
   width: 91.9rem;
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .know__card-subtitle span {
@@ -2177,7 +2232,7 @@ body, html {
 }
 
 .know__info {
-  margin-top: 14rem;
+  margin-top: 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
