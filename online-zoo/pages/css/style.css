@@ -2292,13 +2292,10 @@ body, html {
           filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
 }
 
-.animal:hover, .animal:focus {
-  -webkit-filter: drop-shadow(0px 4px 30px rgba(255, 255, 255, 0.5));
-          filter: drop-shadow(0px 4px 30px rgba(255, 255, 255, 0.5));
-}
-
 .animal:hover .border, .animal:focus .border {
   opacity: 1;
+  -webkit-filter: drop-shadow(0px 4px 30px rgba(255, 255, 255, 0.5));
+          filter: drop-shadow(0px 4px 30px rgba(255, 255, 255, 0.5));
 }
 
 .animal:active {
@@ -2318,8 +2315,43 @@ body, html {
 }
 
 .animal__alligator {
-  left: 28.9rem;
-  bottom: 35.9rem;
+  left: 29rem;
+  bottom: 37rem;
+}
+
+.animal__eagle {
+  left: 17rem;
+  bottom: 36rem;
+}
+
+.animal__lion {
+  left: 57rem;
+  bottom: 33rem;
+}
+
+.animal__gorilla {
+  right: 61rem;
+  bottom: 30rem;
+}
+
+.animal__lemur {
+  right: 51rem;
+  bottom: 18rem;
+}
+
+.animal__panda {
+  right: 35rem;
+  bottom: 42rem;
+}
+
+.animal__tiger {
+  right: 29rem;
+  bottom: 27.5rem;
+}
+
+.animal__koala {
+  right: 16rem;
+  bottom: 16rem;
 }
 
 .border {

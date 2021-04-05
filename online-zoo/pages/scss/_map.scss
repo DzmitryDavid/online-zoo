@@ -25,12 +25,11 @@
     cursor: pointer;
     transition: all ease 0.5s;
     filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
-   
     &:hover,
     &:focus {
-        filter: drop-shadow(0px 4px 30px rgba(255, 255, 255, 0.5));
         .border {
             opacity: 1;
+            filter: drop-shadow(0px 4px 30px rgba(255, 255, 255, 0.5));
         }
     }
     &:active {
@@ -50,10 +49,44 @@
             }
         }
     }
-
     &__alligator {
-        left: 28.9rem;
-        bottom: 35.9rem;
+        left: 29rem;
+        bottom: 37rem;
+        
+    }
+    &__eagle {
+        left: 17rem;
+        bottom: 36rem;
+        
+    }
+    &__lion {
+        left: 57rem;
+        bottom: 33rem;
+        
+    }
+    &__gorilla {
+        right: 61rem;
+        bottom: 30rem;
+        
+    }
+    &__lemur {
+        right: 51rem;
+        bottom: 18rem;
+        
+    }
+    &__panda {
+        right: 35rem;
+        bottom: 42rem;
+        
+    }
+    &__tiger {
+        right: 29rem;
+        bottom: 27.5rem;
+        
+    }
+    &__koala {
+        right: 16rem;
+        bottom: 16rem;
         
     }
 }
