@@ -22,7 +22,6 @@
     align-items: flex-start;
     width: 10rem;
     height: 14.4rem;
-    cursor: pointer;
     transition: all ease 0.5s;
     filter: drop-shadow(0px 4px 30px rgba(245, 128, 33, 0.7));
     &:hover,
@@ -30,6 +29,9 @@
         .border {
             opacity: 1;
             filter: drop-shadow(0px 4px 30px rgba(255, 255, 255, 0.5));
+        }
+        .animal__tooltip-text {
+            visibility: visible;
         }
     }
     &:active {
@@ -40,55 +42,119 @@
         transition: all ease 0.5s;
         
     }
-    &:hover {
-        
-        .tag {
-            path {
-                transition: all ease 0.5s;
-                fill: #fff;
-            }
+    
+
+    &__tooltip {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        top: 0;
+        left: 100%;
+        &-text {
+            visibility: hidden;
+            color: $primary-color;
+            @include descr;
+            line-height: 2.1rem;
+
         }
+        &-eagle {
+            position: absolute;
+            right: 100%;
+            width: 10rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+
     }
     &__alligator {
         left: 29rem;
         bottom: 37rem;
+        cursor:default;
+
+        
         
     }
     &__eagle {
         left: 17rem;
         bottom: 36rem;
-        
+        &:hover {
+            .tag {
+                path {
+                    transition: all ease 0.5s;
+                    fill: #fff;
+                }
+            }
+        }
     }
+
     &__lion {
         left: 57rem;
         bottom: 33rem;
+        cursor: default;
         
     }
     &__gorilla {
         right: 61rem;
         bottom: 30rem;
-        
+        &:hover {
+            .tag {
+                path {
+                    transition: all ease 0.5s;
+                    fill: #fff;
+                }
+            }
+        }
     }
+        
+    
     &__lemur {
         right: 51rem;
         bottom: 18rem;
-        
+        &:hover {
+            .tag {
+                path {
+                    transition: all ease 0.5s;
+                    fill: #fff;
+                }
+            }
+        }
     }
+        
+    
     &__panda {
         right: 35rem;
         bottom: 42rem;
+        &:hover {
+            .tag {
+                path {
+                    transition: all ease 0.5s;
+                    fill: #fff;
+                }
+            }
+        }
         
     }
     &__tiger {
         right: 29rem;
         bottom: 27.5rem;
+        cursor: default;
         
     }
     &__koala {
         right: 16rem;
         bottom: 16rem;
+        cursor: default;
         
     }
+
+
 }
 .border {
     position: absolute;
@@ -97,4 +163,5 @@
     opacity: 0;
     
 }
+
 

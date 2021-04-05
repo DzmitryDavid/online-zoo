@@ -70,12 +70,11 @@
         font-size: 1.8rem;
         min-height: 20rem;
         border-radius: 5px;
-        border: 1px solid #00A092;
         background: #FFFFFF;     
-        &:invalid {
-            border: 1px solid #F58021;
-            background: rgba(245, 128, 33, 0.2);
-        }
+        // &:invalid {
+        //     border: 1px solid #F58021;
+        //     background: rgba(245, 128, 33, 0.2);
+        // }
         &:active,
         &:focus {
             background: #FFFFFF;     
