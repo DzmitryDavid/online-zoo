@@ -21,6 +21,10 @@
   display: block;
 }
 
+.union {
+  margin-left: 1rem;
+}
+
 *,
 *::after,
 *::before {
@@ -230,21 +234,6 @@ body, html {
   color: #fff;
   border-radius: 5px;
   border: none;
-}
-
-.watch__button-btn::after {
-  content: url("../../assets/icons/union.svg");
-  color: #f58021;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 1rem;
 }
 
 .watch__button-btn:hover {
@@ -801,13 +790,13 @@ body, html {
 .pets__button-main:hover {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  background-color: #05786E;
+  background-color: #05786e;
 }
 
 .pets__button-main:focus, .pets__button-main:active {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  background-color: #05786E;
+  background-color: #05786e;
   -webkit-transform: scale(0.96);
           transform: scale(0.96);
 }
@@ -930,21 +919,6 @@ body, html {
   cursor: pointer;
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
-}
-
-.feed__button-donate::after {
-  content: url("../../assets/icons/union.svg");
-  color: #f58021;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 1rem;
 }
 
 .feed__button-donate:hover {
@@ -1206,13 +1180,13 @@ body, html {
 .think__general-btn:hover {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  background-color: #05786E;
+  background-color: #05786e;
 }
 
 .think__general-btn:focus, .think__general-btn:active {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  background-color: #05786E;
+  background-color: #05786e;
   -webkit-transform: scale(0.96);
           transform: scale(0.96);
 }
@@ -1413,13 +1387,13 @@ body, html {
 .care__button-main:hover {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  background-color: #05786E;
+  background-color: #05786e;
 }
 
 .care__button-main:focus, .care__button-main:active {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  background-color: #05786E;
+  background-color: #05786e;
   -webkit-transform: scale(0.96);
           transform: scale(0.96);
 }
@@ -1577,13 +1551,13 @@ body, html {
 .footer__button-main:hover {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  background-color: #05786E;
+  background-color: #05786e;
 }
 
 .footer__button-main:focus, .footer__button-main:active {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  background-color: #05786E;
+  background-color: #05786e;
   -webkit-transform: scale(0.96);
           transform: scale(0.96);
 }
@@ -1687,21 +1661,6 @@ body, html {
   color: #fff;
   border-radius: 5px;
   border: none;
-}
-
-.live__button button::after {
-  content: url("../../assets/icons/union.svg");
-  color: #f58021;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 1rem;
 }
 
 .live__button button:hover {
@@ -2681,13 +2640,13 @@ body, html {
 .form__btn:hover {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  background-color: #05786E;
+  background-color: #05786e;
 }
 
 .form__btn:focus, .form__btn:active {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  background-color: #05786E;
+  background-color: #05786e;
   -webkit-transform: scale(0.96);
           transform: scale(0.96);
 }

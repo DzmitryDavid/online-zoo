@@ -1,0 +1,25 @@
+
+$primary-color: #f58021;
+$secondary-color: #20113d;
+$title-color: #00a092;
+
+.visually-hidden {
+    position: absolute;
+    top:0;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.link-active {
+    color: $title-color;
+    cursor: default;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.line-divider {
+    display: block;
+}
