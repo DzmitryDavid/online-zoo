@@ -1,24 +1,20 @@
 .watch {
     background-image: url("../../assets/img/main/watch/Background.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 79rem;
+    padding: 13rem 0;
+    
     &__title {
-        display: flex;
-        flex-wrap: wrap;
-        padding-top: 129px;
-        width: 890px;
         @include h1;
     }
     &__description {
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 1.8rem;
-        font-weight: 400;
         margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
         width: 43rem;
-        line-height: 2.7rem;
+        flex-wrap: wrap;
+        @include descr;
     }
     &__button {
         margin-top: 4.6rem;

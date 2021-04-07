@@ -1,9 +1,10 @@
 .header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $primary-color;
-    height: 110px;
+    min-height: 110px;
 
     &__wrapper {
         display: flex;

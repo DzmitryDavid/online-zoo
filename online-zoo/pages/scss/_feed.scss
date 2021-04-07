@@ -26,6 +26,8 @@
         }
         &-content {
             margin-top: 1.7rem;
+            display: flex;
+            flex-direction: column;
         }
 
         &-description {

@@ -217,15 +217,9 @@
     color: #fff;
     border-radius: 5px;
     border: none;
-    &::after {
-        content: url('../../assets/icons/union.svg');
-        color: $primary-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 1rem;
-    }
+    
 }
+
 @mixin btn-hovered {
     background-color: #d26004;
     transition: all ease 0.5s;

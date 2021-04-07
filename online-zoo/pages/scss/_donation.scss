@@ -3,26 +3,29 @@
     padding-bottom: 5rem;
     background-color: $secondary-color;
     &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         &-title {
-            // width: 889px;
+            display: flex;
+            flex-wrap: wrap;
             @include h3;
         }
         &-subtitle {
+            width: 61rem;
             font-size: 1.8rem;
             margin-top: 2rem;
             font-weight: 400;
             color: #fff;
             line-height: 27px;
-            
         }
         &-wrapper {
             display: flex;
+            // flex-wrap: wrap;
             justify-content: space-between;
-            // column-gap: 171px;
         }
     }
     &__input {
-        
         padding: 0 2.1rem;
         width: 100%;
         height: 100%;
@@ -39,9 +42,7 @@
             text-transform: uppercase;
             text-align: center;
             font-family: inherit;
-            
         }
-        
     }
     &__action {
         display: flex;
@@ -72,9 +73,8 @@
             letter-spacing: 0.07rem;
             line-height: 130%;
         }
-        
     }
-    &__btn  {
+    &__btn {
         text-transform: uppercase;
         display: block;
         width: 80px;
@@ -90,7 +90,7 @@
         }
     }
 }
-.donation__input::-webkit-inner-spin-button, 
+.donation__input::-webkit-inner-spin-button,
 ::-webkit-inner-spin-button {
     -webkit-appearance: none;
     -moz-appearance: textfield;

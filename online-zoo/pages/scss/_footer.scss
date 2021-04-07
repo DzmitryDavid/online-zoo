@@ -1,7 +1,5 @@
 .footer {
-    // padding-top: 8rem;
     background-color: $secondary-color;
-    // height: 32.9rem;
     padding-bottom: 4.4rem;
     
     &__wrapper {
@@ -39,7 +37,6 @@
             @include descr;
             cursor: pointer;
             transition: all ease 0.5s;
-           
         }
         display: flex;
         justify-content: space-between;

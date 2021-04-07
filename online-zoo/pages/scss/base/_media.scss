@@ -1,37 +1,202 @@
 @media (max-width: 1700px) {
+    // .think {
+    //     &__wrapper {
+    //         flex-direction: column;
 
+    //     }
+    //     &__cards {
+    //         margin-top: 5rem;
+    //         justify-content: center;
+    //         grid-template-columns: repeat(2, 44rem);
+    //         grid-template-rows: repeat(3, 658px);
+    //         gap: 2rem;
+    //     }
+    // }
 }
-@media (max-width: 1300px) {
 
-}
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
     .container {
-        max-width: 960px;
-        
+        max-width: 1200px;
+    }
+    .header {
+        padding: 0 10rem;
+    }
+    .watch {
+        padding: 10rem 4rem;
+        &__description {
+            width: 34rem;
+        }
     }
     
-    
+    .welcome {
+        padding-top: 10rem;
+        &__title {
+            margin-top: 3rem;
+            &-eagles {
+                margin-top: 3rem;
+            }
+        }
+        &__description {
+            margin-top: 3rem;
+        }
+        &__wrapper {
+            padding: 0 10rem 0 10rem;
+            display: flex;
+            flex-direction: column-reverse;
+            &-eagles {
+                align-items: flex-end;
+                padding: 0 10rem 0 10rem;
+                margin-top: 5rem;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &__image {
+            width: 66rem;
+        }
+        &__description-eagles{
+            margin-top: 3rem;
+        }
+    }
+    .donation {
+        &__content {
+            &-wrapper {
+                padding: 5rem 10rem;
+            }
+            &-subtitle {
+                width: 57rem;
+            }
+        } 
+    }
+    .pets {
+        padding: 10rem 0 15rem 0;
+        &__cards {
+            margin-top: 3rem;
+            padding-left: 4rem;
+            gap: 2rem;
+        }
+        &__subtitle {
+            width: 83rem;
+        }
+        &__button {
+            margin-top: 5rem;
+        }
+    }
+    .divider {
+        padding: 0 4rem;
+        &__line {
+            width: 91.5%;
+        }
+    }
+    .feed {
+        padding-top: 15rem;
+        &__button {
+            align-self: flex-start;
+        }
+        &__card {
+            padding: 0 4rem;
+            padding-bottom: 11rem;
+            column-gap: 2rem;
+            &-title {
+                text-align: center;
+            }
+            &-content {
+                justify-content: center;
+                align-items: center;
+            }
+            &-description {
+                text-align: center;
+            }
+            &-image {
+                padding-top: 8rem;
+            }
+            &-icon {
+                margin-top: 8rem;
+            }
+            
+        }
+    }
+        .think {
+            min-height: 188.89rem;
+            padding-bottom: 15rem;
+            &__wrapper {
+                flex-direction: column;
+                
+            }
+            &__content {
+                padding: 0 4rem;
+            }
+            &__cards {
+                position: relative;
+                margin: 0 0 0 auto;
+                margin-top: 5rem;
+            }
+            &__btn {
+                position: absolute;
+                right: 0;
+                bottom: -10rem;
+            }
+            
+        }
+    }
+    .care {
+        padding-top: 15rem;
+        &__subtitle {
+            margin-top: 3rem;
+
+        }
+        &__cards {
+            margin-top: 5rem;
+            justify-content: center;
+            grid-template-columns: repeat(2, 44rem);
+            grid-template-rows: repeat(3, 658px);
+            gap: 2rem;
+        }
+        &__image {
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+    .footer {
+        &__wrapper {
+            &-first {
+                padding: 0 4rem;
+            }
+            &-second {
+                padding: 0 4rem;
+            }
+        }
+        &__logos {
+            width: 34rem;
+        }
+        &__links {
+            width: 35rem;
+        }
+        &__divider {
+            padding: 0;
+        }
+    }
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 980px;
+    }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 979px) {
     .container {
-        max-width: 720px;
+        max-width: 769px;
     }
-    
-    
 }
 
 @media (max-width: 768px) {
     .container {
-        max-width: 540px;
+        max-width: 640px;
     }
-    
 }
 
 @media (max-width: 576px) {
-
 }
-    
-
-

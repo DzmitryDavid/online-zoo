@@ -1,4 +1,5 @@
-@import 'base';
+@import 'base/base';
+@import 'base/mixins';
 
 
 *,
@@ -25,7 +26,7 @@ a {
 }
 button {
     background-color: transparent;
-
+    
     border: 0;
     cursor: pointer;
     &:active {
@@ -45,7 +46,7 @@ body, html {
 .container {
     margin: 0 auto;
     width: 1400px;
-
+    
 }
 
 @import 'header';
@@ -62,3 +63,4 @@ body, html {
 @import 'know';
 @import 'map';
 @import 'contact';
+@import 'base/media';
