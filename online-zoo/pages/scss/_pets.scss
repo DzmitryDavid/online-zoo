@@ -29,7 +29,11 @@
     }
 
     &__card {
-       
+        &-image {
+            img {
+                object-fit: cover;
+            }
+        }
         transition: all ease 0.8s;
         position: relative;
         background-color: $secondary-color;
@@ -88,6 +92,7 @@
                 color: #fff;
                 @include descr;
             }
+            
         }
         &-link {
             position: absolute;

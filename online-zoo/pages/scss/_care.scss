@@ -39,6 +39,12 @@
             transition: all ease 0.5s;
             transform: scale(1.02);
         }
+        &-image {
+            img {
+                // width: 100%;
+                object-fit: cover;
+            }
+        }
         span {
             display: block;
         }

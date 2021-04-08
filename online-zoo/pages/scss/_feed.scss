@@ -60,20 +60,11 @@
         }
 
     }
-}
-.divider {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__text {
-        font-weight: 500;
-        font-size: 26px;
-        letter-spacing: 0.02rem;
-        color: #fff;
-    }
-    &__line {
-        width: 1280px;
-        height: 1px;
-        background-color: #fff;
+    &-image {
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
     }
 }
+
