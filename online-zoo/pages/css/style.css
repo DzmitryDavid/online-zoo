@@ -291,6 +291,14 @@ body, html {
           column-gap: 7.7rem;
 }
 
+.welcome__wrapper-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 7.7rem;
+          column-gap: 7.7rem;
+}
+
 .welcome__wrapper-eagles {
   margin-top: 14.7rem;
   display: -webkit-box;
@@ -2757,6 +2765,20 @@ body, html {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .welcome__wrapper-content {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0 10rem 0 10rem;
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .welcome__wrapper-eagles {
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -3000,18 +3022,18 @@ body, html {
     display: none;
   }
   .pets__cards {
-    padding-left: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-grid-columns: (29rem)[2];
-        grid-template-columns: repeat(2, 29rem);
-    -ms-grid-rows: 60rem;
-        grid-template-rows: 60rem;
-    gap: 2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 2rem;
+    width: 2460px;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
   }
   .pets__card {
-    display: none;
+    max-height: 60rem;
+    max-width: 30rem;
   }
   .pets__card-link {
     bottom: 1rem;
@@ -3024,6 +3046,9 @@ body, html {
   }
   .pets__card-lion {
     display: block;
+  }
+  .pets__card-image img {
+    width: 100%;
   }
   .feed__card {
     padding: 0;

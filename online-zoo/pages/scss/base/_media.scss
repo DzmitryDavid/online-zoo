@@ -45,6 +45,13 @@
             padding: 0 10rem 0 10rem;
             display: flex;
             flex-direction: column-reverse;
+            &-content {
+                align-items: flex-start;
+                padding: 0 10rem 0 10rem;
+                margin-top: 5rem;
+                display: flex;
+                flex-direction: column;
+            }
             &-eagles {
                 align-items: flex-end;
                 padding: 0 10rem 0 10rem;
@@ -281,16 +288,15 @@
             display: none;
         }
         &__cards {
-            padding-left: 0;
-            justify-content: center;
-            // overflow: hidden;
-            grid-template-columns: repeat(2, 29rem);
-            grid-template-rows: 60rem;
-            gap: 2rem;
-            
+            overflow: hidden;
+            display: flex;
+            padding: 0 2rem;
+            width: 2460px;
+            column-gap: 2rem;
         }
         &__card {
-            display: none;
+            max-height: 60rem;
+            max-width: 30rem;
             &-link {
                 bottom: 1rem;
             }
@@ -302,6 +308,11 @@
             }
             &-lion {
                 display: block;
+            }
+            &-image {
+                img {
+                    width: 100%;
+                }
             }
         }
         

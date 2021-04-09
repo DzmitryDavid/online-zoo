@@ -4,6 +4,10 @@
     &__wrapper {
         display: flex;
         column-gap: 7.7rem;
+        &-content {
+            display: flex;
+            column-gap: 7.7rem;
+        }
         &-eagles {
             margin-top: 14.7rem;
             display: flex;
@@ -15,7 +19,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         width: 52.3rem;
-
+        
     }
     &__title {
         margin-top: 6.8rem;
