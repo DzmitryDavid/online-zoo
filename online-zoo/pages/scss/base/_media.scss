@@ -16,7 +16,7 @@
 
 @media (max-width: 1440px) {
     .container {
-        max-width: 1200px;
+        max-width: 1183px;
     }
 
     .header {
@@ -24,7 +24,10 @@
     }
 
     .watch {
-        padding: 10rem 4rem;
+        &__content {
+            padding: 10rem 4rem;
+
+        }
         &__description {
             width: 34rem;
         }
@@ -60,7 +63,7 @@
             }
         }
         &__image {
-            width: 66rem;
+            width: 100%;
         }
         &__description-eagles {
             margin-top: 3rem;
@@ -168,6 +171,7 @@
             grid-template-columns: repeat(2, 44rem);
             grid-template-rows: repeat(3, 658px);
             gap: 2rem;
+            
         }
         &__image {
             img {
@@ -199,9 +203,9 @@
 
 @media (max-width: 1199px) {
     .container {
-        max-width: 979px;
+        max-width: 964px;
     }
-
+    
     .burger {
         display: flex;
     }
@@ -212,7 +216,9 @@
         }
     }
     .watch {
-        padding: 5rem 2rem;
+        &__content {
+            padding: 5rem 2rem;
+        }
 
         &__title {
             font-size: 7.2rem;
@@ -317,6 +323,7 @@
         
     }
     .feed {
+        max-width: 100%;
         &__card {
             padding: 0;
             flex-direction: column;
@@ -329,8 +336,9 @@
             &-image {
                 width: 100%;
                 img {
+                    object-fit: cover;
                     width: 100%;
-                    height: 100%;
+                    // height: 100%;
                 }
             }
             &-icon {
@@ -342,11 +350,11 @@
         }
     }
     .think {
-        overflow: hidden;
         &__cards {
             padding: 0 2rem;
             display: flex;
             width: 2152px;
+            overflow: hidden;
             
         }
         &__card {
@@ -393,7 +401,7 @@
 
         &__cards {
             display: flex;
-            // overflow: hidden;
+            overflow: hidden;
             padding: 0 2rem;
             justify-content: flex-start;
 
@@ -441,17 +449,379 @@
 
 }
 
-@media (max-width: 979px) {
+@media (max-width: 980px) {
     .container {
-        max-width: 769px;
+        max-width: 752px;
     }
 }
 
 @media (max-width: 768px) {
     .container {
-        max-width: 640px;
+        max-width: 623px;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 639px) {
+    .container {
+        max-width: 464px;
+    }
+    .watch {
+        width: 100%;
+
+        &__title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 4.876rem;
+
+        }
+        &__description {
+            margin-top: 2rem;
+        }
+    }
+
+    .welcome {
+        padding-bottom: 5rem;
+        &__title {
+            margin-top: 3rem;
+            font-size: 4rem;
+            line-height: 4.876rem;
+            &-eagles {
+                margin-top: 3rem;
+                line-height: 4.876rem;
+                font-size: 4rem;
+            }
+        }
+        &__description {
+            margin-top: 3rem;
+        }
+        &__wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+            &-content {
+                align-items: flex-start;
+                margin-top: 5rem;
+                display: flex;
+                flex-direction: column;
+            }
+            &-eagles {
+                align-items: flex-end;
+                margin-top: 5rem;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &__image {
+            width: 100%;
+        }
+        &__description-eagles {
+            margin-top: 3rem;
+        }
+
+    }
+
+    .donation {
+        &__content {
+            
+            &-title {
+                line-height: 3.2rem;
+                font-size: 2.6rem;
+            }
+            &-subtitle {
+                font-size: 1.8rem;
+                line-height: 2.7rem;
+            }
+        }
+    }
+
+    .pets {
+        &__cards {
+            margin-top: 3rem;
+            gap: 2rem;
+        }
+        &__title {
+            font-size: 2.6rem;
+        }
+        &__subtitle {
+            margin-top: 2rem;
+            font-size: 1.8rem;
+        }
+        &__button {
+            margin-top: 5rem;
+        }
+    }
+
+    .divider {
+        padding: 0 4rem;
+        &__line {
+            width: 91.5%;
+        }
+    }
+
+    .feed {
+        padding-top: 2rem;
+        &__button {
+            align-self: center;
+        }
+        &__title {
+            padding: 0;
+            text-align: center;
+            font-size: 2.6rem;
+        }
+        &__card {
+            padding: 0;
+            padding-bottom: 0;
+            column-gap: 2rem;
+            &-title {
+                text-align: center;
+                width: 100%;
+            }
+            &-content {
+                max-width: 100%;
+                margin-top: 0;
+                justify-content: center;
+                align-items: center;
+            }
+            &-description {
+                text-align: center;
+                padding: 0 1rem;
+                width: 100%;
+                &-third {
+                    width: 100%;
+                }
+            }
+            &-image {
+                padding-top: 8rem;
+            }
+            &-icon {
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    .think {
+        min-height: 1461px;
+        padding-top: 4rem;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__content {
+            margin: 0 auto;
+            padding: 0;
+            max-width: 30rem;
+            &-title {
+                text-align: center;
+                font-size: 2.6rem;
+                line-height: 3.169rem;
+                font-weight: 500;
+
+            }
+            &-subtitle {
+                text-align: center;
+                width: 100%;
+                font-size: 1.8rem;
+                margin-top: 3rem;
+                font-weight: 400;
+            }
+        }
+        &__card {
+            width: 30rem;
+            height: auto;
+            padding: 0 5rem;
+            &-icon {
+                margin-top: 4rem;
+            }
+        }
+        &__cards {
+            margin: 0 auto;
+            padding: 0;
+            width: 30rem;
+            margin-top: 5rem;
+            position: relative;
+        }
+        &__general {
+            &-button {
+                max-width: 30rem;
+                left: 50%;
+                transform: translate(-50%);
+                bottom: 5rem;
+            }
+        }
+        &__btn {
+            position: absolute;
+            right: 4rem;
+            bottom: -10rem;
+        }
+    }
+
+    .care {
+        padding-top: 4rem;
+        &__title {
+            text-align: center;
+            font-size: 2.6rem;
+            line-height: 3.169rem;
+        }
+        &__subtitle {
+            margin-top: 3rem;
+            font-size: 1.8rem;
+        }
+        &__cards {
+            
+            margin-top: 5rem;
+            
+            
+        }
+        &__card {
+            &-wrapper {
+                width: 30rem;
+                height: auto;
+                flex-direction: column;
+            }
+        }
+        &__image {
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+    .footer {
+        &__wrapper {
+            &-first {
+                padding: 0 1rem;
+            }
+            &-second {
+                padding: 0 1rem;
+            }
+        }
+        &__divider {
+            padding: 0;
+        }
+    }
+
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 320px;
+    }
+    .watch {
+        padding-top: 1rem;
+        background-image: url("../../assets/img/main/watch/Background-32.png");
+        background-size: auto;
+        background-position: bottom;
+        min-height: 70rem;
+        &__content {
+            padding: 0rem 1rem;
+            margin-top: 2rem;
+        }
+        &__title {
+
+            width: 100%;
+        }
+        &__description {
+            width: 100%;
+        }
+        &__button {
+            text-align: center;
+            &-btn {
+                @include btn-32;
+            }
+        }
+    }
+    .welcome {
+        padding-top: 5rem;
+        &__title {
+            font-size: 2.6rem;
+            line-height: 3.169rem;
+        }
+        &__wrapper {
+            &-eagles {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .donation {
+        &__content {
+            &-wrapper {
+                padding: 0 1rem;
+            }
+            width: 100%;
+            
+            &__subtitle {
+                width: 30rem;
+            }
+        }
+        &__action-btn {
+            @include donate-btn-32;
+        }
+    }
+    .pets {
+        padding: 0;
+        &__title {
+            margin-top: 5rem;
+            text-align: center;
+            width: 100%;
+        }
+        &__subtitle {
+            margin-top: 3rem;
+            padding: 0 1rem;
+            font-weight: 400;
+            line-height: 2.7rem;
+        }
+        &__cards {
+            padding: 0 1rem;
+        }
+        &__button-main {
+            display: none;
+        }
+    }
+    .think {
+        &-card {
+            height: auto;
+        }
+        &__care {
+        }
+        &__general {
+            &-button {
+                display: none;
+            }
+        }
+    }
+    
+}
+.care {
+    &__cards {
+        padding: 0 1rem;
+    }
+    &__card {
+        min-height: 60rem;
+        &-description {
+        padding: 0 2.8rem;
+
+        }
+        &-button {
+            left: 50%;
+            bottom: 0;
+        }
+    }
+    &__button {
+        &-main {
+            font-weight: 600;
+            width: 30rem;
+            text-transform: capitalize;
+            padding: 0;
+            height: 4.5rem;
+            font-size: 1.8rem;
+        }
+    }
+    &__image {
+        margin-top: 8rem;
+    }
+    .footer {
+        
+    }
+}
+.content__image {
+    max-width: 100%;
 }

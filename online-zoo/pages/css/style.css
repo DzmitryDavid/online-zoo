@@ -93,7 +93,7 @@ button:active {
 
 body, html {
   font-family: 'Montserrat', sans-serif;
-  width: 100%;
+  min-width: 32rem;
   font-weight: 600;
   font-size: 62.5%;
   padding: 0;
@@ -507,7 +507,7 @@ body, html {
 .donation__action-title {
   color: #fff;
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   letter-spacing: 0.07rem;
   line-height: 130%;
 }
@@ -935,6 +935,8 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .feed__card-description {
@@ -1013,6 +1015,7 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 1767px;
+  overflow: hidden;
 }
 
 .think__wrapper {
@@ -1556,6 +1559,10 @@ body, html {
   cursor: pointer;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
+}
+
+.footer__links li a:hover {
+  color: #00a092;
 }
 
 .footer__divider span {
@@ -2751,6 +2758,7 @@ body, html {
   border-radius: 5px;
   width: 116rem;
   height: 81.5rem;
+  display: none;
 }
 
 .popup__care-title {
@@ -2854,12 +2862,12 @@ body, html {
 
 @media (max-width: 1440px) {
   .container {
-    max-width: 1200px;
+    max-width: 1183px;
   }
   .header {
     padding: 0 10rem;
   }
-  .watch {
+  .watch__content {
     padding: 10rem 4rem;
   }
   .watch__description {
@@ -2915,7 +2923,7 @@ body, html {
             flex-direction: column;
   }
   .welcome__image {
-    width: 66rem;
+    width: 100%;
   }
   .welcome__description-eagles {
     margin-top: 3rem;
@@ -3049,7 +3057,7 @@ body, html {
 
 @media (max-width: 1199px) {
   .container {
-    max-width: 979px;
+    max-width: 964px;
   }
   .burger {
     display: -webkit-box;
@@ -3062,7 +3070,7 @@ body, html {
   .header__navigation-wrapper {
     display: none;
   }
-  .watch {
+  .watch__content {
     padding: 5rem 2rem;
   }
   .watch__title {
@@ -3171,6 +3179,9 @@ body, html {
   .pets__card-image img {
     width: 100%;
   }
+  .feed {
+    max-width: 100%;
+  }
   .feed__card {
     padding: 0;
     -webkit-box-orient: vertical;
@@ -3189,8 +3200,9 @@ body, html {
     width: 100%;
   }
   .feed__card-image img {
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
-    height: 100%;
   }
   .feed__card-icon {
     margin-top: 0;
@@ -3200,15 +3212,13 @@ body, html {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .think {
-    overflow: hidden;
-  }
   .think__cards {
     padding: 0 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 2152px;
+    overflow: hidden;
   }
   .think__card {
     width: 51.2rem;
@@ -3252,6 +3262,7 @@ body, html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: hidden;
     padding: 0 2rem;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -3306,14 +3317,402 @@ body, html {
   }
 }
 
-@media (max-width: 979px) {
+@media (max-width: 980px) {
   .container {
-    max-width: 769px;
+    max-width: 752px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    max-width: 640px;
+    max-width: 623px;
   }
+}
+
+@media (max-width: 639px) {
+  .container {
+    max-width: 464px;
+  }
+  .watch {
+    width: 100%;
+  }
+  .watch__title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 4.876rem;
+  }
+  .watch__description {
+    margin-top: 2rem;
+  }
+  .welcome {
+    padding-bottom: 5rem;
+  }
+  .welcome__title {
+    margin-top: 3rem;
+    font-size: 4rem;
+    line-height: 4.876rem;
+  }
+  .welcome__title-eagles {
+    margin-top: 3rem;
+    line-height: 4.876rem;
+    font-size: 4rem;
+  }
+  .welcome__description {
+    margin-top: 3rem;
+  }
+  .welcome__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .welcome__wrapper-content {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .welcome__wrapper-eagles {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .welcome__image {
+    width: 100%;
+  }
+  .welcome__description-eagles {
+    margin-top: 3rem;
+  }
+  .donation__content-title {
+    line-height: 3.2rem;
+    font-size: 2.6rem;
+  }
+  .donation__content-subtitle {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+  .pets__cards {
+    margin-top: 3rem;
+    gap: 2rem;
+  }
+  .pets__title {
+    font-size: 2.6rem;
+  }
+  .pets__subtitle {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+  .pets__button {
+    margin-top: 5rem;
+  }
+  .divider {
+    padding: 0 4rem;
+  }
+  .divider__line {
+    width: 91.5%;
+  }
+  .feed {
+    padding-top: 2rem;
+  }
+  .feed__button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .feed__title {
+    padding: 0;
+    text-align: center;
+    font-size: 2.6rem;
+  }
+  .feed__card {
+    padding: 0;
+    padding-bottom: 0;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+  .feed__card-title {
+    text-align: center;
+    width: 100%;
+  }
+  .feed__card-content {
+    max-width: 100%;
+    margin-top: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .feed__card-description {
+    text-align: center;
+    padding: 0 1rem;
+    width: 100%;
+  }
+  .feed__card-description-third {
+    width: 100%;
+  }
+  .feed__card-image {
+    padding-top: 8rem;
+  }
+  .feed__card-icon {
+    margin-top: 3rem;
+  }
+  .think {
+    min-height: 1461px;
+    padding-top: 4rem;
+  }
+  .think__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .think__content {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 30rem;
+  }
+  .think__content-title {
+    text-align: center;
+    font-size: 2.6rem;
+    line-height: 3.169rem;
+    font-weight: 500;
+  }
+  .think__content-subtitle {
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    font-weight: 400;
+  }
+  .think__card {
+    width: 30rem;
+    height: auto;
+    padding: 0 5rem;
+  }
+  .think__card-icon {
+    margin-top: 4rem;
+  }
+  .think__cards {
+    margin: 0 auto;
+    padding: 0;
+    width: 30rem;
+    margin-top: 5rem;
+    position: relative;
+  }
+  .think__general-button {
+    max-width: 30rem;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    bottom: 5rem;
+  }
+  .think__btn {
+    position: absolute;
+    right: 4rem;
+    bottom: -10rem;
+  }
+  .care {
+    padding-top: 4rem;
+  }
+  .care__title {
+    text-align: center;
+    font-size: 2.6rem;
+    line-height: 3.169rem;
+  }
+  .care__subtitle {
+    margin-top: 3rem;
+    font-size: 1.8rem;
+  }
+  .care__cards {
+    margin-top: 5rem;
+  }
+  .care__card-wrapper {
+    width: 30rem;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .care__image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+  }
+  .footer__wrapper-first {
+    padding: 0 1rem;
+  }
+  .footer__wrapper-second {
+    padding: 0 1rem;
+  }
+  .footer__divider {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 320px;
+  }
+  .watch {
+    padding-top: 1rem;
+    background-image: url("../../assets/img/main/watch/Background-32.png");
+    background-size: auto;
+    background-position: bottom;
+    min-height: 70rem;
+  }
+  .watch__content {
+    padding: 0rem 1rem;
+    margin-top: 2rem;
+  }
+  .watch__title {
+    width: 100%;
+  }
+  .watch__description {
+    width: 100%;
+  }
+  .watch__button {
+    text-align: center;
+  }
+  .watch__button-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    width: 30rem;
+    height: 4.5rem;
+    background-color: #f58021;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+  }
+  .welcome {
+    padding-top: 5rem;
+  }
+  .welcome__title {
+    font-size: 2.6rem;
+    line-height: 3.169rem;
+  }
+  .welcome__wrapper-eagles {
+    margin-top: 0;
+  }
+  .donation__content {
+    width: 100%;
+  }
+  .donation__content-wrapper {
+    padding: 0 1rem;
+  }
+  .donation__content__subtitle {
+    width: 30rem;
+  }
+  .donation__action-btn {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1.2rem;
+    font-weight: 600;
+    border: 1px solid #fff;
+    width: 30rem;
+    border-radius: 5px;
+    height: 4.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: transparent;
+  }
+  .pets {
+    padding: 0;
+  }
+  .pets__title {
+    margin-top: 5rem;
+    text-align: center;
+    width: 100%;
+  }
+  .pets__subtitle {
+    margin-top: 3rem;
+    padding: 0 1rem;
+    font-weight: 400;
+    line-height: 2.7rem;
+  }
+  .pets__cards {
+    padding: 0 1rem;
+  }
+  .pets__button-main {
+    display: none;
+  }
+  .think-card {
+    height: auto;
+  }
+  .think__general-button {
+    display: none;
+  }
+}
+
+.care__cards {
+  padding: 0 1rem;
+}
+
+.care__card {
+  min-height: 60rem;
+}
+
+.care__card-description {
+  padding: 0 2.8rem;
+}
+
+.care__card-button {
+  left: 50%;
+  bottom: 0;
+}
+
+.care__button-main {
+  font-weight: 600;
+  width: 30rem;
+  text-transform: capitalize;
+  padding: 0;
+  height: 4.5rem;
+  font-size: 1.8rem;
+}
+
+.care__image {
+  margin-top: 8rem;
+}
+
+.content__image {
+  max-width: 100%;
 }

@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 1767px;
+    overflow: hidden;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -27,6 +28,7 @@
         grid-template-columns: repeat(2, 51.5rem);
         grid-template-rows: repeat(2, 46.3rem);
         gap: 3rem;
+        
     }
     &__card {
         display: flex;

@@ -37,6 +37,9 @@
             @include descr;
             cursor: pointer;
             transition: all ease 0.5s;
+            &:hover {
+                color: $title-color;
+            }
         }
         display: flex;
         justify-content: space-between;

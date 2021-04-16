@@ -11,8 +11,9 @@
         border-radius: 5px;
         width: 116rem;
         height: 81.5rem;
+        display: none;
+
         &-title {
-            
             margin-top: 2rem;
             @include h2;
             color: $primary-color;
@@ -69,7 +70,5 @@
         &__two {
             transform: rotate(-45deg);
         }
-        
     }
-    
 }

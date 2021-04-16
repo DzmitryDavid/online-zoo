@@ -178,6 +178,76 @@
     border-radius: 5px;
     border: none;
 }
+@mixin btn-32 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    width: 30rem;
+    height: 4.5rem;
+    background-color: $primary-color;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+@mixin donate-btn {
+    position: relative;
+    display: flex;
+    margin-top: 1.2rem;
+    font-weight: 600;
+    border: 1px solid #fff;
+    width: 32rem;
+    border-radius: 5px;
+    height: 7.4rem;
+    font-size: 1.8rem;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+}
+@mixin donate-btn-32 {
+    position: relative;
+    display: flex;
+    margin-top: 1.2rem;
+    font-weight: 600;
+    border: 1px solid #fff;
+    width: 30rem;
+    border-radius: 5px;
+    height: 4.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+}
+@mixin feedback-btn-32 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    width: 30rem;
+    height: 4.5rem;
+    line-height: 2.2rem;
+    padding: 26px 35px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+        transition: all ease 0.5s;
+        background-color: #05786e;
+    }
+    &:focus,
+    &:active {
+        transition: all ease 0.5s;
+        background-color: #05786e;
+        transform: scale(0.96);
+    }
+}
 
 @mixin btn-hovered {
     background-color: #d26004;
