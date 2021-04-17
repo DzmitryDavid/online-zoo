@@ -27,7 +27,6 @@ a {
 }
 button {
     background-color: transparent;
-    
     border: 0;
     cursor: pointer;
     &:active {
@@ -37,6 +36,7 @@ button {
 body, html {
     font-family: 'Montserrat', sans-serif;
     min-width: 32rem;
+    width: 100%;
     font-weight: 600;
     font-size: 62.5%;
     padding: 0;
@@ -68,3 +68,4 @@ body, html {
 @import 'popup';
 @import 'base/media';
 @import 'base/media-zoos';
+@import 'base/media-contacts';

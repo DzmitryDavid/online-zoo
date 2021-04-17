@@ -18,6 +18,7 @@
     .sidepanel {
         position: absolute;
         max-width: 11.5rem;
+        max-height: 84.6rem;
         &__live {
             display: none;
         }
@@ -113,7 +114,10 @@
             display: flex;
             justify-self: flex-end;
             max-width: 100.5rem;
-            margin-left: 13.5rem;
+            margin-left: 10%;
+        }
+        &__frame {
+            max-height: 72.5rem;
         }
         &__slider {
             &-title {
@@ -162,6 +166,9 @@
 }
 
 @media (max-width: 1199px) {
+    .container {
+        max-width: 964px;
+    }
     .live {
         &__title {
             font-size: 4.2rem;
@@ -170,7 +177,7 @@
         }
         &__button {
             right: 0;
-            top: 100rem;
+            top: 92rem;
         }
         &__slider {
             margin-top: 13rem;
@@ -202,8 +209,10 @@
             &-wrapper {
                 padding: 0;
                 &-inner {
-                    grid-template-columns: repeat(3, 13.5rem);
-                    grid-template-rows: 10.6rem;
+                    grid-template-columns: repeat(3, 30%);
+                    grid-template-rows: 20.9rem;
+                    gap: 1.5rem;
+                    justify-content: center;
                 }
             }
         }
@@ -266,12 +275,141 @@
     .container {
         max-width: 623px;
     }
+    
+    .live {
+        &__button {
+            top: 52rem;
+            button {
+                width: 21.2rem;
+                height: 4.8rem;
+            }
+        }
+        &__description {
+            padding-top: 2rem;
+        }
+        &__frame {
+            margin-top: 1.5rem;
+            max-width: 54.2rem;
+            height: 40rem;
+        }
+        &__video {
+            margin-left: 7.8rem;
+        }
+        &__slider {
+            margin-top: 2rem;
+            &-wrapper {
+                margin: 0;
+            }
+    
+            &-title {
+                margin-top: 9rem;
+                font-size: 2.6rem;
+            }
+            &-wrapper-inner {
+                grid-template-columns: repeat(3, 13.5rem);
+                grid-template-rows: 10.6rem;
+                margin: 0 0 0 auto;
+                gap: 2rem;
+            }
+        }
+    }
+    .sidepanel {
+        &__tooltip {
+            display: none;
+        }
+        max-width: 7.8rem;
+        max-height: 50rem;
+    
+        &__active {
+            height: 10rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        fill: #ffff;
+                    }
+                }
+            }
+        }
+        &__second {
+            max-height: 10rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
+                &:hover {
+                    background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
+                }
+            }
+        }
+        &__third {
+            max-height: 10rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
+                &:hover {
+                    background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
+                }
+            }
+        }
+        &__fourth {
+            max-height: 10rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
+                &:hover {
+                    background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 639px) {
     .container {
         max-width: 464px;
     }
+    
     .live {
         &__description {
             padding-top: 2rem;
@@ -282,7 +420,7 @@
         &__video {
             margin: 0;
             margin-top: 2rem;
-            padding-left:3rem;
+            margin-left: 5rem;
             max-width: 100%;
             max-height: 30rem;
         }
@@ -293,10 +431,34 @@
         }
         &__slider {
             margin-top: 2rem;
+            &-wrapper-inner {
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            &-camera {
+                width: 14rem;
+                height: 11rem;
+            }
         }
+        &__button {
+            left: 50%;
+            transform: translate(-50%);
+            top: 65rem;
+        }
+        button {
+            width: 300px;
+            height: 45px;
+        }
+       
     }
     .sidepanel {
+        &__tooltip {
+            display: none;
+        }
         max-width: 5rem;
+        height: 30rem;
         &__active {
             max-height: 5rem;
             &-logo {
@@ -380,173 +542,198 @@
             }
         }
     }
+    .know {
+        padding-top: 5rem;
+        padding-bottom: 8rem;
+
+        &__card {
+            &-title {
+                font-size: 2.6rem;
+            }
+            &-subtitle span {
+                font-size: 1.8rem;
+            }
+
+        }
+        &__info {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-top: 5rem;
+            padding-bottom: 13rem;
+            &-description {
+                margin-top: 0;
+            }
+            &-content {
+                margin-top: 0;
+                &-heading {
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+                &-descr {
+                    margin: 0;
+                }
+                &-btn {
+                    left: 70%;
+                    top: 10rem;
+                }
+            }
+            
+        }
+    }
 }
 
 @media (max-width: 480px) {
     .container {
         max-width: 320px;
     }
-    .watch {
-        padding-top: 1rem;
-        background-image: url("../../assets/img/main/watch/Background-32.png");
-        background-size: auto;
-        background-position: bottom;
-        min-height: 69rem;
-        &__content {
-            padding: 0rem 1rem;
-            margin-top: 1rem;
+    .sidepanel {
+        max-width: 5rem;
+        height: 30rem;
+        &__active {
+            max-height: 5rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        fill: #ffff;
+                    }
+                }
+            }
         }
-        &__title {
-            width: 100%;
+        &__second {
+            max-height: 5rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
+                &:hover {
+                    background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
+                }
+            }
         }
-        &__description {
-            margin-top: 1rem;
-            width: 100%;
+        &__third {
+            max-height: 5rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
+                &:hover {
+                    background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
+                }
+            }
         }
-        &__button {
-            text-align: center;
-            &-btn {
-                @include btn-32;
+        &__fourth {
+            max-height: 5rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
+                &:hover {
+                    background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
+                }
             }
         }
     }
-    .welcome {
-        padding-top: 5rem;
+    .live {
+        &__description {
+            padding-top: 2rem;
+        }
         &__title {
+            margin-left: 4rem;
             font-size: 2.6rem;
-            line-height: 3.169rem;
-            &-eagles {
+        }
+        &__video {
+            margin: 0;
+            margin-top: 2rem;
+            margin-left: 3rem;
+            max-width: 100%;
+            max-height: 30rem;
+            width: 27rem;
+        }
+        &__frame {
+            width: 27rem;
+            height: 20rem;
+            margin: 0;
+        }
+        &__slider {
+            margin-top: 2rem;
+            &-wrapper-inner {
+                overflow: hidden;
+                display: flex;
+                
+            }
+            &-camera {
+                width: 14rem;
+                height: 11rem;
+            }
+        }
+    }
+    .know {
+        padding-top: 5rem;
+        &__card {
+            &-title {
                 font-size: 2.6rem;
             }
-        }
-        &__content {
-            padding: 0;
-        }
-        &__description {
-            padding: 0 1rem;
-        }
-        &__wrapper {
-            &-eagles {
-                margin-top: 0;
-            }
-        }
-    }
-
-    .donation {
-        &__content {
-            &-wrapper {
-                padding: 0 1rem;
-            }
-            width: 100%;
-
-            &__subtitle {
-                width: 30rem;
-            }
-        }
-        &__action-btn {
-            @include donate-btn-32;
-        }
-    }
-    .pets {
-        padding: 0;
-        &__title {
-            margin-top: 5rem;
-            text-align: center;
-            width: 100%;
-        }
-        &__subtitle {
-            margin-top: 3rem;
-            padding: 0 1rem;
-            font-weight: 400;
-            line-height: 2.7rem;
-        }
-        &__cards {
-            padding: 0 1rem;
-        }
-        &__button-main {
-            display: none;
-        }
-    }
-    .think {
-        &-card {
-            height: auto;
-        }
-
-        &__general {
-            &-button {
-                display: none;
-            }
-        }
-    }
-    .care {
-        &__cards {
-            padding: 0 1rem;
-        }
-        &__card {
-            min-height: 60rem;
-            &-description {
-                padding: 0 2.8rem;
-            }
-            &-button {
-                left: 50%;
-                bottom: 0;
-            }
-        }
-        &__button {
-            &-main {
-                font-weight: 600;
-                width: 30rem;
-                text-transform: capitalize;
-                padding: 0;
-                height: 4.5rem;
+            &-subtitle span {
                 font-size: 1.8rem;
             }
-        }
-        &__image {
-            margin-top: 8rem;
-        }
-    }
 
-    .footer {
-        &__wrapper {
-            display: flex;
-            &-second {
-                flex-direction: column-reverse;
-            }
         }
-        &__logos {
-            max-width: 100%;
-
+        &__info {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            a {
-                margin-top: 3rem;
+            margin-top: 5rem;
+            &-content {
+                margin-top: 0;
+                &-heading {
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+                &-descr {
+                    margin: 0;
+                }
             }
-        }
-        &__links {
-            max-width: 30rem;
-        }
-        &__link a {
-            font-size: 1.6rem;
-        }
-
-        &__button {
-            &-main {
-                padding: 1rem 2rem;
-                height: 4.5rem;
-                max-width: 30rem;
-                text-transform: none;
-            }
-        }
-        &__authors {
-            width: 100%;
-            flex-direction: column;
-        }
-        &__author-link {
-            margin-top: 3rem;
         }
     }
+    
 }
 
 .content__image {

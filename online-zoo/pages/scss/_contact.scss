@@ -1,16 +1,16 @@
+
 .contact {
-    margin-bottom: 15rem;
+    
+    padding-bottom: 15rem;
     &__frame {
         border: 1px solid;
         height: 81.5rem;
-        
     }
     &__feed {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding-top: 15rem;
         gap: 17.5rem;
-        
         &-content {
             &-title {
                 @include h2;
@@ -21,10 +21,13 @@
                 @include descr;
             }
         }
-    
     }
-    
-    
+    &__image {
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
 }
 .form {
     display: flex;
