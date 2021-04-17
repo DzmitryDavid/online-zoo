@@ -28,10 +28,8 @@
         justify-content: space-between;
         width: 41.4rem;
     }
-
-    &__links {
-        margin-top: 6.4rem;
-        li  a {
+    &__link {
+        a {
             color: #fff;
             text-transform: uppercase;
             @include descr;
@@ -41,10 +39,15 @@
                 color: $title-color;
             }
         }
+    }
+    &__links {
+        margin-top: 6.4rem;
+        
         display: flex;
         justify-content: space-between;
         width: 42.6rem;
     }
+    
 
     &__divider span {
         margin-top: 6.8rem;

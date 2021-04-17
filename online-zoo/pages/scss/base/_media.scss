@@ -26,7 +26,6 @@
     .watch {
         &__content {
             padding: 10rem 4rem;
-
         }
         &__description {
             width: 34rem;
@@ -171,7 +170,6 @@
             grid-template-columns: repeat(2, 44rem);
             grid-template-rows: repeat(3, 658px);
             gap: 2rem;
-            
         }
         &__image {
             img {
@@ -205,7 +203,7 @@
     .container {
         max-width: 964px;
     }
-    
+
     .burger {
         display: flex;
     }
@@ -278,7 +276,6 @@
         }
     }
     .pets {
-        
         &__title {
             width: 40rem;
             margin: 0 auto;
@@ -320,7 +317,6 @@
                 }
             }
         }
-        
     }
     .feed {
         max-width: 100%;
@@ -355,7 +351,6 @@
             display: flex;
             width: 2152px;
             overflow: hidden;
-            
         }
         &__card {
             width: 51.2rem;
@@ -382,8 +377,6 @@
             bottom: 90rem;
             left: 2rem;
         }
-        
-        
     }
     .care {
         padding-top: 8rem;
@@ -396,7 +389,6 @@
             width: 100%;
             text-align: center;
             padding: 0 2rem;
-            
         }
 
         &__cards {
@@ -404,7 +396,6 @@
             overflow: hidden;
             padding: 0 2rem;
             justify-content: flex-start;
-
         }
         &__card {
             display: flex;
@@ -433,7 +424,6 @@
         &__image {
             margin-top: 10rem;
         }
-        
     }
     .footer {
         &__wrapper {
@@ -446,7 +436,6 @@
             }
         }
     }
-
 }
 
 @media (max-width: 980px) {
@@ -472,7 +461,6 @@
             font-size: 4rem;
             font-weight: 800;
             line-height: 4.876rem;
-
         }
         &__description {
             margin-top: 2rem;
@@ -516,12 +504,10 @@
         &__description-eagles {
             margin-top: 3rem;
         }
-
     }
 
     .donation {
         &__content {
-            
             &-title {
                 line-height: 3.2rem;
                 font-size: 2.6rem;
@@ -613,7 +599,6 @@
                 font-size: 2.6rem;
                 line-height: 3.169rem;
                 font-weight: 500;
-
             }
             &-subtitle {
                 text-align: center;
@@ -665,10 +650,7 @@
             font-size: 1.8rem;
         }
         &__cards {
-            
             margin-top: 5rem;
-            
-            
         }
         &__card {
             &-wrapper {
@@ -697,7 +679,6 @@
             padding: 0;
         }
     }
-
 }
 
 @media (max-width: 480px) {
@@ -705,20 +686,22 @@
         max-width: 320px;
     }
     .watch {
+
         padding-top: 1rem;
         background-image: url("../../assets/img/main/watch/Background-32.png");
         background-size: auto;
         background-position: bottom;
-        min-height: 70rem;
+        min-height: 69rem;
         &__content {
             padding: 0rem 1rem;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
         &__title {
-
+            
             width: 100%;
         }
         &__description {
+            margin-top: 1rem;
             width: 100%;
         }
         &__button {
@@ -733,6 +716,15 @@
         &__title {
             font-size: 2.6rem;
             line-height: 3.169rem;
+            &-eagles {
+                font-size: 2.6rem;
+            }
+        }
+        &__content {
+            padding: 0;
+        }
+        &__description {
+            padding: 0 1rem;
         }
         &__wrapper {
             &-eagles {
@@ -747,7 +739,7 @@
                 padding: 0 1rem;
             }
             width: 100%;
-            
+
             &__subtitle {
                 width: 30rem;
             }
@@ -755,6 +747,7 @@
         &__action-btn {
             @include donate-btn-32;
         }
+    
     }
     .pets {
         padding: 0;
@@ -780,48 +773,84 @@
         &-card {
             height: auto;
         }
-        &__care {
-        }
+       
         &__general {
             &-button {
                 display: none;
             }
         }
     }
-    
-}
-.care {
-    &__cards {
-        padding: 0 1rem;
+    .care {
+        &__cards {
+            padding: 0 1rem;
+        }
+        &__card {
+            min-height: 60rem;
+            &-description {
+                padding: 0 2.8rem;
+            }
+            &-button {
+                left: 50%;
+                bottom: 0;
+            }
+        }
+        &__button {
+            &-main {
+                font-weight: 600;
+                width: 30rem;
+                text-transform: capitalize;
+                padding: 0;
+                height: 4.5rem;
+                font-size: 1.8rem;
+            }
+        }
+        &__image {
+            margin-top: 8rem;
+        }
     }
-    &__card {
-        min-height: 60rem;
-        &-description {
-        padding: 0 2.8rem;
 
-        }
-        &-button {
-            left: 50%;
-            bottom: 0;
-        }
-    }
-    &__button {
-        &-main {
-            font-weight: 600;
-            width: 30rem;
-            text-transform: capitalize;
-            padding: 0;
-            height: 4.5rem;
-            font-size: 1.8rem;
-        }
-    }
-    &__image {
-        margin-top: 8rem;
-    }
     .footer {
+        &__wrapper {
+            display: flex;
+            &-second {
+                flex-direction: column-reverse;
+            }
+        }
+        &__logos {
+            max-width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+                margin-top: 3rem;
+            }
+        }
+        &__links {
+            max-width: 30rem;
+        }
+        &__link  a {
+            font-size: 1.6rem;
+        }
         
+        &__button {
+            &-main {
+                padding: 1rem 2rem;
+                height: 4.5rem;
+                max-width: 30rem;
+                text-transform: none;
+            }
+        }
+        &__authors {
+            width: 100%;
+            flex-direction: column;
+        }
+        &__author-link {
+            margin-top: 3rem;
+        }
     }
 }
+
 .content__image {
     max-width: 100%;
 }
