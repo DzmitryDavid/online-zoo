@@ -15,34 +15,6 @@
 }
 
 @media (max-width: 1440px) {
-    .panda__svg  {
-        width: 53px;
-        height: 40px;
-        path {
-            fill: #ffff;
-        }
-    }
-    .eagle__svg {
-        width: 53px;
-        height: 40px;
-        path {
-            fill: $primary-color;
-        }
-    }
-    .gorilla__svg {
-        width: 53px;
-        height: 40px;
-        path {
-            fill: $primary-color;
-        }
-    }
-    .lemur__svg {
-        width: 53px;
-        height: 40px;
-        path {
-            fill: $primary-color;
-        }
-    }
     .sidepanel {
         position: absolute;
         max-width: 11.5rem;
@@ -56,30 +28,78 @@
         &__active {
             &-logo {
                 background: none;
-                
+                svg {
+                    width: 53px;
+                    height: 40px;
+                    path {
+                        fill: #ffff;
+                    }
+                }
             }
         }
         &__second {
             &-logo {
                 background: none;
+                svg {
+                    width: 53px;
+                    height: 40px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
                 &:hover {
                     background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
                 }
             }
         }
         &__third {
             &-logo {
                 background: none;
+                svg {
+                    width: 53px;
+                    height: 40px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
                 &:hover {
                     background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
                 }
             }
         }
         &__fourth {
             &-logo {
                 background: none;
+                svg {
+                    width: 53px;
+                    height: 40px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
                 &:hover {
                     background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
                 }
             }
         }
@@ -163,13 +183,11 @@
                     max-height: 2rem;
                     span {
                         font-size: 1rem;
-                        
                     }
                     img {
                         width: 11.35px;
                         height: 11.35px;
                     }
-
                 }
             }
             &-arrow-left {
@@ -185,7 +203,7 @@
                 padding: 0;
                 &-inner {
                     grid-template-columns: repeat(3, 13.5rem);
-                    grid-template-rows: 10.6rem ;
+                    grid-template-rows: 10.6rem;
                 }
             }
         }
@@ -236,9 +254,6 @@
             }
         }
     }
-    
-    
-    
 }
 
 @media (max-width: 980px) {
@@ -257,7 +272,114 @@
     .container {
         max-width: 464px;
     }
-    
+    .live {
+        &__description {
+            padding-top: 2rem;
+        }
+        &__title {
+            font-size: 2.6rem;
+        }
+        &__video {
+            margin: 0;
+            margin-top: 2rem;
+            padding-left:3rem;
+            max-width: 100%;
+            max-height: 30rem;
+        }
+        &__frame {
+            max-width: 100%;
+            max-height: 30rem;
+            margin: 0;
+        }
+        &__slider {
+            margin-top: 2rem;
+        }
+    }
+    .sidepanel {
+        max-width: 5rem;
+        &__active {
+            max-height: 5rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        fill: #ffff;
+                    }
+                }
+            }
+        }
+        &__second {
+            max-height: 5rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
+                &:hover {
+                    background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
+                }
+            }
+        }
+        &__third {
+            max-height: 5rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
+                &:hover {
+                    background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
+                }
+            }
+        }
+        &__fourth {
+            max-height: 5rem;
+            &-logo {
+                background: none;
+                svg {
+                    width: 26px;
+                    height: 20px;
+                    path {
+                        transition: all ease 0.5s;
+                        fill: $primary-color;
+                    }
+                }
+                &:hover {
+                    background: none;
+                    svg {
+                        transition: all ease 0.5s;
+                        path {
+                            fill: #ffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -265,7 +387,6 @@
         max-width: 320px;
     }
     .watch {
-
         padding-top: 1rem;
         background-image: url("../../assets/img/main/watch/Background-32.png");
         background-size: auto;
@@ -276,7 +397,6 @@
             margin-top: 1rem;
         }
         &__title {
-            
             width: 100%;
         }
         &__description {
@@ -326,7 +446,6 @@
         &__action-btn {
             @include donate-btn-32;
         }
-    
     }
     .pets {
         padding: 0;
@@ -352,7 +471,7 @@
         &-card {
             height: auto;
         }
-       
+
         &__general {
             &-button {
                 display: none;
@@ -408,10 +527,10 @@
         &__links {
             max-width: 30rem;
         }
-        &__link  a {
+        &__link a {
             font-size: 1.6rem;
         }
-        
+
         &__button {
             &-main {
                 padding: 1rem 2rem;

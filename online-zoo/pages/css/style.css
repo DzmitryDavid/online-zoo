@@ -3330,11 +3330,32 @@ body, html {
   .container {
     max-width: 752px;
   }
+  .donation__content-subtitle {
+    max-width: 88%;
+    margin: auto;
+    margin-top: 3rem;
+  }
+  .donation__content-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     max-width: 623px;
+  }
+  .donation__content-subtitle {
+    max-width: 88%;
+    margin: auto;
+    margin-top: 3rem;
+  }
+  .donation__content-wrapper {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
   }
 }
 
@@ -3780,34 +3801,6 @@ body, html {
 }
 
 @media (max-width: 1440px) {
-  .panda__svg {
-    width: 53px;
-    height: 40px;
-  }
-  .panda__svg path {
-    fill: #ffff;
-  }
-  .eagle__svg {
-    width: 53px;
-    height: 40px;
-  }
-  .eagle__svg path {
-    fill: #f58021;
-  }
-  .gorilla__svg {
-    width: 53px;
-    height: 40px;
-  }
-  .gorilla__svg path {
-    fill: #f58021;
-  }
-  .lemur__svg {
-    width: 53px;
-    height: 40px;
-  }
-  .lemur__svg path {
-    fill: #f58021;
-  }
   .sidepanel {
     position: absolute;
     max-width: 11.5rem;
@@ -3823,23 +3816,78 @@ body, html {
   .sidepanel__active-logo {
     background: none;
   }
+  .sidepanel__active-logo svg {
+    width: 53px;
+    height: 40px;
+  }
+  .sidepanel__active-logo svg path {
+    fill: #ffff;
+  }
   .sidepanel__second-logo {
     background: none;
+  }
+  .sidepanel__second-logo svg {
+    width: 53px;
+    height: 40px;
+  }
+  .sidepanel__second-logo svg path {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    fill: #f58021;
   }
   .sidepanel__second-logo:hover {
     background: none;
   }
+  .sidepanel__second-logo:hover svg {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  .sidepanel__second-logo:hover svg path {
+    fill: #ffff;
+  }
   .sidepanel__third-logo {
     background: none;
+  }
+  .sidepanel__third-logo svg {
+    width: 53px;
+    height: 40px;
+  }
+  .sidepanel__third-logo svg path {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    fill: #f58021;
   }
   .sidepanel__third-logo:hover {
     background: none;
   }
+  .sidepanel__third-logo:hover svg {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  .sidepanel__third-logo:hover svg path {
+    fill: #ffff;
+  }
   .sidepanel__fourth-logo {
     background: none;
   }
+  .sidepanel__fourth-logo svg {
+    width: 53px;
+    height: 40px;
+  }
+  .sidepanel__fourth-logo svg path {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    fill: #f58021;
+  }
   .sidepanel__fourth-logo:hover {
     background: none;
+  }
+  .sidepanel__fourth-logo:hover svg {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  .sidepanel__fourth-logo:hover svg path {
+    fill: #ffff;
   }
   .live {
     padding-bottom: 10rem;
@@ -4018,6 +4066,118 @@ body, html {
 @media (max-width: 639px) {
   .container {
     max-width: 464px;
+  }
+  .live__description {
+    padding-top: 2rem;
+  }
+  .live__title {
+    font-size: 2.6rem;
+  }
+  .live__video {
+    margin: 0;
+    margin-top: 2rem;
+    padding-left: 3rem;
+    max-width: 100%;
+    max-height: 30rem;
+  }
+  .live__frame {
+    max-width: 100%;
+    max-height: 30rem;
+    margin: 0;
+  }
+  .live__slider {
+    margin-top: 2rem;
+  }
+  .sidepanel {
+    max-width: 5rem;
+  }
+  .sidepanel__active {
+    max-height: 5rem;
+  }
+  .sidepanel__active-logo {
+    background: none;
+  }
+  .sidepanel__active-logo svg {
+    width: 26px;
+    height: 20px;
+  }
+  .sidepanel__active-logo svg path {
+    fill: #ffff;
+  }
+  .sidepanel__second {
+    max-height: 5rem;
+  }
+  .sidepanel__second-logo {
+    background: none;
+  }
+  .sidepanel__second-logo svg {
+    width: 26px;
+    height: 20px;
+  }
+  .sidepanel__second-logo svg path {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    fill: #f58021;
+  }
+  .sidepanel__second-logo:hover {
+    background: none;
+  }
+  .sidepanel__second-logo:hover svg {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  .sidepanel__second-logo:hover svg path {
+    fill: #ffff;
+  }
+  .sidepanel__third {
+    max-height: 5rem;
+  }
+  .sidepanel__third-logo {
+    background: none;
+  }
+  .sidepanel__third-logo svg {
+    width: 26px;
+    height: 20px;
+  }
+  .sidepanel__third-logo svg path {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    fill: #f58021;
+  }
+  .sidepanel__third-logo:hover {
+    background: none;
+  }
+  .sidepanel__third-logo:hover svg {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  .sidepanel__third-logo:hover svg path {
+    fill: #ffff;
+  }
+  .sidepanel__fourth {
+    max-height: 5rem;
+  }
+  .sidepanel__fourth-logo {
+    background: none;
+  }
+  .sidepanel__fourth-logo svg {
+    width: 26px;
+    height: 20px;
+  }
+  .sidepanel__fourth-logo svg path {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    fill: #f58021;
+  }
+  .sidepanel__fourth-logo:hover {
+    background: none;
+  }
+  .sidepanel__fourth-logo:hover svg {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  .sidepanel__fourth-logo:hover svg path {
+    fill: #ffff;
   }
 }
 

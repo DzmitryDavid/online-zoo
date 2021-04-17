@@ -442,12 +442,41 @@
     .container {
         max-width: 752px;
     }
+    .donation__content {
+        &-subtitle {
+            max-width: 88%;
+            margin: auto;
+            margin-top: 3rem;
+
+        }
+        &-wrapper {
+            align-items: center;
+            padding-bottom: 5rem;
+            padding-top: 5rem;
+            
+        }
+    }
+
 }
+
 
 @media (max-width: 768px) {
     .container {
         max-width: 623px;
     }
+    .donation__content {
+        &-subtitle {
+            max-width: 88%;
+            margin: auto;
+            margin-top: 3rem;
+        }
+        &-wrapper{
+            padding-bottom: 5rem;
+            padding-top: 5rem;
+            
+        }
+    }
+
 }
 
 @media (max-width: 639px) {
