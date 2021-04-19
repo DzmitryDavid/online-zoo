@@ -83,3 +83,203 @@
         }
     }
 }
+@media (max-width: 980px) {
+    .tag {
+        width: 8rem;
+        height:  10rem;
+    }
+    .border-svg {
+        width: 110px;
+        height: 130px;
+    }
+    .animal {
+        &__tooltip {
+            &-text {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
+        }
+        &__img img {
+            width: 4.4rem;
+            height: 5rem;
+        }
+        &__eagle {
+            left: 6rem;
+            bottom: 39.5rem;
+        }
+        &__alligator {
+            left: 13.2rem;
+            bottom: 38.9rem;
+        }
+        &__gorilla {
+            left: 34.5rem;
+            bottom: 36rem;
+        }
+        &__lion {
+            left: 28.5rem;
+            bottom: 37.5rem;
+        }
+        &__lemur {
+            right: 25rem;
+            bottom: 29rem;
+        }
+        &__panda {
+            right: 13rem;
+            bottom: 44rem;
+        }
+        &__tiger {
+            right: 13rem;
+            bottom: 32rem;
+        }
+        &__koala {
+            right: 7rem;
+            bottom: 28rem;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .tag {
+        width: 4.5rem;
+        height: 6rem;
+    }
+    .map-svg {
+        margin-top: 5rem;
+        max-height: 415px;
+        margin-bottom: 5rem;
+    }
+    .border-svg {
+        padding: 8px;
+        width: 100px;
+        height: 87px;
+    }
+    .animal {
+        width: 5rem;
+        height: 8rem;
+        &__tooltip {
+            &-text {
+                display: none;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
+        }
+        &__img img {
+            width: 2.4rem;
+            height: 2rem;
+        }
+        &__eagle {
+            left: 6.6rem;
+            bottom: 22.5rem;
+        }
+        &__alligator {
+            left: 12.5rem;
+            bottom: 21.9rem;
+        }
+        &__gorilla {
+            left: 30rem;
+            bottom: 20rem;
+        }
+        &__lion {
+            left: 25rem;
+            bottom: 20.5rem;
+        }
+        &__lemur {
+            right: 22.5rem;
+            bottom: 14rem;
+        }
+        &__panda {
+            right: 13rem;
+            bottom: 26rem;
+        }
+        &__tiger {
+            right: 13rem;
+            bottom: 17rem;
+        }
+        &__koala {
+            right: 7rem;
+            bottom: 13rem;
+        }
+    }
+    .animal__img {
+        width: 2.4rem;
+        height: 2rem;
+    }
+}
+@media (max-width: 480px) {
+
+    .map {
+        position: relative;
+        
+        overflow: hidden;
+        &__title-heading {
+            line-height: 130%;
+            font-size: 2.6rem;
+        }
+        &__wrapper {
+            
+            &-inner {
+                overflow: hidden;
+                position: relative;
+                margin: 3rem  0;
+                height: 233px;
+                width: 361px;
+                height: 233px;
+            }
+        }
+    }
+    .map-svg {
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: -2rem;
+    }
+    .animal {
+        width: 5rem;
+        height: 8rem;
+        &__tooltip {
+            &-text {
+                display: none;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
+        }
+        &__img img {
+            width: 2.4rem;
+            height: 2rem;
+        }
+        &__eagle {
+            left: 0.8rem;
+            bottom: 12.3rem;
+        }
+        &__alligator {
+            left: 4.2rem;
+            bottom: 12.3rem;
+        }
+        &__gorilla {
+            left: 14.5rem;
+            bottom: 10.5rem;
+        }
+        &__lion {
+            left: 11.5rem;
+            bottom: 11.5rem;
+        }
+        &__lemur {
+            right: 10rem;
+            bottom: 7rem;
+        }
+        &__panda {
+            right: 4.5rem;
+            bottom: 14.5rem;
+        }
+        &__tiger {
+            right: 4.5rem;
+            bottom: 9rem;
+        }
+        &__koala {
+            right: 1.5rem;
+            bottom: 6.5rem;
+        }
+    }
+}

@@ -3,12 +3,12 @@
     height: 100vh;
     right: 0;
     background-color: $secondary-color;
-    transition: all ease 1s;
+    transition: all ease .5s;
     z-index: 1000;
     overflow: hidden;
     transform: translateX(100%);
     width: 0;
-    
+
     &__close {
         z-index: 10000;
         cursor: pointer;
@@ -25,7 +25,7 @@
             background-color: #fff;
             height: 30px;
             width: 2px;
-            
+
             &__one {
                 transform: rotate(45deg);
             }
@@ -33,7 +33,6 @@
                 transform: rotate(-45deg);
             }
         }
-
     }
     &__navigation {
         position: relative;
@@ -43,28 +42,32 @@
             text-transform: uppercase;
             margin-top: 20%;
             &-link {
-                color: #ffff;   
+                color: #ffff;
+                &:hover {
+                    color: $title-color;
+                }
+                
             }
-            
         }
         &:first-child {
             margin-top: 15rem;
         }
         &-link {
-
             margin-top: 40%;
             font-size: 1.8rem;
             &:hover {
                 color: $title-color;
             }
-        
+           
         }
     }
 }
 .show {
-    transition: all ease 1s;
+    transition: all ease .5s;
     visibility: visible;
     transform: translateX(0%);
-    width: 30%;
-
+    width: 40%;
+    @media (max-width: 480px) {
+        width: 75%;      
+    }
 }

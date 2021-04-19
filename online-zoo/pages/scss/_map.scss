@@ -42,7 +42,6 @@
         transition: all ease 0.5s;
         
     }
-    
 
     &__tooltip {
         position: absolute;
@@ -77,9 +76,6 @@
         left: 29rem;
         bottom: 37rem;
         cursor:default;
-
-        
-        
     }
     &__eagle {
         left: 17rem;
@@ -98,7 +94,6 @@
         left: 57rem;
         bottom: 33rem;
         cursor: default;
-        
     }
     &__gorilla {
         right: 61rem;
@@ -112,8 +107,6 @@
             }
         }
     }
-        
-    
     &__lemur {
         right: 51rem;
         bottom: 18rem;
@@ -153,8 +146,6 @@
         cursor: default;
         
     }
-
-
 }
 .border {
     position: absolute;
