@@ -173,7 +173,6 @@
         &__title {
             font-size: 4.2rem;
             font-weight: 500;
-            // margin-left: 20%;
         }
         &__button {
             right: 0;
@@ -225,11 +224,11 @@
                 padding: 0;
                 margin: 0 auto;
             }
-            &__subtitle {
+            &-subtitle {
                 max-width: 100%;
             }
             &-wrapper-zoos {
-                padding: 3rem 4rem;
+                padding: 3rem 2rem;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -269,14 +268,20 @@
     .container {
         max-width: 752px;
     }
+    
 }
 
 @media (max-width: 768px) {
     .container {
         max-width: 623px;
     }
-    
     .live {
+        &__title {
+            margin-left: 12.6rem;
+        }
+        &__wrapper {
+            padding-right: 2rem;
+        }
         &__button {
             top: 52rem;
             button {
@@ -300,7 +305,7 @@
             &-wrapper {
                 margin: 0;
             }
-    
+
             &-title {
                 margin-top: 9rem;
                 font-size: 2.6rem;
@@ -314,12 +319,15 @@
         }
     }
     .sidepanel {
+        &__arrow img {
+            top: 2rem;
+        }
         &__tooltip {
             display: none;
         }
         max-width: 7.8rem;
         max-height: 50rem;
-    
+
         &__active {
             height: 10rem;
             &-logo {
@@ -409,19 +417,18 @@
     .container {
         max-width: 464px;
     }
-    
+
     .live {
         &__description {
             padding-top: 2rem;
         }
         &__title {
+            margin: 0;
             font-size: 2.6rem;
         }
         &__video {
             margin: 0;
-            margin-top: 2rem;
-            margin-left: 5rem;
-            max-width: 100%;
+            width: 100%;
             max-height: 30rem;
         }
         &__frame {
@@ -431,11 +438,14 @@
         }
         &__slider {
             margin-top: 2rem;
+            &-title {
+                margin-top: 2rem;
+            }
             &-wrapper-inner {
                 overflow: hidden;
                 display: flex;
                 justify-content: space-between;
-                
+                width: 100%;
             }
             &-camera {
                 width: 14rem;
@@ -443,15 +453,14 @@
             }
         }
         &__button {
-            left: 50%;
+            left: 44%;
             transform: translate(-50%);
-            top: 65rem;
+            top: 59rem;
         }
         button {
             width: 300px;
             height: 45px;
         }
-       
     }
     .sidepanel {
         &__tooltip {
@@ -462,6 +471,7 @@
         &__active {
             max-height: 5rem;
             &-logo {
+                max-height: 5rem;
                 background: none;
                 svg {
                     width: 26px;
@@ -475,6 +485,7 @@
         &__second {
             max-height: 5rem;
             &-logo {
+                max-height: 5rem;
                 background: none;
                 svg {
                     width: 26px;
@@ -498,6 +509,7 @@
         &__third {
             max-height: 5rem;
             &-logo {
+                max-height: 5rem;
                 background: none;
                 svg {
                     width: 26px;
@@ -521,6 +533,7 @@
         &__fourth {
             max-height: 5rem;
             &-logo {
+                max-height: 5rem;
                 background: none;
                 svg {
                     width: 26px;
@@ -553,7 +566,6 @@
             &-subtitle span {
                 font-size: 1.8rem;
             }
-
         }
         &__info {
             display: flex;
@@ -577,7 +589,6 @@
                     top: 10rem;
                 }
             }
-            
         }
     }
 }
@@ -587,11 +598,10 @@
         max-width: 320px;
     }
     .sidepanel {
-        max-width: 5rem;
-        height: 30rem;
+        max-height: 30rem;
         &__active {
-            max-height: 5rem;
             &-logo {
+                max-height: 5rem;
                 background: none;
                 svg {
                     width: 26px;
@@ -603,8 +613,8 @@
             }
         }
         &__second {
-            max-height: 5rem;
             &-logo {
+                height: 5rem;
                 background: none;
                 svg {
                     width: 26px;
@@ -626,8 +636,8 @@
             }
         }
         &__third {
-            max-height: 5rem;
             &-logo {
+                height: 5rem;
                 background: none;
                 svg {
                     width: 26px;
@@ -649,8 +659,8 @@
             }
         }
         &__fourth {
-            max-height: 5rem;
             &-logo {
+                height: 5rem;
                 background: none;
                 svg {
                     width: 26px;
@@ -673,56 +683,97 @@
         }
     }
     .live {
+        margin: 0;
+        padding: 0;
+        &__wrapper {
+            margin: 0;
+            padding: 0;
+        }
         &__description {
             padding-top: 2rem;
         }
         &__title {
-            margin-left: 4rem;
+            margin-left: 5rem;
             font-size: 2.6rem;
+        }
+        &__button {
+            top: 49rem;
+            left: 50%;
+            padding: 0 1rem;
+            margin-bottom: 5rem;
+            width: 100%;
+            // display: none;
         }
         &__video {
             margin: 0;
-            margin-top: 2rem;
-            margin-left: 3rem;
-            max-width: 100%;
-            max-height: 30rem;
-            width: 27rem;
+            padding: 0;
+            margin-left: 5rem;
+            max-width: 27rem;
         }
         &__frame {
-            width: 27rem;
-            height: 20rem;
-            margin: 0;
+            max-width: 100%;
+            max-height: 20rem;
         }
+
         &__slider {
-            margin-top: 2rem;
+            margin-top: 0;
+            padding-bottom: 14.5rem;
+            &-title {
+                margin: 0;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 1.8rem;
+            }
             &-wrapper-inner {
-                overflow: hidden;
                 display: flex;
-                
+                overflow-x: hidden;
+                justify-content: space-evenly;
+                gap: 0;
             }
             &-camera {
+                &:first-child {
+                    display: none;
+                }
                 width: 14rem;
                 height: 11rem;
             }
         }
     }
+    .donation {
+        &__content {
+            margin: 0;
+            &-title {
+                padding-top: 3rem;
+            }
+            &-wrapper {
+                &-zoos {
+                    padding: 0 1rem;
+                }
+            }
+            
+        }
+        
+    }
     .know {
         padding-top: 5rem;
         &__card {
             &-title {
+                padding-top: 4.6rem;
                 font-size: 2.6rem;
             }
             &-subtitle span {
                 font-size: 1.8rem;
             }
-
         }
         &__info {
             display: flex;
-            flex-direction: column;
+            flex-direction: column-reverse;
             margin-top: 5rem;
             &-content {
                 margin-top: 0;
+                &-btn {
+                    left: 10%;
+                }
                 &-heading {
                     align-items: flex-start;
                     flex-direction: column;
@@ -733,7 +784,6 @@
             }
         }
     }
-    
 }
 
 .content__image {

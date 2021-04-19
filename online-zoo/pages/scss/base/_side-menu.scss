@@ -1,0 +1,70 @@
+.side-menu {
+    position: absolute;
+    height: 100vh;
+    right: 0;
+    background-color: $secondary-color;
+    transition: all ease 1s;
+    z-index: 1000;
+    overflow: hidden;
+    transform: translateX(100%);
+    width: 0;
+    
+    &__close {
+        z-index: 10000;
+        cursor: pointer;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 3rem;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+        &-line {
+            display: inline-block;
+            background-color: #fff;
+            height: 30px;
+            width: 2px;
+            
+            &__one {
+                transform: rotate(45deg);
+            }
+            &__two {
+                transform: rotate(-45deg);
+            }
+        }
+
+    }
+    &__navigation {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        &-list {
+            text-transform: uppercase;
+            margin-top: 20%;
+            &-link {
+                color: #ffff;   
+            }
+            
+        }
+        &:first-child {
+            margin-top: 15rem;
+        }
+        &-link {
+
+            margin-top: 40%;
+            font-size: 1.8rem;
+            &:hover {
+                color: $title-color;
+            }
+        
+        }
+    }
+}
+.show {
+    transition: all ease 1s;
+    visibility: visible;
+    transform: translateX(0%);
+    width: 30%;
+
+}

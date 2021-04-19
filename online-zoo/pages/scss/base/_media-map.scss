@@ -1,0 +1,85 @@
+@media (max-width: 1440px) {
+    .map {
+        margin-bottom: 0;
+        &__wrapper {
+            margin-top: 0;
+
+        }
+    }
+    .animal {
+        &__eagle {
+            left: 12.5rem;
+            bottom: 39rem;
+        }
+        &__alligator {
+            left: 23.5rem;
+            bottom: 38.5rem;
+        }
+        &__gorilla {
+            left: 57rem;
+            bottom: 33rem;
+        }
+        &__lion {
+            left: 47.5rem;
+            bottom: 35.5rem;
+        }
+        &__lemur {
+            right: 42rem;
+            bottom: 23rem;
+        }
+        &__panda {
+            right: 23rem;
+            bottom: 47rem;
+        }
+        &__tiger {
+            right: 24rem;
+            bottom: 28.5rem;
+        }
+        &__koala {
+            right: 13rem;
+            bottom: 21rem;
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .map {
+        margin-bottom: 0;
+        &__wrapper {
+            margin-top: 0;
+        }
+    }
+    .animal {
+        &__eagle {
+            left: 9.5rem;
+            bottom: 40rem;
+        }
+        &__alligator {
+            left: 18.2rem;
+            bottom: 39.9rem;
+        }
+        &__gorilla {
+            left: 45.5rem;
+            bottom: 36rem;
+        }
+        &__lion {
+            left: 37.5rem;
+            bottom: 37.5rem;
+        }
+        &__lemur {
+            right: 33.5rem;
+            bottom: 27rem;
+        }
+        &__panda {
+            right: 18rem;
+            bottom: 46rem;
+        }
+        &__tiger {
+            right: 19rem;
+            bottom: 32rem;
+        }
+        &__koala {
+            right: 10rem;
+            bottom: 25rem;
+        }
+    }
+}

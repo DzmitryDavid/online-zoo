@@ -12,7 +12,7 @@ $title-color: #00a092;
 }
 
 .link-active {
-    color: $title-color;
+    color: $title-color !important;
     cursor: default;
 }
 .overlay {
