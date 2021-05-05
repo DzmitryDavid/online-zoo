@@ -37,7 +37,7 @@ const popupPaymentCvv = document.querySelector('.popup-payment__form-input--cvv'
 const popupPaymentCard = document.querySelector('.popup-payment__form-input--card')
 // 
 
-alert('Уважаемые проверяющие к сожалению я не успел реализовать весь функционал =( реализованы  только часть Landing пункт 1 и 2. Всем хороших оценок =)' );
+alert('Здравствуйте, к сожалению я не успел реализовать весь функционал =( реализованы  только часть Landing пункт 1 и 2 и часть Map. Всем хороших оценок =)' );
 
 
 const addClass = (el) => {
@@ -77,33 +77,43 @@ popupInfoNextBtn.addEventListener('click', (e) => {
   addClass(popupPayment);
 })
 
-popupPaymentBack.addEventListener('click', () => {
+popupPaymentBack.addEventListener('click', (e) => {
+  e.preventDefault();
   removeClass(popupPayment);
   addClass(popupInfo);
 });
 
-popupCompleteBtn.addEventListener('click', (e) => {
+const validate = () => {
   if (popupPaymentCvv.validity.valid && popupPaymentCard.validity.valid) {
-    alert('Success!Donation complete. Thank you!')
+    popupCompleteBtn.classList.remove('invalid');
+  } else {
+    popupCompleteBtn.classList.add('invalid');
+
   }
+}
+
+popupCompleteBtn.addEventListener('click', () => {
+  alert('Success!Donation complete. Thank you!')
+
 });
 
 popupPaymentCvv.addEventListener('input', () => {
   if (popupPaymentCvv.value > 3) {
     popupPaymentCvv.value = popupPaymentCvv.value.slice(0, 3);
-}
+  }
+  validate();
 });
+
 popupPaymentCard.addEventListener('input', () => {
   if (popupPaymentCard.value > 16) {
     popupPaymentCard.value = popupPaymentCard.value.slice(0, 16);
 }
+  validate();
 });
 
 popupCareBtns.addEventListener('click', (e) => {
   let donate = e.target;
 });
-
-
 
 popupBtns.forEach((btn) => {
   btn.addEventListener('click', () => {

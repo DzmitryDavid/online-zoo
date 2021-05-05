@@ -49,8 +49,10 @@ body, html {
     width: 1400px;
     
 }
-.valid {
-  background-color: gren;
+.invalid {
+  background-color: transparent !important;
+  cursor: default;
+  
 }
 @import 'header';
 @import 'watch';
