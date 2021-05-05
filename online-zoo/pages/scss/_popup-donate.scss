@@ -1,0 +1,145 @@
+.popup-donate {
+  position: absolute;
+  // margin: 0 auto;
+  margin-top: 10rem;
+  width: 92rem;
+  background: #E5E5E5;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  display: none;
+
+
+  &__title {
+    height: 13.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    @include h3;
+    background-color: $primary-color;
+  }
+  &__subtitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    margin-left: 12rem;
+
+  }
+  &__content-wrapper {
+    padding: 0 12rem;
+    &-title {
+      margin-top: 4rem;
+      @include descr;
+      span {
+
+        color: $title-color;
+      }
+    }
+  }
+  &__buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    
+    &-btn {
+      @include popup-btn; 
+      max-width: 8rem;
+      max-height: 6rem;
+      background: rgba(0, 160, 146, 0.5);
+    }
+  }
+  &__form {
+    margin-top: 4rem;
+  }
+}
+.donate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  &__btn {
+    @include popup-btn;
+    text-transform: uppercase;
+    background-color: $title-color;
+  }
+  
+  &__amount {
+    display: flex;
+    gap: 4rem;
+  }
+  &__special {
+    display: flex;
+    gap: 4rem;
+    &-btn {
+      text-transform: uppercase;
+      @include popup-btn;
+      background: rgba(0, 160, 146, 0.5);
+    }
+  }
+  &__input {
+    width: 20rem;
+    height: 6.5rem;
+    border-radius: 5px;
+    padding-left: 2rem;
+    font-size: 18px;
+
+  }
+  &__select {
+    width: 44rem;
+    height: 6.5rem;
+  }
+  &__label {
+    display: flex;
+    align-items: flex-start;
+    span {
+      margin-left: 2rem;
+      @include descr;
+    }
+    input {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 3rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    width: 68.5rem;
+    &-dots {
+      display: flex;
+      justify-content: space-between;
+      width: 5rem;
+    }
+
+    &-btn {
+      text-transform: uppercase;
+      img {
+        margin-left: 1rem;
+      }
+      background-color: $title-color;
+      @include popup-btn;
+    }
+  }
+}
+.dot {
+  border: 1px solid #00A092;
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  &--active {
+    background-color: #00A092;
+  }
+}
+.show-popup {
+  display: flex;
+  z-index: 1000;
+}

@@ -1,0 +1,71 @@
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   background: #23b499;
+//   font-family: "Open Sans", sans-serif;
+//   color: #fff;
+// }
+
+.select {
+  font-family: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
+  background-position: 35rem center;
+  padding-left: 10rem;
+  color: #a4a8ae;
+  font-weight: 400;
+  font-size: 18px;
+  flex: 1;
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  position: relative;
+  &-option {
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+    &__title {
+      color: #a4a8ae;
+      font-size: 18px;
+    }
+  }
+  
+}
+
+
+
+
+
+.popup-payment__select {
+  font-family: inherit;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  width: 20rem;
+  height: 6.5rem;
+  text-align: center;
+  color: #a4a8ae;
+  background: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  // flex: 1;
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  background-position: 17rem center;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
+
+}
