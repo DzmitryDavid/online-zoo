@@ -93,6 +93,7 @@ const validate = () => {
 }
 
 popupCompleteBtn.addEventListener('click', () => {
+  if (popupCompleteBtn.classList.contains('invalid')) return;
   alert('Success!Donation complete. Thank you!')
 
 });
