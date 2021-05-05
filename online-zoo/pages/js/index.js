@@ -9,6 +9,7 @@ const popupCare = document.querySelector('.popup__care');
 const popupDonate = document.querySelector('.popup-donate');
 const popupInfo = document.querySelector('.popup-info'); 
 const popupPayment = document.querySelector('.popup-payment');
+const popupPaymentForm = document.querySelector('.popup-payment__form');
 
 // popup-btns:next/back
 const popupDonateNextBtn = document.querySelector('.donate-form__footer-btn');
@@ -35,6 +36,9 @@ const popupButtons = document.querySelectorAll('.popup-donate__buttons-btn');
 const popupPaymentCvv = document.querySelector('.popup-payment__form-input--cvv')
 const popupPaymentCard = document.querySelector('.popup-payment__form-input--card')
 // 
+
+alert('Уважаемые проверяющие к сожалению я не успел реализовать весь функционал =( реализованы  только часть Landing пункт 1 и 2. Всем хороших оценок =)' );
+
 
 const addClass = (el) => {
   el.classList.add('show-popup');
@@ -78,8 +82,10 @@ popupPaymentBack.addEventListener('click', () => {
   addClass(popupInfo);
 });
 
-popupCompleteBtn.addEventListener('click', () => {
-  alert('Success!Donation complete. Thank you!')
+popupCompleteBtn.addEventListener('click', (e) => {
+  if (popupPaymentCvv.validity.valid && popupPaymentCard.validity.valid) {
+    alert('Success!Donation complete. Thank you!')
+  }
 });
 
 popupPaymentCvv.addEventListener('input', () => {
