@@ -107,6 +107,10 @@ body, html {
   width: 1400px;
 }
 
+.valid {
+  background-color: gren;
+}
+
 .header {
   width: 100%;
   display: -webkit-box;

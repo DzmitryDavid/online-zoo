@@ -61,7 +61,7 @@
           <form class="donate-form">
             <div class="donate-form__amount">
               <button type="submit" class="donate-form__btn">Other amount</button>
-              <input type="number" class="donate-form__input">
+              <input type="number" class="donate-form__input" required>
 
             </div>
             <div class="donate-form__special">
@@ -95,7 +95,7 @@
         </div>
       </div>
     </div>
-<!-- donate-popup -->
+    <!-- donate-popup -->
 
     <div class="popup-info">
       <h2 class="popup-info__title">make your donation</h2>
@@ -104,96 +104,107 @@
       <div class="popup-info__content-wrapper">
         <form action="" class="popup-info__form">
           <label for="name"> <span>*</span> Your Name </label>
-          <input type="text" id="name" class="popup-info__form-input"  placeholder="First and last name">
-          <label for="email"> <span>*</span> Your Email Address </label>  
-          <input type="email" id="email" class="popup-info__form-input" placeholder="Enter your email">
-          <p class="popup-info__form-description">You will receive emails from the Online Zoo, including updates and news on the latest discoveries and translations. You can unsubscribe at any time.</p>
+          <input  type="text" 
+              id="info-name" 
+              class="popup-info__form-input" 
+              placeholder="First and last name">
+          <label for="info-email"> <span>*</span> Your Email Address </label>
+          <input type="email" 
+              id="info-email" 
+              class="popup-info__form-input" 
+              placeholder="Enter your email" >
+
+          <p class="popup-info__form-description">You will receive emails from the Online Zoo, including updates and
+            news on the latest discoveries and translations. You can unsubscribe at any time.</p>
+          
+        </form>
+        <div class="donate-form__footer">
+          <div class="donate-form__footer-dots">
+            <span class="dot dot--active"></span>
+            <span class="dot  dot--active"></span>
+            <span class="dot"></span>
+          </div>
+
+          <div class="donate-form__footer-button">
+            <button id="donate-backBtn" class="popup-info__footer-btn">Back</button>
+          </div>
+
+          <button  id="popup-info__btn" class="donate-form__footer-btn">Next
+            <img src="./assets/icons/Union.svg" alt="arrow icon">
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <!-- popup-info -->
+    <div class="popup-payment">
+      <h2 class="popup-payment__title">make your donation</h2>
+      <div class="popup-payment__subtitle">Payment Information:</div>
+      <hr>
+      <div class="popup-payment__content-wrapper">
+        <form action="" class="popup-payment__form">
+          <div class="input-wrapper">
+            <div>
+              <label for="card"> <span>*</span> Credit Card Number </label>
+              <input type="number" id="card" class="popup-payment__form-input popup-payment__form-input--card" required>
+            </div>
+
+            <div>
+              <label for="cvv"> <span>*</span> CVV Number</label>
+              <input type="number" id="cvv" class="popup-payment__form-input popup-payment__form-input--cvv" required>
+            </div>
+          </div>
+          <p class="select-descr" for="month"><span>*</span> Expiration Date</p>
+          <div class="select-wrapper">
+
+            <select id="month" class="popup-payment__select" required>
+              <option selected disabled>Month</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+
+            <select class="popup-payment__select" required>
+              <option disabled selected>Year</option>
+              <option>2021</option>
+              <option>2022</option>
+              <option>2023</option>
+              <option>2024</option>
+              <option>2025</option>
+              <option>2026</option>
+
+            </select>
+          </div>
+          <div class="donate-form__footer">
+            <div class="donate-form__footer-dots">
+              <span class="dot dot--active"></span>
+              <span class="dot dot--active"></span>
+              <span class="dot dot--active"></span>
+            </div>
+
+            <div class="donate-form__footer-button">
+              <button class="popup-payment__footer-btn">Back</button>
+            </div>
+
+            <button type="submit" id="complete-btn" class="popup-payment__footer-btn--large">Complete donation
+              <img src="./assets/icons/Union.svg" alt="arrow icon">
+            </button>
+          </div>
         </form>
       </div>
-      <div class="donate-form__footer">
-        <div class="donate-form__footer-dots">
-          <span class="dot dot--active"></span>
-          <span class="dot  dot--active"></span>
-          <span class="dot"></span>
-        </div>
 
-        <div class="donate-form__footer-button">
-          <button id="donate-backBtn" class="popup-info__footer-btn">Back</button>
-      </div>
-      
-      <button id="popup-info__btn" class="donate-form__footer-btn">Next
-        <img src="./assets/icons/Union.svg" alt="arrow icon">
-      </button>
     </div>
   </div>
-<!-- popup-info -->
-<div class="popup-payment">
-  <h2 class="popup-payment__title">make your donation</h2>
-  <div class="popup-payment__subtitle">Payment Information:</div>
-  <hr>
-  <div class="popup-payment__content-wrapper">
-    <form action="" class="popup-payment__form">
-      <div class="input-wrapper">
-        <div>
-          <label for="card"> <span>*</span> Credit Card Number </label>
-          <input type="number" id="card" class="popup-payment__form-input popup-payment__form-input--card" >
-        </div>
-
-        <div>
-          <label for="cvv"> <span>*</span> CVV Number</label>  
-          <input type="number" id="cvv" class="popup-payment__form-input popup-payment__form-input--cvv">         
-        </div>
-      </div>
-      <p class="select-descr" for="month"><span>*</span> Expiration Date</p>
-      <div class="select-wrapper">
-        
-          <select  id="month" class="popup-payment__select">
-          <option selected disabled>Month</option>
-          <option>01</option>
-          <option>02</option>
-          <option>03</option>
-          <option>04</option>
-          <option>05</option>
-          <option>06</option>
-          <option>07</option>
-          <option>08</option>
-          <option>09</option>
-          <option>10</option>
-          <option>11</option>
-          <option>12</option>
-        </select>
-        
-        <select class="popup-payment__select">
-          <option disabled selected >Year</option>
-          <option>2021</option>
-          <option>2022</option>
-          <option>2023</option>
-          <option>2024</option>
-          <option>2025</option>
-          <option>2026</option>
-
-        </select>
-      </div>
-    </form>
-  </div>
-  <div class="donate-form__footer">
-    <div class="donate-form__footer-dots">
-      <span class="dot dot--active"></span>
-      <span class="dot dot--active"></span>
-      <span class="dot dot--active"></span>
-    </div>
-
-    <div class="donate-form__footer-button">
-      <button class="popup-payment__footer-btn">Back</button>
-  </div>
-  
-  <button id="complete-btn" class="popup-payment__footer-btn--large">Complete donation
-    <img src="./assets/icons/Union.svg" alt="arrow icon">
-  </button>
-</div>
-</div>
-  </div>
-<!-- popup-payment -->
+  <!-- popup-payment -->
   <div class="side-menu">
     <div class="side-menu__close">
       <span class="close-line close-line__one"></span>
@@ -959,7 +970,7 @@
         </div>
       </div>
     </footer>
-    
+
     <script src="pages/js/index.js"></script>
 
 </body>

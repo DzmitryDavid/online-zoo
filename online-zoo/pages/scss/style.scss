@@ -49,7 +49,9 @@ body, html {
     width: 1400px;
     
 }
-
+.valid {
+  background-color: gren;
+}
 @import 'header';
 @import 'watch';
 @import 'welcome';

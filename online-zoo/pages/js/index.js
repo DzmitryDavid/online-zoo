@@ -17,19 +17,23 @@ const popupDonateBtnBack = document.querySelector('#donate-backBtn');
 const popupPaymentBack = document.querySelector('.popup-payment__footer-btn');
 const popupCareBtns = document.querySelector('.popup__care-buttons');
 const popupDonateBtns = document.querySelectorAll('.popup-donate__buttons');
+const popupDonateBtnOne = document.querySelector('.popup-donate__buttons');
 const popupCompleteBtn = document.querySelector('#complete-btn');
 const donateBtn = document.querySelector('.feed__button-donate');
 const closePopup = document.querySelector('.close');
 // popup-inputs
+const popupInfoNameField = document.querySelector('.popup-info__form-input');
+const popupInfoEmailField = document.querySelector('#email');
 const donateFooter = document.querySelector('.footer__button-main');
 const popupBtns = document.querySelectorAll('.popup__care-buttons-btn');
 const quickDonateBtn = document.querySelector('.donation__btn');
 const popupDonateInput = document.querySelector('.donate-form__input');
 const popupDonateBtn = document.querySelector('.donate-form__btn');
 const tenDollarsBtn = document.querySelector('.popup-donate__buttons-btn');
+const popupButtons = document.querySelectorAll('.popup-donate__buttons-btn');
+
 const popupPaymentCvv = document.querySelector('.popup-payment__form-input--cvv')
 const popupPaymentCard = document.querySelector('.popup-payment__form-input--card')
-
 // 
 
 const addClass = (el) => {
@@ -42,7 +46,18 @@ const removeClass = (el) => {
   document.body.style.overflow = 'visible';
 };
 
-popupDonateBtnBack.addEventListener('click', () => {
+popupDonateBtnOne.addEventListener('click', (e) => {
+  let btn = e.target;
+  popupDonateInput.value = btn.innerText.slice(1, 4);
+  popupButtons.forEach(btn => btn.style.backgroundColor = 'rgba(0, 160, 146, 0.5)')
+  if (btn.classList.contains('popup-donate__buttons-btn')) {
+    btn.style.backgroundColor = '#00a092';
+  }
+  
+});
+tenDollarsBtn.style.backgroundColor = '#00a092';
+
+popupDonateBtnBack.addEventListener('click', (e) => {
   removeClass(popupInfo);
   addClass(popupDonate);
 });
@@ -52,7 +67,8 @@ popupDonateNextBtn.addEventListener('click',() => {
   addClass(popupInfo);
 });
 
-popupInfoNextBtn.addEventListener('click', () => {
+popupInfoNextBtn.addEventListener('click', (e) => {
+  e.preventDefault();
   removeClass(popupInfo);
   addClass(popupPayment);
 })
@@ -156,7 +172,9 @@ popupDonateInput.addEventListener('input', () => {
   if (popupDonateInput.value > 4) {
       popupDonateInput.value = popupDonateInput.value.slice(0, 4);
   }
+});
   
-})
+
+
 
 
