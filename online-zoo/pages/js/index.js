@@ -92,19 +92,7 @@ petsNextBtn.addEventListener('click', () => {
   
 });
 
-
-// window.addEventListener("resize", e => (width = petsCarousel.offsetWidth));
-// petsNextBtn.addEventListener("click", e => {
-
-// });
-
-
-
-
-
-
-// alert('Здравствуйте, к сожалению я не успел реализовать весь функционал =( реализованы  только часть Landing пункт 1 и 2 и часть Map. Всем хороших оценок =)' );
-
+alert('Здравствуйте, к сожалению я не успел реализовать весь функционал =( реализованы  только часть Landing пункт 1,2, 3 и часть Map. Всем хороших оценок =)' );
 
 const addClass = (el) => {
   el.classList.add('show-popup');
