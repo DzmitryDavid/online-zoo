@@ -13,6 +13,19 @@
     //     }
     // }
 }
+@media (min-width: 1921px) {
+
+  .gradient {
+      width: calc((100% - 1920px) / 2 + 20px);
+      z-index: 1000;
+      position: absolute;
+      height: 162.5rem;
+      top: 4rem;
+      left: 50%;
+      transform: translateX(94rem);
+      background: linear-gradient(to right, transparent, #fff 90%);
+  }
+}
 
 @media (max-width: 1440px) {
     .container {

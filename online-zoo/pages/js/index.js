@@ -35,9 +35,75 @@ const popupButtons = document.querySelectorAll('.popup-donate__buttons-btn');
 
 const popupPaymentCvv = document.querySelector('.popup-payment__form-input--cvv')
 const popupPaymentCard = document.querySelector('.popup-payment__form-input--card')
-// 
+// carousel
+const petsPrevBtn = document.querySelector('.pets__btn-prev');
+const petsNextBtn = document.querySelector('.pets__btn-next');
+const petsCards = document.querySelector('.pets__cards');
+const petsCard = document.querySelector('.pets__card');
+const petsCarousel = document.querySelector('.pets-carousel');
+const rowOne = document.querySelector('.pets__row-one');
+const rowTwo = document.querySelector('.pets__row-two');
+let width = document.documentElement.clientWidth;
+let gap = 10;
+let offset = 0
 
-alert('Здравствуйте, к сожалению я не успел реализовать весь функционал =( реализованы  только часть Landing пункт 1 и 2 и часть Map. Всем хороших оценок =)' );
+petsPrevBtn.addEventListener("click", e => {
+  if (width <= 1200) {
+    offset += 475;
+    if (offset >= 0) {
+      offset = -1 * (475 * 5);
+    }
+  } else {
+    offset += 480;
+    if (width < 1440) {
+      if (offset > 0) {
+        offset = -1 * (480 * 6);
+      }  
+    } else {
+      if (offset > 0) {
+        offset = -1 * (480 * 5);
+      }
+    }
+  }
+  rowOne.style.left = offset + 'px';
+  rowTwo.style.left = offset + 'px';
+
+});
+petsNextBtn.addEventListener('click', () => {
+  if (width <= 1200) {
+    offset -= 475; 
+    if (offset <= (-475 * 6)) {
+      offset = 0;
+    }
+  } else {
+    offset -= 480;
+    if (width < 1440) {
+      if (offset <= (-440 * 7)) {
+        offset = 0;
+      } 
+    } else {
+      if (offset <= (-440 * 6)) {
+        offset = 0;
+      }
+    }
+  }
+  rowOne.style.left = offset + 'px';
+  rowTwo.style.left = offset + 'px';
+  
+});
+
+
+// window.addEventListener("resize", e => (width = petsCarousel.offsetWidth));
+// petsNextBtn.addEventListener("click", e => {
+
+// });
+
+
+
+
+
+
+// alert('Здравствуйте, к сожалению я не успел реализовать весь функционал =( реализованы  только часть Landing пункт 1 и 2 и часть Map. Всем хороших оценок =)' );
 
 
 const addClass = (el) => {

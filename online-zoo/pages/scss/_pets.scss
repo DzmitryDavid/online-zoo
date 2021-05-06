@@ -1,8 +1,51 @@
 
 .pets {
-    overflow: hidden;
+  position: relative;
+    overflow: hidden;  
     padding-top: 13.4rem;
     padding-bottom: 15rem;
+    transition: all ease 0.5s;
+    min-height: 244rem;
+
+    &-carousel {
+      margin-top: 10rem;
+      position: relative;
+      // display: flex;
+      // flex-direction: column;
+      // flex-wrap: wrap;
+      // overflow: hidden;
+      &__wrapper {
+        height: 164.4rem;
+        margin-left: calc(220px + (100% - 1920px) / 2);
+        max-width: 192rem;
+        width: 100%;
+        overflow: hidden;
+        min-height: 74rem;
+      }
+    }
+    &__row {
+      
+      &-one {
+        min-height: 74rem;
+        transition: all ease 0.5s;
+        position: absolute;
+        display: flex;
+        // gap: 2rem;
+        overflow: hidden;
+      }
+
+      &-two {
+        transition: all ease 0.5s;
+        position: absolute;
+        top: 76.3rem;
+        display: flex;
+        // gap: 2rem;
+        overflow: hidden;
+        min-height: 74rem;
+
+      }
+    }
+
     &__title {
         text-align: center;
         @include h2;
@@ -19,30 +62,34 @@
     &__btn {
         @include square-btns-navy;
     }
-
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(4, 44rem);
-        grid-template-rows: repeat(2, 749px);
-        margin-top: 5rem;
-        gap: 4rem;
-    }
-
     &__card {
+      width: 48rem;
+      height: 74.7rem;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+
+      &-wrapper {
+        max-width: 44rem;
+        background-color: #20113d;
+      }
         &-image {
             img {
-                object-fit: cover;
+              max-width: 44rem;
+              object-fit: cover;
             }
         }
         transition: all ease 0.8s;
         position: relative;
-        background-color: $secondary-color;
         border-radius: 5px;
         &:hover {
             cursor: pointer;
             transform: scale(1.02);
         }
         &-text {
+          &-wrapper {
+            height: 311px;
+          }
             padding:  0 10px;
         }
         &-name {
@@ -66,39 +113,19 @@
             color: #fff;
         }
         &-subtitle {
+            min-height: 8.1rem;
             margin-top: 1.5rem;
             padding: 0 4.5rem 0 4.5rem;
             
             text-align: center;
             color: #fff;
             @include descr;
-            &-eagle {
-                margin-top: 1.5rem;
-                text-align: center;
-                color: #fff;
-                @include descr;
-            }
-            &-lion {
-                margin-top: 1.5rem;
-                padding:0 3rem 0 3rem;
-                text-align: center;
-                color: #fff;
-                @include descr;
-            }
-            &-alligator {
-                margin-top: 1.5rem;
-                padding: 0 6.5rem 0 6.5rem;
-                text-align: center;
-                color: #fff;
-                @include descr;
-            }
             
         }
+
         &-link {
-            position: absolute;
-            bottom: 5rem;
-            left: 50%;
-            transform: translateX(-50%);
+            margin: 0 auto;
+            margin-top: 2rem;
             @include no-bordered-btn;
             transition: all ease 0.6s;
             svg {
@@ -119,7 +146,10 @@
     }
     
     &__button {
-        margin-top: 9.5rem;
+        position: absolute;
+        bottom: 12rem;
+        left: 50%;
+        transform: translateX(-50%);
         
         &-main {
             margin: 0 auto;
