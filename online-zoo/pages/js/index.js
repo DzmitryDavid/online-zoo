@@ -7,7 +7,7 @@ const sideMenuCloseBtn = document.querySelector('.side-menu__close');
 const popupOverlay = document.querySelector('.popup-overlay');
 const popupCare = document.querySelector('.popup__care');
 const popupDonate = document.querySelector('.popup-donate');
-const popupInfo = document.querySelector('.popup-info'); 
+const popupInfo = document.querySelector('.popup-info');
 const popupPayment = document.querySelector('.popup-payment');
 const popupPaymentForm = document.querySelector('.popup-payment__form');
 
@@ -33,8 +33,12 @@ const popupDonateBtn = document.querySelector('.donate-form__btn');
 const tenDollarsBtn = document.querySelector('.popup-donate__buttons-btn');
 const popupButtons = document.querySelectorAll('.popup-donate__buttons-btn');
 
-const popupPaymentCvv = document.querySelector('.popup-payment__form-input--cvv')
-const popupPaymentCard = document.querySelector('.popup-payment__form-input--card')
+const popupPaymentCvv = document.querySelector(
+  '.popup-payment__form-input--cvv'
+);
+const popupPaymentCard = document.querySelector(
+  '.popup-payment__form-input--card'
+);
 // carousel
 const petsPrevBtn = document.querySelector('.pets__btn-prev');
 const petsNextBtn = document.querySelector('.pets__btn-next');
@@ -45,9 +49,9 @@ const rowOne = document.querySelector('.pets__row-one');
 const rowTwo = document.querySelector('.pets__row-two');
 let width = document.documentElement.clientWidth;
 let gap = 10;
-let offset = 0
+let offset = 0;
 
-petsPrevBtn.addEventListener("click", e => {
+petsPrevBtn.addEventListener('click', (e) => {
   if (width <= 1200) {
     offset += 475;
     if (offset >= 0) {
@@ -58,7 +62,7 @@ petsPrevBtn.addEventListener("click", e => {
     if (width < 1440) {
       if (offset > 0) {
         offset = -1 * (480 * 6);
-      }  
+      }
     } else {
       if (offset > 0) {
         offset = -1 * (480 * 5);
@@ -67,32 +71,28 @@ petsPrevBtn.addEventListener("click", e => {
   }
   rowOne.style.left = offset + 'px';
   rowTwo.style.left = offset + 'px';
-
 });
 petsNextBtn.addEventListener('click', () => {
   if (width <= 1200) {
-    offset -= 475; 
-    if (offset <= (-475 * 6)) {
+    offset -= 475;
+    if (offset <= -475 * 6) {
       offset = 0;
     }
   } else {
     offset -= 480;
     if (width < 1440) {
-      if (offset <= (-440 * 7)) {
+      if (offset <= -440 * 7) {
         offset = 0;
-      } 
+      }
     } else {
-      if (offset <= (-440 * 6)) {
+      if (offset <= -440 * 6) {
         offset = 0;
       }
     }
   }
   rowOne.style.left = offset + 'px';
   rowTwo.style.left = offset + 'px';
-  
 });
-
-alert('Здравствуйте, к сожалению я не успел реализовать весь функционал =( реализованы  только часть Landing пункт 1,2, 3 и часть Map. Всем хороших оценок =)' );
 
 const addClass = (el) => {
   el.classList.add('show-popup');
@@ -105,13 +105,14 @@ const removeClass = (el) => {
 };
 
 popupDonateBtnOne.addEventListener('click', (e) => {
-  let btn = e.target;
+  const btn = e.target;
   popupDonateInput.value = btn.innerText.slice(1, 4);
-  popupButtons.forEach(btn => btn.style.backgroundColor = 'rgba(0, 160, 146, 0.5)')
+  popupButtons.forEach(
+    (btn) => (btn.style.backgroundColor = 'rgba(0, 160, 146, 0.5)')
+  );
   if (btn.classList.contains('popup-donate__buttons-btn')) {
     btn.style.backgroundColor = '#00a092';
   }
-  
 });
 tenDollarsBtn.style.backgroundColor = '#00a092';
 
@@ -120,7 +121,7 @@ popupDonateBtnBack.addEventListener('click', (e) => {
   addClass(popupDonate);
 });
 
-popupDonateNextBtn.addEventListener('click',() => {
+popupDonateNextBtn.addEventListener('click', () => {
   removeClass(popupDonate);
   addClass(popupInfo);
 });
@@ -129,7 +130,7 @@ popupInfoNextBtn.addEventListener('click', (e) => {
   e.preventDefault();
   removeClass(popupInfo);
   addClass(popupPayment);
-})
+});
 
 popupPaymentBack.addEventListener('click', (e) => {
   e.preventDefault();
@@ -142,14 +143,12 @@ const validate = () => {
     popupCompleteBtn.classList.remove('invalid');
   } else {
     popupCompleteBtn.classList.add('invalid');
-
   }
-}
+};
 
 popupCompleteBtn.addEventListener('click', () => {
   if (popupCompleteBtn.classList.contains('invalid')) return;
-  alert('Success!Donation complete. Thank you!')
-
+  alert('Success!Donation complete. Thank you!');
 });
 
 popupPaymentCvv.addEventListener('input', () => {
@@ -162,7 +161,7 @@ popupPaymentCvv.addEventListener('input', () => {
 popupPaymentCard.addEventListener('input', () => {
   if (popupPaymentCard.value > 16) {
     popupPaymentCard.value = popupPaymentCard.value.slice(0, 16);
-}
+  }
   validate();
 });
 
@@ -173,8 +172,8 @@ popupCareBtns.addEventListener('click', (e) => {
 popupBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
     removeClass(popupCare);
-    addClass(popupDonate)
-  })
+    addClass(popupDonate);
+  });
 });
 
 donateBtn.addEventListener('click', () => {
@@ -208,7 +207,7 @@ quickDonateBtn.addEventListener('click', () => {
   } else {
     tenDollarsBtn.style.backgroundColor = 'rgba(0, 160, 146, 0.5)';
   }
-  
+
   if (popupDonateInput.value !== '') {
     popupDonateBtn.style.backgroundColor = 'rgba(0, 160, 146, 0.5)';
   } else {
@@ -220,14 +219,13 @@ burgerBtn.addEventListener('click', () => {
   sideMenu.classList.add('show');
 });
 sideMenuCloseBtn.addEventListener('click', () => {
-  sideMenu.classList.remove('show')
+  sideMenu.classList.remove('show');
 });
 
 donateInput.oninput = () => {
   let value = donateInput.value;
   popupDonateInput.value = value;
   if (donateInput.value > 4) {
-    
     donateInput.value = donateInput.value.slice(0, 4);
   }
 };
@@ -238,14 +236,8 @@ popupDonateInput.addEventListener('input', () => {
     popupDonateBtn.style.backgroundColor = '#00a092';
   } else {
     popupDonateBtn.style.backgroundColor = 'rgba(0, 160, 146, 0.5)';
-
   }
   if (popupDonateInput.value > 4) {
-      popupDonateInput.value = popupDonateInput.value.slice(0, 4);
+    popupDonateInput.value = popupDonateInput.value.slice(0, 4);
   }
 });
-  
-
-
-
-
